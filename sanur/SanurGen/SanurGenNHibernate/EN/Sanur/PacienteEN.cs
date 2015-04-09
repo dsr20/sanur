@@ -15,7 +15,7 @@ private string nombre;
  *
  */
 
-private string apellido;
+private string apellidos;
 
 /**
  *
@@ -93,7 +93,7 @@ private string codigoPostal;
  *
  */
 
-private string iPS;
+private string ips;
 
 
 
@@ -104,8 +104,8 @@ public virtual string Nombre {
 }
 
 
-public virtual string Apellido {
-        get { return apellido; } set { apellido = value;  }
+public virtual string Apellidos {
+        get { return apellidos; } set { apellidos = value;  }
 }
 
 
@@ -169,8 +169,8 @@ public virtual string CodigoPostal {
 }
 
 
-public virtual string IPS {
-        get { return iPS; } set { iPS = value;  }
+public virtual string Ips {
+        get { return ips; } set { ips = value;  }
 }
 
 
@@ -183,25 +183,25 @@ public PacienteEN()
 
 
 
-public PacienteEN(int idPaciente, string nombre, string apellido, Nullable<DateTime> fNac, string tlf, string direccion, string nacionalidad, int sip, int dni, string sexo, string email, string municipio, string grupoSang, string codigoPostal, string iPS)
+public PacienteEN(int idPaciente, string nombre, string apellidos, Nullable<DateTime> fNac, string tlf, string direccion, string nacionalidad, int sip, int dni, string sexo, string email, string municipio, string grupoSang, string codigoPostal, string ips)
 {
-        this.init (idPaciente, nombre, apellido, fNac, tlf, direccion, nacionalidad, sip, dni, sexo, email, municipio, grupoSang, codigoPostal, iPS);
+        this.init (idPaciente, nombre, apellidos, fNac, tlf, direccion, nacionalidad, sip, dni, sexo, email, municipio, grupoSang, codigoPostal, ips);
 }
 
 
 public PacienteEN(PacienteEN paciente)
 {
-        this.init (paciente.IdPaciente, paciente.Nombre, paciente.Apellido, paciente.FNac, paciente.Tlf, paciente.Direccion, paciente.Nacionalidad, paciente.Sip, paciente.Dni, paciente.Sexo, paciente.Email, paciente.Municipio, paciente.GrupoSang, paciente.CodigoPostal, paciente.IPS);
+        this.init (paciente.IdPaciente, paciente.Nombre, paciente.Apellidos, paciente.FNac, paciente.Tlf, paciente.Direccion, paciente.Nacionalidad, paciente.Sip, paciente.Dni, paciente.Sexo, paciente.Email, paciente.Municipio, paciente.GrupoSang, paciente.CodigoPostal, paciente.Ips);
 }
 
-private void init (int idPaciente, string nombre, string apellido, Nullable<DateTime> fNac, string tlf, string direccion, string nacionalidad, int sip, int dni, string sexo, string email, string municipio, string grupoSang, string codigoPostal, string iPS)
+private void init (int idPaciente, string nombre, string apellidos, Nullable<DateTime> fNac, string tlf, string direccion, string nacionalidad, int sip, int dni, string sexo, string email, string municipio, string grupoSang, string codigoPostal, string ips)
 {
         this.IdPaciente = idPaciente;
 
 
         this.Nombre = nombre;
 
-        this.Apellido = apellido;
+        this.Apellidos = apellidos;
 
         this.FNac = fNac;
 
@@ -225,7 +225,7 @@ private void init (int idPaciente, string nombre, string apellido, Nullable<Date
 
         this.CodigoPostal = codigoPostal;
 
-        this.IPS = iPS;
+        this.Ips = ips;
 }
 
 public override bool Equals (object obj)

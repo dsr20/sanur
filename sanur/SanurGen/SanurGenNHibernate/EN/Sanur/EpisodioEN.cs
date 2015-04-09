@@ -15,7 +15,7 @@ private SanurGenNHibernate.EN.Sanur.PacienteEN paciente;
  *
  */
 
-private SanurGenNHibernate.EN.Sanur.TriajeEN triaje;
+private SanurGenNHibernate.EN.Sanur.TriageEN triage;
 
 /**
  *
@@ -86,8 +86,8 @@ public virtual SanurGenNHibernate.EN.Sanur.PacienteEN Paciente {
 }
 
 
-public virtual SanurGenNHibernate.EN.Sanur.TriajeEN Triaje {
-        get { return triaje; } set { triaje = value;  }
+public virtual SanurGenNHibernate.EN.Sanur.TriageEN Triage {
+        get { return triage; } set { triage = value;  }
 }
 
 
@@ -151,25 +151,25 @@ public EpisodioEN()
 
 
 
-public EpisodioEN(int idEpisodio, SanurGenNHibernate.EN.Sanur.PacienteEN paciente, SanurGenNHibernate.EN.Sanur.TriajeEN triaje, TimeSpan fechaInicio, string observaciones, SanurGenNHibernate.EN.Sanur.DiagnosticoEN diagnostico, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PruebaEN> prueba, SanurGenNHibernate.EN.Sanur.AdministrativoEN administrativo, TimeSpan fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum estado, bool emergencia, bool imporante)
+public EpisodioEN(int idEpisodio, SanurGenNHibernate.EN.Sanur.PacienteEN paciente, SanurGenNHibernate.EN.Sanur.TriageEN triage, TimeSpan fechaInicio, string observaciones, SanurGenNHibernate.EN.Sanur.DiagnosticoEN diagnostico, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PruebaEN> prueba, SanurGenNHibernate.EN.Sanur.AdministrativoEN administrativo, TimeSpan fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum estado, bool emergencia, bool imporante)
 {
-        this.init (idEpisodio, paciente, triaje, fechaInicio, observaciones, diagnostico, prueba, administrativo, fechaFin, estado, emergencia, imporante);
+        this.init (idEpisodio, paciente, triage, fechaInicio, observaciones, diagnostico, prueba, administrativo, fechaFin, estado, emergencia, imporante);
 }
 
 
 public EpisodioEN(EpisodioEN episodio)
 {
-        this.init (episodio.IdEpisodio, episodio.Paciente, episodio.Triaje, episodio.FechaInicio, episodio.Observaciones, episodio.Diagnostico, episodio.Prueba, episodio.Administrativo, episodio.FechaFin, episodio.Estado, episodio.Emergencia, episodio.Imporante);
+        this.init (episodio.IdEpisodio, episodio.Paciente, episodio.Triage, episodio.FechaInicio, episodio.Observaciones, episodio.Diagnostico, episodio.Prueba, episodio.Administrativo, episodio.FechaFin, episodio.Estado, episodio.Emergencia, episodio.Imporante);
 }
 
-private void init (int idEpisodio, SanurGenNHibernate.EN.Sanur.PacienteEN paciente, SanurGenNHibernate.EN.Sanur.TriajeEN triaje, TimeSpan fechaInicio, string observaciones, SanurGenNHibernate.EN.Sanur.DiagnosticoEN diagnostico, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PruebaEN> prueba, SanurGenNHibernate.EN.Sanur.AdministrativoEN administrativo, TimeSpan fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum estado, bool emergencia, bool imporante)
+private void init (int idEpisodio, SanurGenNHibernate.EN.Sanur.PacienteEN paciente, SanurGenNHibernate.EN.Sanur.TriageEN triage, TimeSpan fechaInicio, string observaciones, SanurGenNHibernate.EN.Sanur.DiagnosticoEN diagnostico, System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.PruebaEN> prueba, SanurGenNHibernate.EN.Sanur.AdministrativoEN administrativo, TimeSpan fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum estado, bool emergencia, bool imporante)
 {
         this.IdEpisodio = idEpisodio;
 
 
         this.Paciente = paciente;
 
-        this.Triaje = triaje;
+        this.Triage = triage;
 
         this.FechaInicio = fechaInicio;
 

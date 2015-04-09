@@ -10,8 +10,8 @@
 					<property name="Nombre" type="string"> 
 						<column name="[nombre]"  not-null="true"/>
 					</property>
-					<property name="Apellido" type="string"> 
-						<column name="[apellido]"  not-null="true"/>
+					<property name="Apellidos" type="string"> 
+						<column name="[apellidos]"  not-null="true"/>
 					</property>
 					<property name="FNac" type="date"> 
 						<column name="[fNac]"  not-null="true"/>
@@ -46,8 +46,8 @@
 					<property name="CodigoPostal" type="string"> 
 						<column name="[codigoPostal]"  not-null="true"/>
 					</property>
-					<property name="IPS" type="string"> 
-						<column name="[IPS]"  not-null="true"/>
+					<property name="Ips" type="string"> 
+						<column name="[ips]"  not-null="true"/>
 					</property>
 			
 			
@@ -83,6 +83,8 @@
 		  </class>
 		  
 		  <query name="PacienteENReadAllHQL">from PacienteEN</query>
-		  <query name="PacienteENbuscarDNIHQL"><![CDATA[from PacienteEN where dni= :dni]]></query>
+		  <query name="PacienteENbuscarDNIHQL"><![CDATA[from PacienteEN as pa where pa.Dni= :dni]]></query>
+		  <query name="PacienteENbuscarSIPHQL"><![CDATA[from PacienteEN where sip= :sip]]></query>
+		  <query name="PacienteENbuscarNombreApellidosHQL"><![CDATA[from PacienteEN where nombre= :dni AND apellidos= :apellidos]]></query>
 		</hibernate-mapping>
 	

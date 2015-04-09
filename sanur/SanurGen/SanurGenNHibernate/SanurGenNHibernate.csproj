@@ -74,7 +74,9 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -97,7 +99,36 @@
     <Content Include="AppLib\nunit.framework.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfirmarTriage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmarTriage.Designer.cs">
+      <DependentUpon>ConfirmarTriage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_busca_paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_busca_paciente.Designer.cs">
+      <DependentUpon>Form_busca_paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_crear_paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_crear_paciente.Designer.cs">
+      <DependentUpon>Form_crear_paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HojaTriage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HojaTriage.Designer.cs">
+      <DependentUpon>HojaTriage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="SanurGenNHibernateDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanurGenNHibernateDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Util.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Exceptions\ModelException.cs" />
@@ -127,10 +158,10 @@
     <Compile Include="CEN\Sanur\EpisodioCEN.cs" />
     <Compile Include="CAD\Sanur\IEpisodioCAD.cs" />
     <Compile Include="CAD\Sanur\EpisodioCAD.cs" />
-    <Compile Include="EN\Sanur\TriajeEN.cs" />
-    <Compile Include="CEN\Sanur\TriajeCEN.cs" />
-    <Compile Include="CAD\Sanur\ITriajeCAD.cs" />
-    <Compile Include="CAD\Sanur\TriajeCAD.cs" />
+    <Compile Include="EN\Sanur\TriageEN.cs" />
+    <Compile Include="CEN\Sanur\TriageCEN.cs" />
+    <Compile Include="CAD\Sanur\ITriageCAD.cs" />
+    <Compile Include="CAD\Sanur\TriageCAD.cs" />
     <Compile Include="EN\Sanur\DiagnosticoEN.cs" />
     <Compile Include="CEN\Sanur\DiagnosticoCEN.cs" />
     <Compile Include="CAD\Sanur\IDiagnosticoCAD.cs" />
@@ -154,13 +185,25 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ConfirmarTriage.resx">
+      <DependentUpon>ConfirmarTriage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_busca_paciente.resx">
+      <DependentUpon>Form_busca_paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_crear_paciente.resx">
+      <DependentUpon>Form_crear_paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HojaTriage.resx">
+      <DependentUpon>HojaTriage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mappings\Sanur\usuario.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\administrador.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\administrativo.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\medico.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\paciente.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\episodio.hbm.xml" />
-    <EmbeddedResource Include="Mappings\Sanur\triaje.hbm.xml" />
+    <EmbeddedResource Include="Mappings\Sanur\triage.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\diagnostico.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\prueba.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\adjunto.hbm.xml" />
@@ -181,6 +224,17 @@
     </None>
     <None Include="Resources\xsd\nhibernate-mapping.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="SanurGenNHibernateDataSet.xsc">
+      <DependentUpon>SanurGenNHibernateDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SanurGenNHibernateDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SanurGenNHibernateDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SanurGenNHibernateDataSet.xss">
+      <DependentUpon>SanurGenNHibernateDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

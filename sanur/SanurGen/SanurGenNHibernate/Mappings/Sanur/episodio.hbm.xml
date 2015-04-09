@@ -44,8 +44,8 @@
 						</many-to-one>
 					
 					
-   						<many-to-one name="Triaje" class="SanurGenNHibernate.EN.Sanur.TriajeEN" cascade="delete">
-								<column name="[FK_idTriaje_idTriaje]" unique="true"/>
+   						<many-to-one name="Triage" class="SanurGenNHibernate.EN.Sanur.TriageEN" cascade="delete">
+								<column name="[FK_idTriaje_idTriage]" unique="true"/>
 						</many-to-one>
 					
 					
@@ -82,5 +82,7 @@
 		  
 		  <query name="EpisodioENReadAllHQL">from EpisodioEN</query>
 		  <query name="EpisodioENobtenerHistorialHQL"><![CDATA[select ep FROM EpisodioEN as ep inner join ep.Paciente as pa where pa.IdPaciente = :idPaciente]]></query>
+		  <query name="EpisodioENbuscarParaTriageHQL"><![CDATA[FROM EpisodioEN as ep where ep.Estado = 1 order by ep.FechaInicio]]></query>
+		  <query name="EpisodioENbuscarParaMedicoHQL"><![CDATA[FROM EpisodioEN as ep WHERE ep.Estado = 2 AND ep.Triage.Destino = :destino ORDER BY ep.Triage.Prioridad ASC, ep.FechaInicio ASC]]></query>
 		</hibernate-mapping>
 	

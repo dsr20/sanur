@@ -87,7 +87,7 @@ public void Modify (PacienteEN paciente)
                 pacienteEN.Nombre = paciente.Nombre;
 
 
-                pacienteEN.Apellido = paciente.Apellido;
+                pacienteEN.Apellidos = paciente.Apellidos;
 
 
                 pacienteEN.FNac = paciente.FNac;
@@ -123,7 +123,7 @@ public void Modify (PacienteEN paciente)
                 pacienteEN.CodigoPostal = paciente.CodigoPostal;
 
 
-                pacienteEN.IPS = paciente.IPS;
+                pacienteEN.Ips = paciente.Ips;
 
                 session.Update (pacienteEN);
                 SessionCommit ();
@@ -229,10 +229,73 @@ public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarDNI (int dni)
         try
         {
                 SessionInitializeTransaction ();
-                //String sql = @"FROM PacienteEN self where from PacienteEN where dni= :dni";
+                //String sql = @"FROM PacienteEN self where from PacienteEN as pa where pa.Dni= :dni";
                 //IQuery query = session.CreateQuery(sql);
                 IQuery query = (IQuery)session.GetNamedQuery ("PacienteENbuscarDNIHQL");
                 query.SetParameter ("dni", dni);
+
+
+                result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.PacienteEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in PacienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
+public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarSIP (int sip)
+{
+        SanurGenNHibernate.EN.Sanur.PacienteEN result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM PacienteEN self where from PacienteEN where sip= :sip";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("PacienteENbuscarSIPHQL");
+                query.SetParameter ("sip", sip);
+
+
+                result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.PacienteEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in PacienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
+public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarNombreApellidos (string nombre, string apellidos)
+{
+        SanurGenNHibernate.EN.Sanur.PacienteEN result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM PacienteEN self where from PacienteEN where nombre= :dni AND apellidos= :apellidos";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("PacienteENbuscarNombreApellidosHQL");
+                query.SetParameter ("nombre", nombre);
+                query.SetParameter ("apellidos", apellidos);
 
 
                 result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.PacienteEN>();

@@ -20,5 +20,11 @@ System.Collections.Generic.IList<EpisodioEN> ReadAll (int first, int size);
 
 
 System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> ObtenerHistorial (int idPaciente);
+
+
+System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaTriage ();
+
+
+System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaMedico (SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum destino);
 }
 }

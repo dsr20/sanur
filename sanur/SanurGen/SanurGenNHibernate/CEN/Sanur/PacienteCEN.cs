@@ -32,7 +32,7 @@ public IPacienteCAD get_IPacienteCAD ()
         return this._IPacienteCAD;
 }
 
-public int New_ (string p_nombre, string p_apellido, Nullable<DateTime> p_fNac, string p_tlf, string p_direccion, string p_nacionalidad, int p_sip, int p_dni, string p_sexo, string p_email, string p_municipio, string p_grupoSang, string p_codigoPostal, string p_IPS)
+public int New_ (string p_nombre, string p_apellidos, Nullable<DateTime> p_fNac, string p_tlf, string p_direccion, string p_nacionalidad, int p_sip, int p_dni, string p_sexo, string p_email, string p_municipio, string p_grupoSang, string p_codigoPostal, string p_ips)
 {
         PacienteEN pacienteEN = null;
         int oid;
@@ -41,7 +41,7 @@ public int New_ (string p_nombre, string p_apellido, Nullable<DateTime> p_fNac, 
         pacienteEN = new PacienteEN ();
         pacienteEN.Nombre = p_nombre;
 
-        pacienteEN.Apellido = p_apellido;
+        pacienteEN.Apellidos = p_apellidos;
 
         pacienteEN.FNac = p_fNac;
 
@@ -65,7 +65,7 @@ public int New_ (string p_nombre, string p_apellido, Nullable<DateTime> p_fNac, 
 
         pacienteEN.CodigoPostal = p_codigoPostal;
 
-        pacienteEN.IPS = p_IPS;
+        pacienteEN.Ips = p_ips;
 
         //Call to PacienteCAD
 
@@ -73,7 +73,7 @@ public int New_ (string p_nombre, string p_apellido, Nullable<DateTime> p_fNac, 
         return oid;
 }
 
-public void Modify (int p_Paciente_OID, string p_nombre, string p_apellido, Nullable<DateTime> p_fNac, string p_tlf, string p_direccion, string p_nacionalidad, int p_sip, int p_dni, string p_sexo, string p_email, string p_municipio, string p_grupoSang, string p_codigoPostal, string p_IPS)
+public void Modify (int p_Paciente_OID, string p_nombre, string p_apellidos, Nullable<DateTime> p_fNac, string p_tlf, string p_direccion, string p_nacionalidad, int p_sip, int p_dni, string p_sexo, string p_email, string p_municipio, string p_grupoSang, string p_codigoPostal, string p_ips)
 {
         PacienteEN pacienteEN = null;
 
@@ -81,7 +81,7 @@ public void Modify (int p_Paciente_OID, string p_nombre, string p_apellido, Null
         pacienteEN = new PacienteEN ();
         pacienteEN.IdPaciente = p_Paciente_OID;
         pacienteEN.Nombre = p_nombre;
-        pacienteEN.Apellido = p_apellido;
+        pacienteEN.Apellidos = p_apellidos;
         pacienteEN.FNac = p_fNac;
         pacienteEN.Tlf = p_tlf;
         pacienteEN.Direccion = p_direccion;
@@ -93,7 +93,7 @@ public void Modify (int p_Paciente_OID, string p_nombre, string p_apellido, Null
         pacienteEN.Municipio = p_municipio;
         pacienteEN.GrupoSang = p_grupoSang;
         pacienteEN.CodigoPostal = p_codigoPostal;
-        pacienteEN.IPS = p_IPS;
+        pacienteEN.Ips = p_ips;
         //Call to PacienteCAD
 
         _IPacienteCAD.Modify (pacienteEN);
@@ -122,6 +122,14 @@ public System.Collections.Generic.IList<PacienteEN> ReadAll (int first, int size
 public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarDNI (int dni)
 {
         return _IPacienteCAD.BuscarDNI (dni);
+}
+public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarSIP (int sip)
+{
+        return _IPacienteCAD.BuscarSIP (sip);
+}
+public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarNombreApellidos (string nombre, string apellidos)
+{
+        return _IPacienteCAD.BuscarNombreApellidos (nombre, apellidos);
 }
 }
 }

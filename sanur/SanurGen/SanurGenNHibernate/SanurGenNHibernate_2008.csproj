@@ -113,10 +113,10 @@
 	<Compile Include="CEN\Sanur\EpisodioCEN.cs" />
 	<Compile Include="CAD\Sanur\IEpisodioCAD.cs" />
 	<Compile Include="CAD\Sanur\EpisodioCAD.cs" />
-	<Compile Include="EN\Sanur\TriajeEN.cs" />
-	<Compile Include="CEN\Sanur\TriajeCEN.cs" />
-	<Compile Include="CAD\Sanur\ITriajeCAD.cs" />
-	<Compile Include="CAD\Sanur\TriajeCAD.cs" />
+	<Compile Include="EN\Sanur\TriageEN.cs" />
+	<Compile Include="CEN\Sanur\TriageCEN.cs" />
+	<Compile Include="CAD\Sanur\ITriageCAD.cs" />
+	<Compile Include="CAD\Sanur\TriageCAD.cs" />
 	<Compile Include="EN\Sanur\DiagnosticoEN.cs" />
 	<Compile Include="CEN\Sanur\DiagnosticoCEN.cs" />
 	<Compile Include="CAD\Sanur\IDiagnosticoCAD.cs" />
@@ -153,7 +153,7 @@
 	<EmbeddedResource Include="Mappings\Sanur\medico.hbm.xml" />
 	<EmbeddedResource Include="Mappings\Sanur\paciente.hbm.xml" />
 	<EmbeddedResource Include="Mappings\Sanur\episodio.hbm.xml" />
-	<EmbeddedResource Include="Mappings\Sanur\triaje.hbm.xml" />
+	<EmbeddedResource Include="Mappings\Sanur\triage.hbm.xml" />
 	<EmbeddedResource Include="Mappings\Sanur\diagnostico.hbm.xml" />
 	<EmbeddedResource Include="Mappings\Sanur\prueba.hbm.xml" />
 	<EmbeddedResource Include="Mappings\Sanur\adjunto.hbm.xml" />

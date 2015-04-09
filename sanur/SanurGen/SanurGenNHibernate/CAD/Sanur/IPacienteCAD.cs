@@ -23,5 +23,11 @@ System.Collections.Generic.IList<PacienteEN> ReadAll (int first, int size);
 
 
 SanurGenNHibernate.EN.Sanur.PacienteEN BuscarDNI (int dni);
+
+
+SanurGenNHibernate.EN.Sanur.PacienteEN BuscarSIP (int sip);
+
+
+SanurGenNHibernate.EN.Sanur.PacienteEN BuscarNombreApellidos (string nombre, string apellidos);
 }
 }
