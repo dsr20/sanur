@@ -17,7 +17,7 @@ namespace SanurGenNHibernate
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HojaTriage());
+            Application.Run(new HojaTriage(1));
             /*
             PacienteCEN pcen = new PacienteCEN();
             PacienteEN paciente = pcen.BuscarDNI(48672144);
