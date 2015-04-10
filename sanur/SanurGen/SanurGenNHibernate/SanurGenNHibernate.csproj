@@ -46,7 +46,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>SanurGenNHibernate.Program</StartupObject>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.DynamicProxy2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
@@ -97,6 +97,7 @@
     <Content Include="AppLib\NHibernate.dll" />
     <Content Include="AppLib\nunit.core.dll" />
     <Content Include="AppLib\nunit.framework.dll" />
+    <Content Include="inicializar_datos_db.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfirmarTriage.cs">
@@ -111,6 +112,12 @@
     <Compile Include="HojaTriage.Designer.cs">
       <DependentUpon>HojaTriage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Utils\Util.cs" />
     <Compile Include="NHibernateHelper.cs" />
@@ -121,6 +128,7 @@
     <Compile Include="CEN\Sanur\UsuarioCEN.cs" />
     <Compile Include="CAD\Sanur\IUsuarioCAD.cs" />
     <Compile Include="CAD\Sanur\UsuarioCAD.cs" />
+    <Compile Include="CEN\Sanur\UsuarioCEN_ComprobarMail.cs" />
     <Compile Include="EN\Sanur\AdministradorEN.cs" />
     <Compile Include="CEN\Sanur\AdministradorCEN.cs" />
     <Compile Include="CAD\Sanur\IAdministradorCAD.cs" />
@@ -173,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HojaTriage.resx">
       <DependentUpon>HojaTriage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Mappings\Sanur\usuario.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\administrador.hbm.xml" />

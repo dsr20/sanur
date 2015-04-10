@@ -69,5 +69,10 @@ public int New_ (string p_nombre, String p_contrasena, bool p_iniciado, string p
         oid = _IUsuarioCAD.New_ (usuarioEN);
         return oid;
 }
+
+public SanurGenNHibernate.EN.Sanur.UsuarioEN ReadMail (string p_mail)
+{
+        return _IUsuarioCAD.ReadMail (p_mail);
+}
 }
 }
