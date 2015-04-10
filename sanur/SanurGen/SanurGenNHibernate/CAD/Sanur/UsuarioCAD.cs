@@ -133,5 +133,37 @@ public int New_ (UsuarioEN usuario)
 
         return usuario.IdUsuario;
 }
+
+public SanurGenNHibernate.EN.Sanur.UsuarioEN ReadMail (string p_mail)
+{
+        SanurGenNHibernate.EN.Sanur.UsuarioEN result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM UsuarioEN self where FROM UsuarioEN  as usu where usu.Email = :p_mail";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("UsuarioENreadMailHQL");
+                query.SetParameter ("p_mail", p_mail);
+
+
+                result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.UsuarioEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in UsuarioCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }
