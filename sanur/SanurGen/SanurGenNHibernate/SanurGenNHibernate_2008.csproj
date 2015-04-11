@@ -93,6 +93,7 @@
 	<Compile Include="CEN\Sanur\UsuarioCEN.cs" />
 	<Compile Include="CAD\Sanur\IUsuarioCAD.cs" />
 	<Compile Include="CAD\Sanur\UsuarioCAD.cs" />
+			<Compile Include="CEN\Sanur\UsuarioCEN_ComprobarMail.cs" />
 	<Compile Include="EN\Sanur\AdministradorEN.cs" />
 	<Compile Include="CEN\Sanur\AdministradorCEN.cs" />
 	<Compile Include="CAD\Sanur\IAdministradorCAD.cs" />
