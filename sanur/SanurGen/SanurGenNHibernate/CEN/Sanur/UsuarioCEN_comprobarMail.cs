@@ -25,14 +25,12 @@ public bool ComprobarMail (string p_mail, string p_pass)
         if (p_mail != null && p_pass != null) {
                 usuarioEN = _IUsuarioCAD.ReadMail (p_mail);
 
-                if (usuarioEN != null) 
-                {
-                    if (usuarioEN.Contrasena == p_pass)
-                        login = true;
+                if (usuarioEN != null) {
+                        if (usuarioEN.Contrasena == p_pass)
+                                login = true;
                 }
-                else
-                {
-                    login = false;
+                else{
+                        login = false;
                 }
         }
 

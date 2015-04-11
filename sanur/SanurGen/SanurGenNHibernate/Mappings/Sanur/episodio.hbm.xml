@@ -14,7 +14,7 @@
 						<column name="[observaciones]"  not-null="true"/>
 					</property>
 					<property name="FechaFin" type="timestamp"> 
-						<column name="[fechaFin]"  not-null="true"/>
+						<column name="[fechaFin]" />
 					</property>
 					<property name="Estado" > 
 						<column name="[estado]"  not-null="true"/>

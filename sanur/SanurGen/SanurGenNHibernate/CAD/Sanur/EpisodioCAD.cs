@@ -96,9 +96,6 @@ public void Modify (EpisodioEN episodio)
                 episodioEN.Observaciones = episodio.Observaciones;
 
 
-                episodioEN.FechaFin = episodio.FechaFin;
-
-
                 episodioEN.Estado = episodio.Estado;
 
 

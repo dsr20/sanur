@@ -125,6 +125,9 @@ public void Modify (PacienteEN paciente)
 
                 pacienteEN.Ips = paciente.Ips;
 
+
+                pacienteEN.Ciudad = paciente.Ciudad;
+
                 session.Update (pacienteEN);
                 SessionCommit ();
         }

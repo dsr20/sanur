@@ -24,11 +24,11 @@ namespace SanurGenNHibernate
 
             if (user.ComprobarMail(nombre.Text, password.Text)) // COMPROBAMOS QUE EL USUARIO COINCIDE CN EL PASS
             {
-
+                /*
                 HojaTriage htr = new HojaTriage(); // CREAMOS EL NUEVO FORM
                 this.Hide(); // OCULTAMOS EL LOGIN
                 htr.ShowDialog();// CREAMOS EL ID DE SESSION Y MOVEMOS A SIGUIENTE CAPA
-
+                */
             }
 
             nombre.Refresh(); // REFRESCAMOS LOS DATOS
