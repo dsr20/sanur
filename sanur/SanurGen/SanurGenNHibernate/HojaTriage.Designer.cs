@@ -94,14 +94,13 @@
             // 
             // destino
             // 
-            this.destino.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.destino.FormattingEnabled = true;
             this.destino.Items.AddRange(new object[] {
             "Ginecología",
-            "Interna",
+            "Traumatología",
             "Pediatría",
             "Psiquiatría",
-            "Traumatología"});
+            "Interna"});
             this.destino.Location = new System.Drawing.Point(126, 40);
             this.destino.Name = "destino";
             this.destino.Size = new System.Drawing.Size(121, 21);
@@ -109,7 +108,6 @@
             // 
             // prioridad
             // 
-            this.prioridad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.prioridad.FormattingEnabled = true;
             this.prioridad.Items.AddRange(new object[] {
             "Inmediata",
@@ -157,9 +155,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "HojaTriage";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hoja de triage";
             this.ResumeLayout(false);
             this.PerformLayout();

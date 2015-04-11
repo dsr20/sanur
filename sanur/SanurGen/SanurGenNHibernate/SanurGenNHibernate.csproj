@@ -99,6 +99,12 @@
     <Content Include="AppLib\nunit.framework.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfirmarTriage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmarTriage.Designer.cs">
+      <DependentUpon>ConfirmarTriage.cs</DependentUpon>
+    </Compile>
     <Compile Include="HojaTriage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ConfirmarTriage.resx">
+      <DependentUpon>ConfirmarTriage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HojaTriage.resx">
       <DependentUpon>HojaTriage.cs</DependentUpon>
     </EmbeddedResource>
