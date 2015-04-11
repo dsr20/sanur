@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="SanurGenNHibernate"
+		                   namespace="SanurGenNHibernate.EN.Sanur">
+			<class name="TriageEN" table="[Triage]">
+				  	
+						<id name="IdTriage" column="[idTriaje]" type="integer">
+							<generator class="identity"/>
+						</id>
+					<property name="Prioridad" > 
+						<column name="[prioridad]"  not-null="true"/>
+					</property>
+					<property name="MotivoAsist" type="string"> 
+						<column name="[motivoAsist]"  not-null="true"/>
+					</property>
+					<property name="Destino" > 
+						<column name="[destino]"  not-null="true"/>
+					</property>
+					<property name="Observaciones" type="string"> 
+						<column name="[observaciones]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+			
+					
+					
+						<many-to-one name="Medico" class="SanurGenNHibernate.EN.Sanur.MedicoEN" >
+									<column name="[FK_idUsuario_idMedico]"/>
+						</many-to-one>
+					
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="TriageENReadAllHQL">from TriageEN</query>
+		</hibernate-mapping>
+	
