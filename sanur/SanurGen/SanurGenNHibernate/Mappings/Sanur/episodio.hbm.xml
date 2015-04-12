@@ -7,13 +7,13 @@
 						<id name="IdEpisodio" column="[idEpisodio]" type="integer">
 							<generator class="identity"/>
 						</id>
-					<property name="FechaInicio" type="timestamp"> 
+					<property name="FechaInicio" type="datetime"> 
 						<column name="[fechaInicio]"  not-null="true"/>
 					</property>
 					<property name="Observaciones" type="string"> 
 						<column name="[observaciones]"  not-null="true"/>
 					</property>
-					<property name="FechaFin" type="timestamp"> 
+					<property name="FechaFin" type="datetime"> 
 						<column name="[fechaFin]"  not-null="true"/>
 					</property>
 					<property name="Estado" > 

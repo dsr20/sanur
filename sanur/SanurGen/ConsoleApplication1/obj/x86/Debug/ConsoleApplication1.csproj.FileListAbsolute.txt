@@ -1,0 +1,4 @@
+C:\workspace\sanur\SanurGen\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\workspace\sanur\SanurGen\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\workspace\sanur\SanurGen\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\workspace\sanur\SanurGen\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb

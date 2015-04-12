@@ -106,6 +106,12 @@
     <Compile Include="ConfirmarTriage.Designer.cs">
       <DependentUpon>ConfirmarTriage.cs</DependentUpon>
     </Compile>
+    <Compile Include="episodio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="episodio.Designer.cs">
+      <DependentUpon>episodio.cs</DependentUpon>
+    </Compile>
     <Compile Include="HojaTriage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
   <ItemGroup>
     <EmbeddedResource Include="ConfirmarTriage.resx">
       <DependentUpon>ConfirmarTriage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="episodio.resx">
+      <DependentUpon>episodio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HojaTriage.resx">
       <DependentUpon>HojaTriage.cs</DependentUpon>

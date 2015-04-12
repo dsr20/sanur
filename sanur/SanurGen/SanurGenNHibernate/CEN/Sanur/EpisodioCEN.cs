@@ -32,7 +32,7 @@ public IEpisodioCAD get_IEpisodioCAD ()
         return this._IEpisodioCAD;
 }
 
-public int New_ (int p_paciente, TimeSpan p_fechaInicio, string p_observaciones, int p_administrativo, TimeSpan p_fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum p_estado, bool p_emergencia, bool p_imporante)
+public int New_ (int p_paciente, DateTime p_fechaInicio, string p_observaciones, int p_administrativo, DateTime p_fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum p_estado, bool p_emergencia, bool p_imporante)
 {
         EpisodioEN episodioEN = null;
         int oid;
@@ -69,7 +69,7 @@ public int New_ (int p_paciente, TimeSpan p_fechaInicio, string p_observaciones,
         return oid;
 }
 
-public void Modify (int p_Episodio_OID, TimeSpan p_fechaInicio, string p_observaciones, TimeSpan p_fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum p_estado, bool p_emergencia, bool p_imporante)
+public void Modify (int p_Episodio_OID, DateTime p_fechaInicio, string p_observaciones, DateTime p_fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum p_estado, bool p_emergencia, bool p_imporante)
 {
         EpisodioEN episodioEN = null;
 
