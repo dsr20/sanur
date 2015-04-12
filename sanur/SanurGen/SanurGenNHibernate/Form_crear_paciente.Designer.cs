@@ -59,11 +59,13 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.selector_sexo = new System.Windows.Forms.ComboBox();
+            this.tciudad = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(127, 432);
+            this.button1.Location = new System.Drawing.Point(123, 476);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
@@ -73,7 +75,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(269, 432);
+            this.button2.Location = new System.Drawing.Point(264, 476);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -131,7 +133,7 @@
             // 
             // TSip
             // 
-            this.TSip.Location = new System.Drawing.Point(184, 214);
+            this.TSip.Location = new System.Drawing.Point(184, 249);
             this.TSip.Name = "TSip";
             this.TSip.Size = new System.Drawing.Size(283, 20);
             this.TSip.TabIndex = 8;
@@ -185,7 +187,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 214);
+            this.label7.Location = new System.Drawing.Point(17, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(24, 13);
             this.label7.TabIndex = 14;
@@ -194,7 +196,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 370);
+            this.label8.Location = new System.Drawing.Point(17, 413);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(21, 13);
             this.label8.TabIndex = 26;
@@ -203,7 +205,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(16, 344);
+            this.label9.Location = new System.Drawing.Point(18, 387);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(86, 13);
             this.label9.TabIndex = 25;
@@ -212,7 +214,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 318);
+            this.label10.Location = new System.Drawing.Point(16, 361);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 24;
@@ -221,7 +223,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(18, 292);
+            this.label11.Location = new System.Drawing.Point(17, 335);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(31, 13);
             this.label11.TabIndex = 23;
@@ -230,7 +232,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(20, 266);
+            this.label12.Location = new System.Drawing.Point(17, 309);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(29, 13);
             this.label12.TabIndex = 22;
@@ -239,7 +241,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(20, 243);
+            this.label13.Location = new System.Drawing.Point(18, 282);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(26, 13);
             this.label13.TabIndex = 21;
@@ -247,21 +249,21 @@
             // 
             // TCP
             // 
-            this.TCP.Location = new System.Drawing.Point(184, 370);
+            this.TCP.Location = new System.Drawing.Point(184, 406);
             this.TCP.Name = "TCP";
             this.TCP.Size = new System.Drawing.Size(283, 20);
             this.TCP.TabIndex = 20;
             // 
             // TGS
             // 
-            this.TGS.Location = new System.Drawing.Point(184, 344);
+            this.TGS.Location = new System.Drawing.Point(184, 380);
             this.TGS.Name = "TGS";
             this.TGS.Size = new System.Drawing.Size(283, 20);
             this.TGS.TabIndex = 19;
             // 
             // TMunicipio
             // 
-            this.TMunicipio.Location = new System.Drawing.Point(184, 318);
+            this.TMunicipio.Location = new System.Drawing.Point(184, 354);
             this.TMunicipio.Name = "TMunicipio";
             this.TMunicipio.Size = new System.Drawing.Size(283, 20);
             this.TMunicipio.TabIndex = 18;
@@ -269,14 +271,14 @@
             // 
             // TEmail
             // 
-            this.TEmail.Location = new System.Drawing.Point(184, 292);
+            this.TEmail.Location = new System.Drawing.Point(184, 328);
             this.TEmail.Name = "TEmail";
             this.TEmail.Size = new System.Drawing.Size(283, 20);
             this.TEmail.TabIndex = 17;
             // 
             // TDNI
             // 
-            this.TDNI.Location = new System.Drawing.Point(184, 240);
+            this.TDNI.Location = new System.Drawing.Point(184, 275);
             this.TDNI.Name = "TDNI";
             this.TDNI.Size = new System.Drawing.Size(283, 20);
             this.TDNI.TabIndex = 15;
@@ -284,7 +286,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(16, 396);
+            this.label14.Location = new System.Drawing.Point(17, 439);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(32, 13);
             this.label14.TabIndex = 28;
@@ -292,7 +294,7 @@
             // 
             // TIPS
             // 
-            this.TIPS.Location = new System.Drawing.Point(184, 396);
+            this.TIPS.Location = new System.Drawing.Point(184, 432);
             this.TIPS.Name = "TIPS";
             this.TIPS.Size = new System.Drawing.Size(283, 20);
             this.TIPS.TabIndex = 27;
@@ -319,16 +321,34 @@
             this.selector_sexo.Items.AddRange(new object[] {
             "Hombre",
             "Mujer"});
-            this.selector_sexo.Location = new System.Drawing.Point(184, 265);
+            this.selector_sexo.Location = new System.Drawing.Point(184, 301);
             this.selector_sexo.Name = "selector_sexo";
             this.selector_sexo.Size = new System.Drawing.Size(200, 21);
             this.selector_sexo.TabIndex = 31;
+            // 
+            // tciudad
+            // 
+            this.tciudad.Location = new System.Drawing.Point(184, 214);
+            this.tciudad.Name = "tciudad";
+            this.tciudad.Size = new System.Drawing.Size(283, 20);
+            this.tciudad.TabIndex = 32;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(18, 221);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(40, 13);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "Ciudad";
             // 
             // Form_crear_paciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 468);
+            this.ClientSize = new System.Drawing.Size(498, 511);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.tciudad);
             this.Controls.Add(this.selector_sexo);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dateTimePicker1);
@@ -400,5 +420,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox selector_sexo;
+        private System.Windows.Forms.TextBox tciudad;
+        private System.Windows.Forms.Label label16;
     }
 }

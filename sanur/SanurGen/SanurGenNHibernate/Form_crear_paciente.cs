@@ -45,12 +45,12 @@ namespace SanurGenNHibernate
                 MessageBox.Show("El código postal no puede estar vacío");
             else if (TIPS.Text.Length < 1)
                 MessageBox.Show("El campo IPS no puede ser vacío");
+            else if (tciudad.Text.Length < 1)
+                MessageBox.Show("El campo ciudad no puede ser vacío");
             else
             {
-
                 PacienteCEN pacienteCen = new PacienteCEN();
-                //Agregar campo ciudad
-                pacienteCen.New_(TNombre.Text, TApellido.Text, dateTimePicker1.Value, TTelefono.Text, TDireccion.Text, TNacionalidad.Text, Convert.ToInt32(TSip.Text), Convert.ToInt32(TDNI.Text), selector_sexo.Text, TEmail.Text, TMunicipio.Text, TGS.Text, TCP.Text, TIPS.Text, "Alicante");
+                pacienteCen.New_(TNombre.Text, TApellido.Text, dateTimePicker1.Value, TTelefono.Text, TDireccion.Text, TNacionalidad.Text, Convert.ToInt32(TSip.Text), Convert.ToInt32(TDNI.Text), selector_sexo.Text, TEmail.Text, TMunicipio.Text, TGS.Text, TCP.Text, TIPS.Text, tciudad.Text);
             }
 
 

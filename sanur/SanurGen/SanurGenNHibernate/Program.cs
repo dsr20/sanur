@@ -21,6 +21,7 @@ namespace SanurGenNHibernate
             //Login login = new Login();
             //login.ShowDialog();
             //PacienteCEN pcen = new PacienteCEN();
+
             //pcen.New_("Gacel", "Ivorra", new DateTime(1991, 1, 9), "600255555", "Doctor Jimenez", "España", 1232345, 48672144, "H", "g@g.com", "Alicante", "B+", "03005", "San Juan", "Alicante");
             //MedicoCEN mcen= new MedicoCEN();
             //mcen.New_("Sergio", "sergio", false, "s@s.com", "apellido1 apellido2", Enumerated.Sanur.EspecialidadEnum.ginecologia);

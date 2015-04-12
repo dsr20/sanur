@@ -125,6 +125,12 @@
     <Content Include="SanurGenNHibernate_2008.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form_busca_paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_busca_paciente.Designer.cs">
+      <DependentUpon>Form_busca_paciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_crear_paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +208,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Form_busca_paciente.resx">
+      <DependentUpon>Form_busca_paciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_crear_paciente.resx">
       <DependentUpon>Form_crear_paciente.cs</DependentUpon>
     </EmbeddedResource>

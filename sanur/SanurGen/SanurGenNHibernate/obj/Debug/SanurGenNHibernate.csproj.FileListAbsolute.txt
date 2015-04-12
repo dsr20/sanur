@@ -44,7 +44,6 @@ C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\Sanu
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Antlr3.Runtime.dll
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\log4net.dll
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\ResolveAssemblyReference.cache
-C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ConfirmarTriage.resources
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Form_crear_paciente.resources
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.HojaTriage.resources
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Login.resources
@@ -59,3 +58,6 @@ C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibern
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.core.dll
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.framework.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.core.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.framework.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Form_busca_paciente.resources
