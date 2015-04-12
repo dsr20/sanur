@@ -32,7 +32,7 @@ public IPacienteCAD get_IPacienteCAD ()
         return this._IPacienteCAD;
 }
 
-public int New_ (string p_nombre, string p_apellidos, Nullable<DateTime> p_fNac, string p_tlf, string p_direccion, string p_nacionalidad, int p_sip, int p_dni, string p_sexo, string p_email, string p_municipio, string p_grupoSang, string p_codigoPostal, string p_ips)
+public int New_ (string p_nombre, string p_apellidos, Nullable<DateTime> p_fNac, string p_tlf, string p_direccion, string p_nacionalidad, int p_sip, int p_dni, string p_sexo, string p_email, string p_municipio, string p_grupoSang, string p_codigoPostal, string p_ips, string p_ciudad)
 {
         PacienteEN pacienteEN = null;
         int oid;
@@ -67,13 +67,15 @@ public int New_ (string p_nombre, string p_apellidos, Nullable<DateTime> p_fNac,
 
         pacienteEN.Ips = p_ips;
 
+        pacienteEN.Ciudad = p_ciudad;
+
         //Call to PacienteCAD
 
         oid = _IPacienteCAD.New_ (pacienteEN);
         return oid;
 }
 
-public void Modify (int p_Paciente_OID, string p_nombre, string p_apellidos, Nullable<DateTime> p_fNac, string p_tlf, string p_direccion, string p_nacionalidad, int p_sip, int p_dni, string p_sexo, string p_email, string p_municipio, string p_grupoSang, string p_codigoPostal, string p_ips)
+public void Modify (int p_Paciente_OID, string p_nombre, string p_apellidos, Nullable<DateTime> p_fNac, string p_tlf, string p_direccion, string p_nacionalidad, int p_sip, int p_dni, string p_sexo, string p_email, string p_municipio, string p_grupoSang, string p_codigoPostal, string p_ips, string p_ciudad)
 {
         PacienteEN pacienteEN = null;
 
@@ -94,6 +96,7 @@ public void Modify (int p_Paciente_OID, string p_nombre, string p_apellidos, Nul
         pacienteEN.GrupoSang = p_grupoSang;
         pacienteEN.CodigoPostal = p_codigoPostal;
         pacienteEN.Ips = p_ips;
+        pacienteEN.Ciudad = p_ciudad;
         //Call to PacienteCAD
 
         _IPacienteCAD.Modify (pacienteEN);

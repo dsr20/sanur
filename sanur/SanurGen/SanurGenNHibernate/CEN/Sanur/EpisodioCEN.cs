@@ -32,7 +32,7 @@ public IEpisodioCAD get_IEpisodioCAD ()
         return this._IEpisodioCAD;
 }
 
-public int New_ (int p_paciente, TimeSpan p_fechaInicio, string p_observaciones, int p_administrativo, TimeSpan p_fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum p_estado, bool p_emergencia, bool p_imporante)
+public int New_ (int p_paciente, Nullable<DateTime> p_fechaInicio, string p_observaciones, int p_administrativo, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum p_estado, bool p_emergencia, bool p_imporante)
 {
         EpisodioEN episodioEN = null;
         int oid;
@@ -55,8 +55,6 @@ public int New_ (int p_paciente, TimeSpan p_fechaInicio, string p_observaciones,
                 episodioEN.Administrativo.IdUsuario = p_administrativo;
         }
 
-        episodioEN.FechaFin = p_fechaFin;
-
         episodioEN.Estado = p_estado;
 
         episodioEN.Emergencia = p_emergencia;
@@ -69,7 +67,7 @@ public int New_ (int p_paciente, TimeSpan p_fechaInicio, string p_observaciones,
         return oid;
 }
 
-public void Modify (int p_Episodio_OID, TimeSpan p_fechaInicio, string p_observaciones, TimeSpan p_fechaFin, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum p_estado, bool p_emergencia, bool p_imporante)
+public void Modify (int p_Episodio_OID, Nullable<DateTime> p_fechaInicio, string p_observaciones, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum p_estado, bool p_emergencia, bool p_imporante)
 {
         EpisodioEN episodioEN = null;
 
@@ -78,7 +76,6 @@ public void Modify (int p_Episodio_OID, TimeSpan p_fechaInicio, string p_observa
         episodioEN.IdEpisodio = p_Episodio_OID;
         episodioEN.FechaInicio = p_fechaInicio;
         episodioEN.Observaciones = p_observaciones;
-        episodioEN.FechaFin = p_fechaFin;
         episodioEN.Estado = p_estado;
         episodioEN.Emergencia = p_emergencia;
         episodioEN.Imporante = p_imporante;

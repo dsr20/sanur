@@ -49,6 +49,9 @@
 					<property name="Ips" type="string"> 
 						<column name="[ips]"  not-null="true"/>
 					</property>
+					<property name="Ciudad" type="string"> 
+						<column name="[ciudad]"  not-null="true"/>
+					</property>
 			
 			
 			
@@ -64,6 +67,8 @@
 			
 			
 			
+			
+					
 					
 					
 					
