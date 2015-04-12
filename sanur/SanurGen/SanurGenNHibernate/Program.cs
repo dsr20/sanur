@@ -18,6 +18,7 @@ namespace SanurGenNHibernate
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form_crear_paciente());
+            //Application.Run(new Form_busca_paciente());
             //Login login = new Login();
             //login.ShowDialog();
             //PacienteCEN pcen = new PacienteCEN();
