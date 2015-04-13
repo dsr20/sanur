@@ -134,5 +134,9 @@ public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarNombreApellidos (string nomb
 {
         return _IPacienteCAD.BuscarNombreApellidos (nombre, apellidos);
 }
+public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarDeEpisodio (int idEpisodio)
+{
+        return _IPacienteCAD.BuscarDeEpisodio (idEpisodio);
+}
 }
 }

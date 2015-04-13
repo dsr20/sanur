@@ -39,5 +39,6 @@
 		  </class>
 		  
 		  <query name="TriageENReadAllHQL">from TriageEN</query>
+		  <query name="TriageENbuscarUltimoHQL"><![CDATA[SELECT max(tri.IdTriage) FROM TriageEN as tri]]></query>
 		</hibernate-mapping>
 	

@@ -56,8 +56,7 @@ C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibern
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe
 C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
-C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.core.dll
-C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.framework.dll
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.core.dll
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.framework.dll
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Form_busca_paciente.resources
+C:\Users\Gacel\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Form_busca_paciente.resources

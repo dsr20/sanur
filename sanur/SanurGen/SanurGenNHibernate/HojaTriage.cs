@@ -9,6 +9,8 @@ using System.Windows.Forms;
 using SanurGenNHibernate.EN.Sanur;
 using SanurGenNHibernate.Enumerated.Sanur;
 using SanurGenNHibernate.CEN.Sanur;
+using SanurGenNHibernate.CAD.Sanur;
+//using SanurCP.SanurCP;
 
 namespace SanurGenNHibernate
 {
@@ -16,10 +18,12 @@ namespace SanurGenNHibernate
     {
         private int idMedico;
         private EpisodioEN episodio;
+      //  private PacienteEN paciente;
 
         // El médico que actúa de usuario actual se recibe por parametro
         public HojaTriage(int idMedico, EpisodioEN episodio)
         {
+           // EpisodioCP ecp = new EpisodioCP();
             this.idMedico = idMedico;
             this.episodio = episodio;
             InitializeComponent();
@@ -30,6 +34,8 @@ namespace SanurGenNHibernate
         {
             TriageEN triage = new TriageEN();
             TriageCEN triageCEN = new TriageCEN();
+            EpisodioCEN epCEN = new EpisodioCEN();
+            int idTriage;
 
             if (validaDatos() && confirmarTriage())
             {
@@ -39,6 +45,12 @@ namespace SanurGenNHibernate
                 triage.Observaciones = observaciones.Text.ToString();
 
                 triageCEN.New_(idMedico, triage.Prioridad, triage.MotivoAsist, triage.Destino, triage.Observaciones);
+                episodio.Estado = EstadoEnum.triaje;
+
+                epCEN.Modify(episodio.IdEpisodio, episodio.FechaInicio, episodio.Observaciones, episodio.Estado, episodio.Emergencia, episodio.Imporante);
+                idTriage = triageCEN.BuscarUltimo();
+                epCEN.AsignarTriage(episodio.IdEpisodio, idTriage);
+
                 Close();
             }
         }
@@ -110,20 +122,28 @@ namespace SanurGenNHibernate
 
         private void inicializarCampos()
         {
-            apellidos.Text = episodio.Paciente.Apellidos;
-            nombre.Text = episodio.Paciente.Nombre;
-            dni.Text = episodio.Paciente.Dni.ToString();
-            fnac.Text = episodio.Paciente.FNac.ToString();
-            sexo.Text = episodio.Paciente.Sexo;
-            nacionalidad.Text = episodio.Paciente.Nacionalidad;
-            ciudad.Text = episodio.Paciente.Ciudad;
-            municipio.Text = episodio.Paciente.Municipio;
-            tlf.Text = episodio.Paciente.Tlf;
-            direccion.Text = episodio.Paciente.Direccion;
-            grupoSang.Text = episodio.Paciente.GrupoSang;
-            codpos.Text = episodio.Paciente.CodigoPostal;
-            sip.Text = episodio.Paciente.Sip.ToString();
-            edad.Text = ((((DateTime)episodio.Paciente.FNac - DateTime.Now).Days) / 365).ToString();
+            PacienteCEN paCEN = new PacienteCEN();
+            PacienteEN paciente = paCEN.BuscarDeEpisodio(episodio.IdEpisodio);
+
+            apellidos.Text = paciente.Apellidos;
+            nombre.Text = paciente.Nombre;
+            dni.Text = paciente.Dni.ToString();
+            fnac.Text = paciente.FNac.ToString();
+            sexo.Text = paciente.Sexo;
+            nacionalidad.Text = paciente.Nacionalidad;
+            ciudad.Text = paciente.Ciudad;
+            municipio.Text = paciente.Municipio;
+            tlf.Text = paciente.Tlf;
+            direccion.Text = paciente.Direccion;
+            grupoSang.Text = paciente.GrupoSang;
+            codpos.Text = paciente.CodigoPostal;
+            sip.Text = paciente.Sip.ToString();
+            edad.Text = (((DateTime.Now - (DateTime)paciente.FNac).Days) / 365).ToString();
+
+            motivo_general.Text = episodio.Observaciones;
+            idEpisodio.Text = episodio.IdEpisodio.ToString();
+            fecha.Text = episodio.FechaInicio.ToString();
+
         }
     }
 }

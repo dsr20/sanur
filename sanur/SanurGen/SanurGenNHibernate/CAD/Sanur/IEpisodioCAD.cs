@@ -26,5 +26,8 @@ System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarP
 
 
 System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarParaMedico (SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum destino);
+
+
+void AsignarTriage (int p_Episodio_OID, int p_triage_OID);
 }
 }

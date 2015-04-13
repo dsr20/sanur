@@ -29,5 +29,8 @@ SanurGenNHibernate.EN.Sanur.PacienteEN BuscarSIP (int sip);
 
 
 SanurGenNHibernate.EN.Sanur.PacienteEN BuscarNombreApellidos (string nombre, string apellidos);
+
+
+SanurGenNHibernate.EN.Sanur.PacienteEN BuscarDeEpisodio (int idEpisodio);
 }
 }

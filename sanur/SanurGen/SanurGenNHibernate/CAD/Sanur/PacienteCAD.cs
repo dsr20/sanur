@@ -320,5 +320,36 @@ public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarNombreApellidos (string nomb
 
         return result;
 }
+public SanurGenNHibernate.EN.Sanur.PacienteEN BuscarDeEpisodio (int idEpisodio)
+{
+        SanurGenNHibernate.EN.Sanur.PacienteEN result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM PacienteEN self where SELECT pa FROM EpisodioEN as ep INNER JOIN ep.Paciente as pa where ep.IdEpisodio = :idEpisodio";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("PacienteENbuscarDeEpisodioHQL");
+                query.SetParameter ("idEpisodio", idEpisodio);
+
+
+                result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.PacienteEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in PacienteCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }

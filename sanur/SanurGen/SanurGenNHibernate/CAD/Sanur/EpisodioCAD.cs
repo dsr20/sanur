@@ -267,5 +267,33 @@ public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> 
 
         return result;
 }
+public void AsignarTriage (int p_Episodio_OID, int p_triage_OID)
+{
+        SanurGenNHibernate.EN.Sanur.EpisodioEN episodioEN = null;
+        try
+        {
+                SessionInitializeTransaction ();
+                episodioEN = (EpisodioEN)session.Load (typeof(EpisodioEN), p_Episodio_OID);
+                episodioEN.Triage = (SanurGenNHibernate.EN.Sanur.TriageEN)session.Load (typeof(SanurGenNHibernate.EN.Sanur.TriageEN), p_triage_OID);
+
+
+
+                session.Update (episodioEN);
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in EpisodioCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+}
 }
 }

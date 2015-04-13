@@ -111,5 +111,11 @@ public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> 
 {
         return _IEpisodioCAD.BuscarParaMedico (destino);
 }
+public void AsignarTriage (int p_Episodio_OID, int p_triage_OID)
+{
+        //Call to EpisodioCAD
+
+        _IEpisodioCAD.AsignarTriage (p_Episodio_OID, p_triage_OID);
+}
 }
 }

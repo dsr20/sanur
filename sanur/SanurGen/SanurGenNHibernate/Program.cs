@@ -28,13 +28,13 @@ namespace SanurGenNHibernate
             //mcen.New_("Sergio", "sergio", false, "s@s.com", "apellido1 apellido2", Enumerated.Sanur.EspecialidadEnum.ginecologia);
            //AdministrativoCEN acen = new AdministrativoCEN();
            //acen.New_("Andrea", "andrea", false, "a@a.com", "Rodriguez");
-            //EpisodioCEN epcen = new EpisodioCEN();
+            EpisodioCEN epcen = new EpisodioCEN();
             //epcen.New_(1, new DateTime(2000, 10, 20), "Dolor en el torax", 2, Enumerated.Sanur.EstadoEnum.espera, false, false);
           
-            //EpisodioEN ep = epcen.ReadOID(1);
+            EpisodioEN ep = epcen.ReadOID(1);
             //PacienteEN pa = ep.Paciente;
             //string s = pa.Apellidos;
-            //Application.Run(new HojaTriage(1, ep));
+            Application.Run(new HojaTriage(1, ep));
         }
     }
 }

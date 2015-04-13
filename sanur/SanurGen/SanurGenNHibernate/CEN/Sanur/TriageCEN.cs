@@ -90,5 +90,9 @@ public System.Collections.Generic.IList<TriageEN> ReadAll (int first, int size)
         list = _ITriageCAD.ReadAll (first, size);
         return list;
 }
+public int BuscarUltimo ()
+{
+        return _ITriageCAD.BuscarUltimo ();
+}
 }
 }

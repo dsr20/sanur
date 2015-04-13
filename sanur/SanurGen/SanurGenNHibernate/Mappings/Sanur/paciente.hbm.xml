@@ -91,5 +91,6 @@
 		  <query name="PacienteENbuscarDNIHQL"><![CDATA[from PacienteEN as pa where pa.Dni= :dni]]></query>
 		  <query name="PacienteENbuscarSIPHQL"><![CDATA[from PacienteEN where sip= :sip]]></query>
 		  <query name="PacienteENbuscarNombreApellidosHQL"><![CDATA[from PacienteEN where nombre= :dni AND apellidos= :apellidos]]></query>
+		  <query name="PacienteENbuscarDeEpisodioHQL"><![CDATA[SELECT pa FROM EpisodioEN as ep INNER JOIN ep.Paciente as pa where ep.IdEpisodio = :idEpisodio]]></query>
 		</hibernate-mapping>
 	
