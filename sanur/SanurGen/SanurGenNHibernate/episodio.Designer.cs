@@ -1,6 +1,6 @@
 ﻿namespace SanurGenNHibernate
 {
-    partial class episodio
+    partial class Episodio
     {
         /// <summary>
         /// Required designer variable.

@@ -71,5 +71,10 @@ namespace SanurGenNHibernate
         {
             Close();
         }
+
+        private void HojaTriage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

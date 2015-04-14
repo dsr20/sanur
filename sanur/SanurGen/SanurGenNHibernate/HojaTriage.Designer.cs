@@ -43,53 +43,59 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 113);
+            this.label1.Location = new System.Drawing.Point(53, 139);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 13);
+            this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Motivo asist.:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 219);
+            this.label2.Location = new System.Drawing.Point(53, 270);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.Size = new System.Drawing.Size(107, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Observaciones:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 43);
+            this.label4.Location = new System.Drawing.Point(53, 53);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.Size = new System.Drawing.Size(60, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Destino:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(280, 43);
+            this.label5.Location = new System.Drawing.Point(373, 53);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 13);
+            this.label5.Size = new System.Drawing.Size(69, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "Prioridad:";
             // 
             // motivo
             // 
-            this.motivo.Location = new System.Drawing.Point(126, 113);
+            this.motivo.Location = new System.Drawing.Point(168, 139);
+            this.motivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.motivo.Multiline = true;
             this.motivo.Name = "motivo";
-            this.motivo.Size = new System.Drawing.Size(337, 82);
+            this.motivo.Size = new System.Drawing.Size(448, 100);
             this.motivo.TabIndex = 5;
             // 
             // observaciones
             // 
-            this.observaciones.Location = new System.Drawing.Point(126, 219);
+            this.observaciones.Location = new System.Drawing.Point(168, 270);
+            this.observaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.observaciones.Multiline = true;
             this.observaciones.Name = "observaciones";
-            this.observaciones.Size = new System.Drawing.Size(337, 128);
+            this.observaciones.Size = new System.Drawing.Size(448, 157);
             this.observaciones.TabIndex = 6;
             // 
             // destino
@@ -101,9 +107,10 @@
             "Pediatría",
             "Psiquiatría",
             "Interna"});
-            this.destino.Location = new System.Drawing.Point(126, 40);
+            this.destino.Location = new System.Drawing.Point(168, 49);
+            this.destino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.destino.Name = "destino";
-            this.destino.Size = new System.Drawing.Size(121, 21);
+            this.destino.Size = new System.Drawing.Size(160, 24);
             this.destino.TabIndex = 7;
             // 
             // prioridad
@@ -115,16 +122,18 @@
             "Urgente",
             "Normal",
             "No urgente"});
-            this.prioridad.Location = new System.Drawing.Point(346, 40);
+            this.prioridad.Location = new System.Drawing.Point(461, 49);
+            this.prioridad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.prioridad.Name = "prioridad";
-            this.prioridad.Size = new System.Drawing.Size(121, 21);
+            this.prioridad.Size = new System.Drawing.Size(160, 24);
             this.prioridad.TabIndex = 8;
             // 
             // aceptar
             // 
-            this.aceptar.Location = new System.Drawing.Point(172, 378);
+            this.aceptar.Location = new System.Drawing.Point(229, 465);
+            this.aceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.aceptar.Name = "aceptar";
-            this.aceptar.Size = new System.Drawing.Size(75, 23);
+            this.aceptar.Size = new System.Drawing.Size(100, 28);
             this.aceptar.TabIndex = 9;
             this.aceptar.Text = "Aceptar";
             this.aceptar.UseVisualStyleBackColor = true;
@@ -132,9 +141,10 @@
             // 
             // cancelar
             // 
-            this.cancelar.Location = new System.Drawing.Point(274, 378);
+            this.cancelar.Location = new System.Drawing.Point(365, 465);
+            this.cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cancelar.Name = "cancelar";
-            this.cancelar.Size = new System.Drawing.Size(75, 23);
+            this.cancelar.Size = new System.Drawing.Size(100, 28);
             this.cancelar.TabIndex = 10;
             this.cancelar.Text = "Cancelar";
             this.cancelar.UseVisualStyleBackColor = true;
@@ -142,9 +152,9 @@
             // 
             // HojaTriage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 435);
+            this.ClientSize = new System.Drawing.Size(704, 535);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.aceptar);
             this.Controls.Add(this.prioridad);
@@ -155,8 +165,10 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HojaTriage";
             this.Text = "Hoja de triage";
+            this.Load += new System.EventHandler(this.HojaTriage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

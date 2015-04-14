@@ -16,8 +16,10 @@ namespace SanurGenNHibernate
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Login());
-            Login login = new Login();
-            login.ShowDialog();
+            Episodio episodio = new Episodio();
+            episodio.ShowDialog();
+            //Login login = new Login();
+            //login.ShowDialog();
         }
     }
 }
