@@ -35,3 +35,5 @@ C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.dll
 C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Iesi.Collections.dll
 C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Antlr3.Runtime.dll
 C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\log4net.dll
+C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.bCrearEpisodio.resources
+C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.crearEpisodio.resources

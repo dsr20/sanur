@@ -100,11 +100,20 @@
     <Content Include="inicializar_datos_db.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bCrearEpisodio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bCrearEpisodio.Designer.cs">
+      <DependentUpon>bCrearEpisodio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfirmarTriage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConfirmarTriage.Designer.cs">
       <DependentUpon>ConfirmarTriage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="crearEpisodio.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="HojaTriage.cs">
       <SubType>Form</SubType>
@@ -176,8 +185,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="bCrearEpisodio.resx">
+      <DependentUpon>bCrearEpisodio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmarTriage.resx">
       <DependentUpon>ConfirmarTriage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="crearEpisodio.resx">
+      <DependentUpon>crearEpisodio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HojaTriage.resx">
       <DependentUpon>HojaTriage.cs</DependentUpon>

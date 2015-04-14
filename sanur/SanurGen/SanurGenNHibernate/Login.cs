@@ -60,6 +60,8 @@ namespace SanurGenNHibernate
         private void login_Load(object sender, EventArgs e)
         {
 
+            DateTime myDate2 = DateTime.Now;
+
         }
 
         private bool EnviarEmail() 
