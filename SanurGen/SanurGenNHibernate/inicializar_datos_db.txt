@@ -1,0 +1,20 @@
+PacienteEN paciente = new PacienteEN();
+PacienteCEN pacienteCen = new PacienteCEN();
+
+            paciente.Nombre = "Pepe";
+            paciente.Apellidos = "Alfonso";
+            paciente.FNac = new DateTime(2000, 2, 5);
+            paciente.Tlf = 666666666;
+            paciente.Direccion = "Calle de Pepe";
+            paciente.Nacionalidad = "España";
+            paciente.Sip = 123123123;
+            paciente.Dni = 48672844;
+            paciente.Sexo = "varon";
+            paciente.Email = "Pepe@pepito.com";
+            paciente.Municipio = "Altea";
+            paciente.GrupoSang = "B-";
+            paciente.Ips = "San Juan";
+
+
+MedicoCEN medicoCEN = new MedicoCEN();
+medicoCEN.New_("Pablo", "pablo", true, "a@a.com", "Carmona", Enumerated.Sanur.EspecialidadEnum.ginecologia);

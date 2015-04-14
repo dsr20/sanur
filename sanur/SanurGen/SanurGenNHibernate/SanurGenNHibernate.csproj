@@ -103,18 +103,30 @@
     <Content Include="inicializar_datos_db.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bCrearEpisodio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bCrearEpisodio.Designer.cs">
+      <DependentUpon>bCrearEpisodio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConfirmarTriage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConfirmarTriage.Designer.cs">
       <DependentUpon>ConfirmarTriage.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Episodio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Episodio.Designer.cs">
       <DependentUpon>Episodio.cs</DependentUpon>
     </Compile>
+=======
+    <Compile Include="crearEpisodio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+>>>>>>> 2a496ecf71f0066f539ac53e10ed4046e45b069f
     <Compile Include="HojaTriage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,11 +197,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="bCrearEpisodio.resx">
+      <DependentUpon>bCrearEpisodio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ConfirmarTriage.resx">
       <DependentUpon>ConfirmarTriage.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Episodio.resx">
       <DependentUpon>Episodio.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="crearEpisodio.resx">
+      <DependentUpon>crearEpisodio.cs</DependentUpon>
+>>>>>>> 2a496ecf71f0066f539ac53e10ed4046e45b069f
     </EmbeddedResource>
     <EmbeddedResource Include="HojaTriage.resx">
       <DependentUpon>HojaTriage.cs</DependentUpon>

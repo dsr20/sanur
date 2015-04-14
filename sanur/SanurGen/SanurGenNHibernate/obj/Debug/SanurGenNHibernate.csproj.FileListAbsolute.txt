@@ -35,6 +35,7 @@ C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.dll
 C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Iesi.Collections.dll
 C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Antlr3.Runtime.dll
 C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\log4net.dll
+<<<<<<< HEAD
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.pdb
@@ -56,3 +57,7 @@ C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Logi
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.csproj.GenerateResource.Cache
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.episodio.resources
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\bin\Debug\itextsharp.dll
+=======
+C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.bCrearEpisodio.resources
+C:\workspace\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.crearEpisodio.resources
+>>>>>>> 2a496ecf71f0066f539ac53e10ed4046e45b069f
