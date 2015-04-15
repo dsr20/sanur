@@ -20,5 +20,8 @@ MedicoEN ReadOID (int idUsuario);
 
 
 System.Collections.Generic.IList<MedicoEN> ReadAll (int first, int size);
+
+
+int Count (int id);
 }
 }

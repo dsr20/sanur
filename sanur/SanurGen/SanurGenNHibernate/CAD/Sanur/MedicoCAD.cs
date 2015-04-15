@@ -198,5 +198,38 @@ public System.Collections.Generic.IList<MedicoEN> ReadAll (int first, int size)
 
         return result;
 }
+
+public int Count (int id)
+{
+        int result;
+
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM MedicoEN self where SELECT count(*) FROM MedicoEN as med where med.Id=:id ";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("MedicoENcountHQL");
+                query.SetParameter ("id", id);
+
+
+                result = query.UniqueResult<int>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in MedicoCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }

@@ -95,5 +95,9 @@ public System.Collections.Generic.IList<MedicoEN> ReadAll (int first, int size)
         list = _IMedicoCAD.ReadAll (first, size);
         return list;
 }
+public int Count (int id)
+{
+        return _IMedicoCAD.Count (id);
+}
 }
 }

@@ -34,7 +34,7 @@ namespace SanurGenNHibernate
             EpisodioEN ep = epcen.ReadOID(1);
             //PacienteEN pa = ep.Paciente;
             //string s = pa.Apellidos;
-            Application.Run(new HojaTriage(1, ep));
+            Application.Run(new ModificarUsuario());
         }
     }
 }
