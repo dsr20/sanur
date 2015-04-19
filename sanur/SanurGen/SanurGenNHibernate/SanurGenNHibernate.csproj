@@ -27,6 +27,8 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -52,6 +54,9 @@
     <Reference Include="Castle.DynamicProxy2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>AppLib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\pdf\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="LinFu.DynamicProxy, Version=1.0.3.14911, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -136,6 +141,12 @@
     </Compile>
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarUsuario.cs">
       <SubType>Form</SubType>
@@ -230,6 +241,9 @@
     <EmbeddedResource Include="Mappings\Sanur\diagnostico.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\prueba.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\adjunto.hbm.xml" />
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>

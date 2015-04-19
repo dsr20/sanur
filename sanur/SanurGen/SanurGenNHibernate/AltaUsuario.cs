@@ -86,5 +86,10 @@ namespace SanurGenNHibernate
                 label6.Visible = false;
             }
         }
+
+        private void altaUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

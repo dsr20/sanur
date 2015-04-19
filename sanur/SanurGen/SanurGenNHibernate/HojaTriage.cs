@@ -145,5 +145,10 @@ namespace SanurGenNHibernate
             fecha.Text = episodio.FechaInicio.ToString();
 
         }
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
