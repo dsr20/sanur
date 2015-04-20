@@ -16,6 +16,8 @@ namespace SanurGenNHibernate
         private int childFormNumber = 0;
 
         private UsuarioEN usuarioEN;
+        private EpisodioEN episodioEN;
+
         public Principal()
         {
             InitializeComponent();
@@ -147,6 +149,16 @@ namespace SanurGenNHibernate
         {
             Form_busca_paciente busPaciente = new Form_busca_paciente(usuarioEN);
             busPaciente.Show();
+            //this.episodioEN = busPaciente.GetEpisodio();
+        }
+
+        private void nuevoTriageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EpisodioCEN episodio = new EpisodioCEN();
+            EpisodioEN epis =new EpisodioEN();
+            epis = episodio.ReadOID(9);
+            HojaTriage hojaTri = new HojaTriage(usuarioEN.IdUsuario,epis);
+            hojaTri.Show();
         }
     }
 }

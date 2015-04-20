@@ -40,6 +40,8 @@
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.triageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoTriageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +67,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
-            this.pacientesToolStripMenuItem});
+            this.pacientesToolStripMenuItem,
+            this.triageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(843, 28);
@@ -127,6 +130,21 @@
             this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
             this.buscarPacienteToolStripMenuItem.Click += new System.EventHandler(this.buscarPacienteToolStripMenuItem_Click);
             // 
+            // triageToolStripMenuItem
+            // 
+            this.triageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nuevoTriageToolStripMenuItem});
+            this.triageToolStripMenuItem.Name = "triageToolStripMenuItem";
+            this.triageToolStripMenuItem.Size = new System.Drawing.Size(63, 24);
+            this.triageToolStripMenuItem.Text = "&Triage";
+            // 
+            // nuevoTriageToolStripMenuItem
+            // 
+            this.nuevoTriageToolStripMenuItem.Name = "nuevoTriageToolStripMenuItem";
+            this.nuevoTriageToolStripMenuItem.Size = new System.Drawing.Size(167, 24);
+            this.nuevoTriageToolStripMenuItem.Text = "Nuevo Triage";
+            this.nuevoTriageToolStripMenuItem.Click += new System.EventHandler(this.nuevoTriageToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -160,6 +178,8 @@
         private System.Windows.Forms.ToolStripMenuItem pacientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarPacienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem triageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nuevoTriageToolStripMenuItem;
     }
 }
 

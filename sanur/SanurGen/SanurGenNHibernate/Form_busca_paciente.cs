@@ -20,6 +20,7 @@ namespace SanurGenNHibernate
     {
         private PacienteEN pacienteEn;
         private UsuarioEN usuarioEN;
+        private EpisodioEN episodioEN;
 
         public Form_busca_paciente()
         {
@@ -92,28 +93,33 @@ namespace SanurGenNHibernate
         private void button2_Click(object sender, EventArgs e)
         {
             DateTime time = DateTime.Now;
-            EpisodioEN episodioEN = new EpisodioEN();
+            EpisodioEN episodioENT = new EpisodioEN();
             EpisodioCEN episodioCEN = new EpisodioCEN();
 
-          /*  episodioEN.Paciente = pacienteEn;
-            episodioEN.FechaInicio = time;
-            episodioEN.FechaFin = time;
+           /* episodioENT.Paciente = pacienteEn;
+            episodioENT.FechaInicio = time;
+            episodioENT.FechaFin = time;
 
-            episodioEN.Administrativo = new AdministrativoEN(usuarioEN.IdUsuario,usuarioEN.Nombre,usuarioEN.Contrasena,usuarioEN.Iniciado,usuarioEN.Email,usuarioEN.Apellidos);
-            episodioEN.Diagnostico = new DiagnosticoEN();
-            episodioEN.Emergencia = false;
-            episodioEN.Imporante = false;
-            episodioEN.Estado = Enumerated.Sanur.EstadoEnum.espera;
-            episodioEN.Triage = null;
-            episodioEN.Observaciones = "";*/
+            AdministrativoCEN admin = null;
+
+            episodioENT.Administrativo = admin.ReadOID(usuarioEN.IdUsuario);
+            episodioENT.Diagnostico = new DiagnosticoEN();
+            episodioENT.Emergencia = false;
+            episodioENT.Imporante = false;
+            episodioENT.Estado = Enumerated.Sanur.EstadoEnum.espera;
+            episodioENT.Triage = null;
+            episodioENT.Observaciones = "";*/
 
             
             episodioCEN.New_(pacienteEn.IdPaciente, time, "",usuarioEN.IdUsuario, Enumerated.Sanur.EstadoEnum.espera, false, false);
-           // episodioCEN.New_(1, new DateTime(2000, 10, 20), "Dolor en el torax", 2, Enumerated.Sanur.EstadoEnum.espera, false, false);
+            //this.episodioEN = episodioENT;
+            // episodioCEN.New_(1, new DateTime(2000, 10, 20), "Dolor en el torax", 2, Enumerated.Sanur.EstadoEnum.espera, false, false);
             this.Close();
-            MessageBox.Show("Episodio creado existosamente");
+            MessageBox.Show("Episodio creado exitosamente");
            // creaPDF(episodioEN);
         }
+
+        public EpisodioEN GetEpisodio() { return this.episodioEN; } 
 
         private void creaPDF(EpisodioEN episodioEN)
         {
