@@ -13,14 +13,31 @@ namespace SanurGenNHibernate
 {
     public partial class Principal : Form
     {
+        public UsuarioEN UsuarioIniciado;
+        public bool Sesion_ini = false;
+
+        SanurGenNHibernate.Login login;
+
+
+
+
         private int childFormNumber = 0;
 
         private UsuarioEN usuarioEN;
-        private EpisodioEN episodioEN;
 
         public Principal()
         {
             InitializeComponent();
+        }
+
+        public void VisibleMenu()
+        {
+            if (Sesion_ini == true)
+            {
+                usuariosToolStripMenuItem.Visible = true;
+                pacientesToolStripMenuItem.Visible = true;
+                triageToolStripMenuItem.Visible = true;
+            }
         }
 
         public Principal(String p_mail)
@@ -113,7 +130,11 @@ namespace SanurGenNHibernate
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            //creo y muestro el formulario de usuarios
+            login = new SanurGenNHibernate.Login();//creo la ventana
+            login.VentanaPrincipal = this;//para que tenga acceso login a los datos de ventanaprincipal
+            login.MdiParent = this;
+            login.Show();
         }
 
         private void crearUsuariosToolStripMenuItem_Click(object sender, EventArgs e)

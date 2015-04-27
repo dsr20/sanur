@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using SanurGenNHibernate.CEN.Sanur;
+using SanurGenNHibernate.EN.Sanur;
 using System.Net.Mail;
 using System.Security.Cryptography;
 
@@ -14,6 +15,9 @@ namespace SanurGenNHibernate
 {
     public partial class Login : Form
     {
+        public SanurGenNHibernate.Principal VentanaPrincipal;
+
+
         public Login()
         {
             InitializeComponent();
@@ -22,19 +26,30 @@ namespace SanurGenNHibernate
         private void button1_Click(object sender, EventArgs e)
         {
             UsuarioCEN user = new UsuarioCEN();
+            UsuarioEN u = new UsuarioEN();       
 
 
             MD5 md = MD5.Create() ;
 
             
             string hashs = GetMd5Hash(md,password.Text);
-            MessageBox.Show(hashs);
+            //MessageBox.Show(hashs);
 
             if (user.ComprobarMail(nombre.Text, hashs)) // COMPROBAMOS QUE EL USUARIO COINCIDE CN EL PASS
             {
-                Principal htr = new Principal(nombre.Text);
-                this.Hide(); // OCULTAMOS EL LOGIN
-                htr.ShowDialog();// CREAMOS EL ID DE SESSION Y MOVEMOS A SIGUIENTE CAPA
+                u = user.ReadMail(nombre.Text);
+                MessageBox.Show("Usuario iniciado con exito", "Logueo usuario", MessageBoxButtons.OK);
+                
+                VentanaPrincipal.UsuarioIniciado = u;
+                VentanaPrincipal.Sesion_ini = true;
+
+                VentanaPrincipal.VisibleMenu();
+
+                Close();
+
+                //Principal htr = new Principal(nombre.Text);
+                //this.Hide(); // OCULTAMOS EL LOGIN
+                //htr.ShowDialog();// CREAMOS EL ID DE SESSION Y MOVEMOS A SIGUIENTE CAPA
             }
 
             nombre.Refresh(); // REFRESCAMOS LOS DATOS
