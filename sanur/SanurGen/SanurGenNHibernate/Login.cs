@@ -39,6 +39,7 @@ namespace SanurGenNHibernate
                 u = user.ReadMail(nombre.Text);
                    
                 VentanaPrincipal.UsuarioIniciado = u;
+                VentanaPrincipal.TipoUsuario=VentanaPrincipal.CompruebaUsuario(u.IdUsuario);
                 VentanaPrincipal.Sesion_ini = true;
 
                 VentanaPrincipal.VisibleMenu();
@@ -46,10 +47,6 @@ namespace SanurGenNHibernate
                 MessageBox.Show("Usuario iniciado con exito", "Logueo usuario", MessageBoxButtons.OK);
 
                 Close();
-
-                //Principal htr = new Principal(nombre.Text);
-                //this.Hide(); // OCULTAMOS EL LOGIN
-                //htr.ShowDialog();// CREAMOS EL ID DE SESSION Y MOVEMOS A SIGUIENTE CAPA
             }
 
             nombre.Refresh(); // REFRESCAMOS LOS DATOS

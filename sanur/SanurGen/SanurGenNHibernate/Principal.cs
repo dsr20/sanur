@@ -45,9 +45,21 @@ namespace SanurGenNHibernate
         {
             if (Sesion_ini == true)
             {
-                usuariosToolStripMenuItem.Visible = true;
-                pacientesToolStripMenuItem.Visible = true;
-                triageToolStripMenuItem.Visible = true;
+                if (TipoUsuario == "Medico")
+                {
+                    pacientesToolStripMenuItem.Visible = true;
+                    triageToolStripMenuItem.Visible = true;
+                }
+                else if (TipoUsuario == "Administrador")
+                {
+                    triageToolStripMenuItem.Visible = true;
+                }
+                else if (TipoUsuario == "Administrativo")
+                {
+                    usuariosToolStripMenuItem.Visible = true;
+                    pacientesToolStripMenuItem.Visible = true;
+                    triageToolStripMenuItem.Visible = true;
+                }
             }
 
             TipoUsuario = CompruebaUsuario(UsuarioIniciado.IdUsuario);
