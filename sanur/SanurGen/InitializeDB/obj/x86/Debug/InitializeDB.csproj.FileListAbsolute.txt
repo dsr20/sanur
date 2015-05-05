@@ -115,3 +115,23 @@ C:\Users\sergio\Desktop\dss bueno\sanur\sanur\SanurGen\InitializeDB\bin\Debug\Sa
 C:\Users\sergio\Desktop\dss bueno\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
 C:\Users\sergio\Desktop\dss bueno\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
 C:\Users\sergio\Desktop\dss bueno\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\hibernate.cfg.xml
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\InitializeDB.exe.config
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\InitializeDB.exe
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\InitializeDB.pdb
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\Antlr3.Runtime.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\Castle.DynamicProxy2.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\Iesi.Collections.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\LinFu.DynamicProxy.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\log4net.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\NHibernate.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\nunit.core.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\nunit.framework.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\SanurGenNHibernate.exe
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\itextsharp.dll
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\bin\Debug\SanurGenNHibernate.pdb
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
+C:\Users\sergio\Desktop\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb

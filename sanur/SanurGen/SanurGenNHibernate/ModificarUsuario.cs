@@ -14,6 +14,8 @@ namespace SanurGenNHibernate
 {
     public partial class ModificarUsuario : Form
     {
+        public SanurGenNHibernate.Principal VentanaPrincipal;
+
         public ModificarUsuario()
         {
             InitializeComponent();
@@ -24,22 +26,44 @@ namespace SanurGenNHibernate
             UsuarioEN usuarioEN = new UsuarioEN();
             UsuarioCEN usuarioCEN = new UsuarioCEN();
             MedicoCEN medicoCEN = new MedicoCEN();
-            //MedicoEN medicoEN = new MedicoEN();
+            MedicoEN medicoEN = new MedicoEN();
+            String tipoUsu = "";
 
             try
             {
-                usuarioEN = usuarioCEN.ReadMail(emailantiguo.Text.ToString());
+                usuarioEN = usuarioCEN.ReadMail(emailantiguo.Text);
+
                 nombre.Text = usuarioEN.Nombre.ToString();
                 apellidos.Text = usuarioEN.Apellidos.ToString();
                 emailnuevo.Text = usuarioEN.Email.ToString();
                 contrasena.Text = usuarioEN.Contrasena.ToString();
-
-                
             }
             catch (Exception except)
             {
                 MessageBox.Show("El usuario no existe", "Modificar usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }           
+            }
+
+            try
+            {
+                tipoUsu = VentanaPrincipal.CompruebaUsuario(usuarioEN.IdUsuario);
+
+                if (tipoUsu == "Medico")
+                {
+                    medicoEN = medicoCEN.ReadOID(usuarioEN.IdUsuario);
+                    label5.Visible = true;
+                    especialidad.Visible = true;
+                    especialidad.SelectedIndex = ((int)medicoEN.Especialidad - 1);
+                }
+                else
+                {
+                    label5.Visible = false;
+                    especialidad.Visible = false;
+                }
+            }
+            catch (Exception excepti)
+            {
+                MessageBox.Show("error en compruebaUsuario");
+            }       
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -72,7 +96,7 @@ namespace SanurGenNHibernate
                     try
                     {
                         medicoEN = medicoCEN.ReadOID(usuarioEN.IdUsuario);
-                        medicoCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), contrasena.Text.ToString(), usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString(), medicoEN.Especialidad);
+                        medicoCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), contrasena.Text.ToString(), usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString(), (EspecialidadEnum)(especialidad.SelectedIndex + 1));
                         MessageBox.Show("El usuario ha sido modificado correctamente", "Modificar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception exce)
@@ -81,6 +105,11 @@ namespace SanurGenNHibernate
                     }
                 }
             }
+        }
+
+        private void contrasena_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

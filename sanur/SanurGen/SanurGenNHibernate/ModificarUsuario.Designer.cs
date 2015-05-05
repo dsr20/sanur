@@ -135,6 +135,7 @@
             this.contrasena.Name = "contrasena";
             this.contrasena.Size = new System.Drawing.Size(155, 20);
             this.contrasena.TabIndex = 10;
+            this.contrasena.TextChanged += new System.EventHandler(this.contrasena_TextChanged);
             // 
             // especialidad
             // 

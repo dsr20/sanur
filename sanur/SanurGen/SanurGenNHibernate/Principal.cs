@@ -13,11 +13,22 @@ namespace SanurGenNHibernate
 {
     public partial class Principal : Form
     {
+        MedicoCEN MedicoCen = new MedicoCEN();
+        AdministrativoCEN AdministrativoCen = new AdministrativoCEN();
+        AdministrativoEN AdministrativoEn = new AdministrativoEN();
+        MedicoEN MedicoEn = new MedicoEN();
+
+        //----- DECLARACION DE DATOS PUBLICOS --------
         public UsuarioEN UsuarioIniciado;
+        
         public bool Sesion_ini = false;
+        public String TipoUsuario = "";
 
+        //------- DECLARACIÓN DE VENTANAS --------
         SanurGenNHibernate.Login login;
-
+        SanurGenNHibernate.altaUsuario altausuario;
+        SanurGenNHibernate.BajaUsuario bajausuario;
+        SanurGenNHibernate.ModificarUsuario modusuario;
 
 
 
@@ -37,6 +48,33 @@ namespace SanurGenNHibernate
                 usuariosToolStripMenuItem.Visible = true;
                 pacientesToolStripMenuItem.Visible = true;
                 triageToolStripMenuItem.Visible = true;
+            }
+
+            TipoUsuario = CompruebaUsuario(UsuarioIniciado.IdUsuario);
+        }
+
+        public String CompruebaUsuario(int user)
+        {
+            int id = 0;
+
+            try
+            {
+                AdministrativoEn = AdministrativoCen.ReadOID(user);
+                id = AdministrativoEn.IdUsuario;
+                return "Administrativo";
+            }
+            catch (Exception p)
+            {
+                try
+                {
+                    MedicoEn = MedicoCen.ReadOID(user);
+                    id = MedicoEn.IdUsuario;
+                    return "Medico";
+                }
+                catch (Exception q)
+                {
+                    return "Administrador";
+                }
             }
         }
 
@@ -139,20 +177,29 @@ namespace SanurGenNHibernate
 
         private void crearUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            altaUsuario nuevoUsuario = new altaUsuario();
-            nuevoUsuario.Show();
+            //creo y muestro el formulario de usuarios
+            altausuario = new SanurGenNHibernate.altaUsuario();//creo la ventana
+            altausuario.VentanaPrincipal = this;//para que tenga acceso login a los datos de ventanaprincipal
+            altausuario.MdiParent = this;
+            altausuario.Show();
         }
 
         private void modificarUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ModificarUsuario modUsuario = new ModificarUsuario();
-            modUsuario.Show();
+            //creo y muestro el formulario de usuarios
+            modusuario = new SanurGenNHibernate.ModificarUsuario();//creo la ventana
+            modusuario.VentanaPrincipal = this;//para que tenga acceso login a los datos de ventanaprincipal
+            modusuario.MdiParent = this;
+            modusuario.Show();
         }
 
         private void borrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BajaUsuario bajaUsu = new BajaUsuario();
-            bajaUsu.Show();
+            //creo y muestro el formulario de usuarios
+            bajausuario = new SanurGenNHibernate.BajaUsuario();//creo la ventana
+            bajausuario.VentanaPrincipal = this;//para que tenga acceso login a los datos de ventanaprincipal
+            bajausuario.MdiParent = this;
+            bajausuario.Show();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)

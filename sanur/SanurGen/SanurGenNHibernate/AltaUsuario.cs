@@ -14,6 +14,8 @@ namespace SanurGenNHibernate
 {
     public partial class altaUsuario : Form
     {
+        public SanurGenNHibernate.Principal VentanaPrincipal;
+
         public altaUsuario()
         {
             InitializeComponent();

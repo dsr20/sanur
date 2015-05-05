@@ -26,24 +26,24 @@ namespace SanurGenNHibernate
         private void button1_Click(object sender, EventArgs e)
         {
             UsuarioCEN user = new UsuarioCEN();
-            UsuarioEN u = new UsuarioEN();       
-
+            UsuarioEN u = new UsuarioEN();
 
             MD5 md = MD5.Create() ;
 
             
             string hashs = GetMd5Hash(md,password.Text);
-            //MessageBox.Show(hashs);
+            MessageBox.Show(hashs);
 
             if (user.ComprobarMail(nombre.Text, hashs)) // COMPROBAMOS QUE EL USUARIO COINCIDE CN EL PASS
             {
                 u = user.ReadMail(nombre.Text);
-                MessageBox.Show("Usuario iniciado con exito", "Logueo usuario", MessageBoxButtons.OK);
-                
+                   
                 VentanaPrincipal.UsuarioIniciado = u;
                 VentanaPrincipal.Sesion_ini = true;
 
                 VentanaPrincipal.VisibleMenu();
+
+                MessageBox.Show("Usuario iniciado con exito", "Logueo usuario", MessageBoxButtons.OK);
 
                 Close();
 
@@ -55,6 +55,7 @@ namespace SanurGenNHibernate
             nombre.Refresh(); // REFRESCAMOS LOS DATOS
             password.Refresh(); // REFRESCAMOS LOS DATOS
             labelError.Show(); // MOSTRAMOS MENSAJE DE ERROR
+                      
 
         }
         static string GetMd5Hash(MD5 md5Hash, string input)
