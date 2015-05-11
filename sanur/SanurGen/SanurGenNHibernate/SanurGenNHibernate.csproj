@@ -103,14 +103,6 @@
     <Content Include="AppLib\nunit.core.dll" />
     <Content Include="AppLib\nunit.framework.dll" />
     <Content Include="inicializar_datos_db.txt" />
-    <None Include="Resources\barra.jpg" />
-    <None Include="Resources\barra.png" />
-    <None Include="Resources\barra1.png" />
-    <None Include="Resources\barrainferior.png" />
-    <None Include="Resources\barrainferior1.png" />
-    <None Include="Resources\barrainferior2.png" />
-    <None Include="Resources\barrainferior3.png" />
-    <None Include="Resources\barrainf.png" />
     <Content Include="SanurGenNHibernate_2008.csproj" />
   </ItemGroup>
   <ItemGroup>
@@ -163,11 +155,6 @@
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="SanurGenNHibernateDataSet.Designer.cs" />
     <Compile Include="Utils\Util.cs" />
     <Compile Include="NHibernateHelper.cs" />
@@ -259,10 +246,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
