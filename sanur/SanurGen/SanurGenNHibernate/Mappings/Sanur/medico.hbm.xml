@@ -17,6 +17,6 @@
 		  </joined-subclass>	
 		  
 		  <query name="MedicoENReadAllHQL">from MedicoEN</query>
-		  <query name="MedicoENcountHQL"><![CDATA[SELECT Count(med) FROM MedicoEN as med where med.IdUsuario = :id ]]></query>
+		  <query name="MedicoENcountHQL"><![CDATA[SELECT count(*) FROM MedicoEN as med where med.Id=:id ]]></query>
 		</hibernate-mapping>
 	

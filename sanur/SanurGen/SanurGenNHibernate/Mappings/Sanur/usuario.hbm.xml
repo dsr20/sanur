@@ -39,5 +39,7 @@
 		  
 		  <query name="UsuarioENReadAllHQL">from UsuarioEN</query>
 		  <query name="UsuarioENreadMailHQL"><![CDATA[FROM UsuarioEN  as usu where usu.Email = :p_mail]]></query>
+		  <query name="UsuarioENusuarioPorMailHQL"><![CDATA[FROM UsuarioEN  as usu where usu.Email = :p_mail]]></query>
+		  <query name="UsuarioENusuarioPorNombreHQL"><![CDATA[FROM UsuarioEN  as usu where usu.Nombre = :p_nombre]]></query>
 		</hibernate-mapping>
 	
