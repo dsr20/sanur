@@ -12,7 +12,6 @@ public AdministrativoEN() : base ()
 }
 
 
-
 public AdministrativoEN(int idUsuario, string nombre, String contrasena, bool iniciado, string email, string apellidos)
 {
         this.init (idUsuario, nombre, contrasena, iniciado, email, apellidos);
