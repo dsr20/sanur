@@ -203,5 +203,36 @@ public int BuscarUltimo ()
 
         return result;
 }
+public SanurGenNHibernate.EN.Sanur.TriageEN BuscarDeEpisodio (int idEpisodio)
+{
+        SanurGenNHibernate.EN.Sanur.TriageEN result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM TriageEN self where SELECT tri FROM EpisodioEN as ep INNER JOIN ep.Triage as tri where ep.IdEpisodio = :idEpisodio";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("TriageENbuscarDeEpisodioHQL");
+                query.SetParameter ("idEpisodio", idEpisodio);
+
+
+                result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.TriageEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in TriageCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
 }
 }

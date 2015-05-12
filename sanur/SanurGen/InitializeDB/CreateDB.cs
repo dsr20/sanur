@@ -77,8 +77,31 @@ public static void InitializeData ()
         /*PROTECTED REGION ID(initializeDataMethod) ENABLED START*/
         try
         {
-                /*List<SanurGenNHibernate.EN.Mediaplayer.MusicTrackEN> musicTracks = new List<SanurGenNHibernate.EN.Mediaplayer.MusicTrackEN>();
+                MedicoCEN medico = new MedicoCEN ();
+                medico.New_ ("pepe", "gacel", false, "gacel", "ivorra", SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum.traumatologia);
+
+                MedicoCEN medicoCEN = new MedicoCEN();
+                medicoCEN.New_("Pablo", "pablo", true, "a@a.com", "Carmona", SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum.ginecologia);
+
+                PacienteCEN pcen = new PacienteCEN();
+                pcen.New_("Gacel", "Ivorra", new DateTime(1991, 1, 9), "600255555", "Doctor Jimenez", "España", 1232345, 48672144, "H", "g@g.com", "Alicante", "B+", "03005", "San Juan", "Alicante");
+
+                MedicoCEN mcen = new MedicoCEN();
+                mcen.New_("Sergio", "sergio", false, "s@s.com", "apellido1 apellido2", SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum.ginecologia);
+            
+                AdministrativoCEN acen = new AdministrativoCEN();
+                acen.New_("Andrea", "administrativo", false, "administrativo", "Rodriguez");
+
+                EpisodioCEN epcen = new EpisodioCEN();
+                epcen.New_(1, new DateTime(2000, 10, 20), "Dolor en el torax", 4, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum.triaje, false, false);
+
+                TriageCEN triaje = new TriageCEN();
+                triaje.New_(1, SanurGenNHibernate.Enumerated.Sanur.PrioridadEnum.normal, "Dolor de cabeza", SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum.traumatologia, "Esta muy nervioso");
+
+                epcen.AsignarTriage(1, 1);
+            /*List<SanurGenNHibernate.EN.Mediaplayer.MusicTrackEN> musicTracks = new List<SanurGenNHibernate.EN.Mediaplayer.MusicTrackEN>();
                  * SanurGenNHibernate.EN.Mediaplayer.UserEN userEN = new SanurGenNHibernate.EN.Mediaplayer.UserEN();
+                 * 
                  * SanurGenNHibernate.EN.Mediaplayer.ArtistEN artistEN = new SanurGenNHibernate.EN.Mediaplayer.ArtistEN();
                  * SanurGenNHibernate.EN.Mediaplayer.MusicTrackEN musicTrackEN = new SanurGenNHibernate.EN.Mediaplayer.MusicTrackEN();
                  * SanurGenNHibernate.CEN.Mediaplayer.ArtistCEN artistCEN = new SanurGenNHibernate.CEN.Mediaplayer.ArtistCEN();

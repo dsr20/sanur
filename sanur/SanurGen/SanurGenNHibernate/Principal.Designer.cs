@@ -66,7 +66,6 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.menuStrip1.BackgroundImage = global::SanurGenNHibernate.Properties.Resources.barra2;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
             this.pacientesToolStripMenuItem,
@@ -93,7 +92,6 @@
             // 
             // crearUsuariosToolStripMenuItem
             // 
-            this.crearUsuariosToolStripMenuItem.BackgroundImage = global::SanurGenNHibernate.Properties.Resources.barrainf;
             this.crearUsuariosToolStripMenuItem.Name = "crearUsuariosToolStripMenuItem";
             this.crearUsuariosToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.crearUsuariosToolStripMenuItem.Text = "Crear Usuarios";
@@ -101,7 +99,6 @@
             // 
             // modificarUsuariosToolStripMenuItem
             // 
-            this.modificarUsuariosToolStripMenuItem.BackgroundImage = global::SanurGenNHibernate.Properties.Resources.barrainf;
             this.modificarUsuariosToolStripMenuItem.Name = "modificarUsuariosToolStripMenuItem";
             this.modificarUsuariosToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.modificarUsuariosToolStripMenuItem.Text = "Modificar Usuario";
@@ -109,7 +106,6 @@
             // 
             // borrarUsuarioToolStripMenuItem
             // 
-            this.borrarUsuarioToolStripMenuItem.BackgroundImage = global::SanurGenNHibernate.Properties.Resources.barrainf;
             this.borrarUsuarioToolStripMenuItem.Name = "borrarUsuarioToolStripMenuItem";
             this.borrarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.borrarUsuarioToolStripMenuItem.Text = "Borrar Usuario";
@@ -127,7 +123,6 @@
             // 
             // nuevoPacienteToolStripMenuItem
             // 
-            this.nuevoPacienteToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("nuevoPacienteToolStripMenuItem.BackgroundImage")));
             this.nuevoPacienteToolStripMenuItem.Name = "nuevoPacienteToolStripMenuItem";
             this.nuevoPacienteToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.nuevoPacienteToolStripMenuItem.Text = "Nuevo Paciente";
@@ -135,7 +130,6 @@
             // 
             // buscarPacienteToolStripMenuItem
             // 
-            this.buscarPacienteToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("buscarPacienteToolStripMenuItem.BackgroundImage")));
             this.buscarPacienteToolStripMenuItem.Name = "buscarPacienteToolStripMenuItem";
             this.buscarPacienteToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.buscarPacienteToolStripMenuItem.Text = "Buscar Paciente";
@@ -152,7 +146,6 @@
             // 
             // nuevoTriageToolStripMenuItem
             // 
-            this.nuevoTriageToolStripMenuItem.BackgroundImage = global::SanurGenNHibernate.Properties.Resources.barrainf;
             this.nuevoTriageToolStripMenuItem.Name = "nuevoTriageToolStripMenuItem";
             this.nuevoTriageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nuevoTriageToolStripMenuItem.Text = "Nuevo Triage";

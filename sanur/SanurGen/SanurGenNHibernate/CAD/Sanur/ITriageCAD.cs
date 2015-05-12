@@ -20,5 +20,8 @@ System.Collections.Generic.IList<TriageEN> ReadAll (int first, int size);
 
 
 int BuscarUltimo ();
+
+
+SanurGenNHibernate.EN.Sanur.TriageEN BuscarDeEpisodio (int idEpisodio);
 }
 }

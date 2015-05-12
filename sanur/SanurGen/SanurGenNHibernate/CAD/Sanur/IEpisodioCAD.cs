@@ -29,5 +29,7 @@ System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> BuscarP
 
 
 void AsignarTriage (int p_Episodio_OID, int p_triage_OID);
+
+void AsignarDiagnostico (int p_Episodio_OID, string p_diagnostico_OID);
 }
 }

@@ -40,5 +40,6 @@
 		  
 		  <query name="TriageENReadAllHQL">from TriageEN</query>
 		  <query name="TriageENbuscarUltimoHQL"><![CDATA[SELECT max(tri.IdTriage) FROM TriageEN as tri]]></query>
+		  <query name="TriageENbuscarDeEpisodioHQL"><![CDATA[SELECT tri FROM EpisodioEN as ep INNER JOIN ep.Triage as tri where ep.IdEpisodio = :idEpisodio]]></query>
 		</hibernate-mapping>
 	

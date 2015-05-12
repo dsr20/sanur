@@ -27,8 +27,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,16 +49,29 @@
     <StartupObject>SanurGenNHibernate.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39271, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Castle.DynamicProxy2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>AppLib\Castle.DynamicProxy2.dll</HintPath>
     </Reference>
-    <Reference Include="itextsharp">
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\pdf\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="LinFu.DynamicProxy, Version=1.0.3.14911, Culture=neutral, PublicKeyToken=62a6874124340d6e, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>AppLib\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\log4net.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -73,6 +84,14 @@
     <Reference Include="NHibernate.ByteCode.LinFu, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>AppLib\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.5.0.9122, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.5.0.9122, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>AppLib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -102,18 +121,48 @@
     <Content Include="AppLib\NHibernate.dll" />
     <Content Include="AppLib\nunit.core.dll" />
     <Content Include="AppLib\nunit.framework.dll" />
+    <Content Include="bin\Debug\Antlr3.Runtime.dll" />
+    <Content Include="bin\Debug\Castle.DynamicProxy2.dll" />
+    <Content Include="bin\Debug\hibernate.cfg.xml" />
+    <Content Include="bin\Debug\Iesi.Collections.dll" />
+    <Content Include="bin\Debug\itextsharp.dll" />
+    <Content Include="bin\Debug\LinFu.DynamicProxy.dll" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\NHibernate.ByteCode.Castle.dll" />
+    <Content Include="bin\Debug\NHibernate.ByteCode.LinFu.dll" />
+    <Content Include="bin\Debug\NHibernate.dll" />
+    <Content Include="bin\Debug\nunit.core.dll" />
+    <Content Include="bin\Debug\nunit.framework.dll" />
+    <Content Include="bin\Debug\SanurGenNHibernate.dll" />
+    <Content Include="bin\Debug\SanurGenNHibernate.exe" />
+    <Content Include="bin\Debug\SanurGenNHibernate.pdb" />
+    <Content Include="bin\Debug\SanurGenNHibernate.vshost.exe" />
+    <Content Include="bin\Debug\WindowsFormsApplication2.exe" />
+    <Content Include="bin\Debug\WindowsFormsApplication2.pdb" />
     <Content Include="inicializar_datos_db.txt" />
-    <None Include="Resources\barra.jpg" />
-    <None Include="Resources\barra.png" />
-    <None Include="Resources\barra1.png" />
-    <None Include="Resources\barrainferior.png" />
-    <None Include="Resources\barrainferior1.png" />
-    <None Include="Resources\barrainferior2.png" />
-    <None Include="Resources\barrainferior3.png" />
-    <None Include="Resources\barrainf.png" />
+    <Content Include="obj\Debug\SanurGenNHibernate.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\SanurGenNHibernate.dll" />
+    <Content Include="obj\Debug\SanurGenNHibernate.exe" />
+    <Content Include="obj\Debug\SanurGenNHibernate.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\SanurGenNHibernateDataSet.Designer.cs.dll" />
+    <Content Include="Resources\barra.jpg" />
+    <Content Include="Resources\barra.png" />
+    <Content Include="Resources\barra1.png" />
+    <Content Include="Resources\barrainf.png" />
+    <Content Include="Resources\barrainferior.png" />
+    <Content Include="Resources\barrainferior1.png" />
+    <Content Include="Resources\barrainferior2.png" />
+    <Content Include="Resources\barrainferior3.png" />
     <Content Include="SanurGenNHibernate_2008.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualizaEpisodio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ActualizaEpisodio.designer.cs">
+      <DependentUpon>ActualizaEpisodio.cs</DependentUpon>
+    </Compile>
     <Compile Include="AltaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,24 +199,19 @@
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </Compile>
     <Compile Include="ModificarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModificarUsuario.Designer.cs">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
+    <Compile Include="Principal.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="SanurGenNHibernateDataSet.Designer.cs" />
     <Compile Include="Utils\Util.cs" />
     <Compile Include="NHibernateHelper.cs" />
@@ -226,6 +270,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ActualizaEpisodio.resx">
+      <DependentUpon>ActualizaEpisodio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AltaUsuario.resx">
       <DependentUpon>AltaUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,25 +301,42 @@
     <EmbeddedResource Include="Mappings\Sanur\diagnostico.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\prueba.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\adjunto.hbm.xml" />
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.ActualizaEpisodio.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.altaUsuario.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.BajaUsuario.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.Form_busca_paciente.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.Form_crear_paciente.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.HojaTriage.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.MDIParent1.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.ModificarUsuario.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.Principal.resources" />
+    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.Properties.Resources.resources" />
+    <EmbeddedResource Include="Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="hibernate.cfg.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="bin\Debug\SanurGenNHibernate.dll.config" />
+    <None Include="bin\Debug\SanurGenNHibernate.exe.config" />
+    <None Include="bin\Debug\SanurGenNHibernate.vshost.exe.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\GenerateResource.read.1.tlog" />
+    <None Include="obj\Debug\GenerateResource.write.1.tlog" />
+    <None Include="obj\Debug\ResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\SanurGenNHibernate.csproj.GenerateResource.Cache" />
+    <None Include="obj\Debug\SanurGenNHibernate.csprojResolveAssemblyReference.cache" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

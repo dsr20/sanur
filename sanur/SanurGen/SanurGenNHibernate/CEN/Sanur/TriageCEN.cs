@@ -94,5 +94,9 @@ public int BuscarUltimo ()
 {
         return _ITriageCAD.BuscarUltimo ();
 }
+public SanurGenNHibernate.EN.Sanur.TriageEN BuscarDeEpisodio (int idEpisodio)
+{
+        return _ITriageCAD.BuscarDeEpisodio (idEpisodio);
+}
 }
 }
