@@ -74,5 +74,9 @@ public SanurGenNHibernate.EN.Sanur.UsuarioEN ReadMail (string p_mail)
 {
         return _IUsuarioCAD.ReadMail (p_mail);
 }
+public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.UsuarioEN> ReadNombre (string p_nombre)
+{
+        return _IUsuarioCAD.ReadNombre (p_nombre);
+}
 }
 }

@@ -187,3 +187,30 @@ C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGen
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Properties.Resources.resources
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ActualizaEpisodio.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.pdb
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\hibernate.cfg.xml
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.pdb
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Castle.DynamicProxy2.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\itextsharp.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\LinFu.DynamicProxy.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Iesi.Collections.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Antlr3.Runtime.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\log4net.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.csprojResolveAssemblyReference.cache
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ActualizaEpisodio.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.altaUsuario.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.BajaUsuario.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Form_busca_paciente.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Form_crear_paciente.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.HojaTriage.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Login.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ModificarUsuario.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Principal.resources
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.csproj.GenerateResource.Cache
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.buscarUsuario.resources

@@ -18,5 +18,8 @@ int New_ (UsuarioEN usuario);
 
 
 SanurGenNHibernate.EN.Sanur.UsuarioEN ReadMail (string p_mail);
+
+
+System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.UsuarioEN> ReadNombre (string p_nombre);
 }
 }

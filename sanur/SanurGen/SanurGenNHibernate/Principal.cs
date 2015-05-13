@@ -29,6 +29,7 @@ namespace SanurGenNHibernate
         SanurGenNHibernate.altaUsuario altausuario;
         SanurGenNHibernate.BajaUsuario bajausuario;
         SanurGenNHibernate.ModificarUsuario modusuario;
+        SanurGenNHibernate.buscarUsuario buscarusuario;
 
 
 
