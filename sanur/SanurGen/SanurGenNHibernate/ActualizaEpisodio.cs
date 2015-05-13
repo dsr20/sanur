@@ -16,33 +16,39 @@ namespace SanurGenNHibernate
     {
         // Añadir esta pagina a la pagina principal (ver principal)
         public SanurGenNHibernate.Principal VentanaPrincipal;
+        private PacienteCEN pacienteCEN;
+        private TriageCEN triageCEN;
+        private EpisodioCEN episodioCEN;
+        private MedicoEN medicoEN;
+        private Diagnostico diagnostico;
 
         public ActualizaEpisodio()
         {
             InitializeComponent();
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            triageCEN = new TriageCEN();
+            pacienteCEN = new PacienteCEN();
+            episodioCEN = new EpisodioCEN();
         }
 
         //A medias cargado de datos.
         public void CargarDatosGrid()
         {
 
-            PacienteCEN paCEN = new PacienteCEN();
-            TriageCEN triageCEN = new TriageCEN();
-            EpisodioCEN epiCEN= new EpisodioCEN();
-            MedicoEN medicoEN = (MedicoEN)VentanaPrincipal.UsuarioIniciado;
+            medicoEN = (MedicoEN)VentanaPrincipal.UsuarioIniciado;
 
             // Obtiene episodios según la especialidad
             List<EpisodioEN> episodios = null;
-            episodios = (List<EpisodioEN>)epiCEN.BuscarParaMedico(medicoEN.Especialidad);
+            episodios = (List<EpisodioEN>)episodioCEN.BuscarParaMedico(medicoEN.Especialidad);
             episodios.Sort(comparaPrioridad);
 
             // Rellena datos del grid, comprobar..
             for (int i = 0; i < episodios.Count(); i++)
             {
-                PacienteEN paciente = paCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
+                PacienteEN paciente = pacienteCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
                 TriageEN triage = triageCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
-                string[] fila = {paciente.IdPaciente.ToString(), paciente.Nombre, triage.Prioridad.ToString(), triage.MotivoAsist, triage.Observaciones, episodios[i].FechaInicio.ToString()};
-                //dataGridView1.Rows.Add(fila);
+                string[] fila = {episodios[i].IdEpisodio.ToString(), paciente.IdPaciente.ToString(), paciente.Nombre, triage.Prioridad.ToString(), triage.MotivoAsist, triage.Observaciones, episodios[i].FechaInicio.ToString()};
+                dataGridView1.Rows.Add(fila);
             }
         }
 
@@ -54,6 +60,19 @@ namespace SanurGenNHibernate
             TriageEN t2 = triageCEN.BuscarDeEpisodio(ep2.IdEpisodio);
             return t1.Prioridad - t2.Prioridad; // Comprobar si ordena ascendente o descendente
         }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EpisodioEN episodio = new EpisodioEN();
+            int idEpisodio = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+
+            if (idEpisodio != 0)
+            {
+                episodio = episodioCEN.ReadOID(idEpisodio);
+                diagnostico = new Diagnostico(medicoEN, episodio);
+                diagnostico.Show();
+                //triage = triageCEN.BuscarDeEpisodio(idEpisodio);
+            }
+        }
     }
 }
-

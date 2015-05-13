@@ -135,6 +135,12 @@
     <Compile Include="buscarUsuario.Designer.cs">
       <DependentUpon>buscarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Diagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diagnostico.Designer.cs">
+      <DependentUpon>Diagnostico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_busca_paciente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     <EmbeddedResource Include="buscarUsuario.resx">
       <DependentUpon>buscarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Diagnostico.resx">
+      <DependentUpon>Diagnostico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_busca_paciente.resx">
       <DependentUpon>Form_busca_paciente.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,7 +288,6 @@
     <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.MDIParent1.resources" />
     <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.ModificarUsuario.resources" />
     <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.Principal.resources" />
-    <EmbeddedResource Include="obj\Debug\SanurGenNHibernate.Properties.Resources.resources" />
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>

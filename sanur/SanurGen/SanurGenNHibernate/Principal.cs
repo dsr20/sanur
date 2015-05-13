@@ -50,6 +50,13 @@ namespace SanurGenNHibernate
                 {
                     pacientesToolStripMenuItem.Visible = true;
                     triageToolStripMenuItem.Visible = true;
+                    
+                    ActualizaEpisodio act_epi = new ActualizaEpisodio();
+                    act_epi.MdiParent = this;
+                    act_epi.VentanaPrincipal = this;
+                    act_epi.CargarDatosGrid();
+                    act_epi.Dock = DockStyle.Fill;
+                    act_epi.Show();
                 }
                 else if (TipoUsuario == "Administrador")
                 {
@@ -237,8 +244,8 @@ namespace SanurGenNHibernate
         {
             EpisodioCEN episodio = new EpisodioCEN();
             EpisodioEN epis =new EpisodioEN();
-            epis = episodio.ReadOID(9);
-            HojaTriage hojaTri = new HojaTriage(usuarioEN.IdUsuario,epis);
+            epis = episodio.ReadOID(1);
+            HojaTriage hojaTri = new HojaTriage((MedicoEN)UsuarioIniciado,epis);
             hojaTri.Show();
         }
     }

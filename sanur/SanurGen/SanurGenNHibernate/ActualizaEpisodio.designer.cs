@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id_episodio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.prioridad = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +44,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_episodio,
             this.idpaciente,
             this.nombre_paciente,
             this.prioridad,
@@ -55,6 +57,13 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(643, 325);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // id_episodio
+            // 
+            this.id_episodio.HeaderText = "Id episodio";
+            this.id_episodio.Name = "id_episodio";
+            this.id_episodio.ReadOnly = true;
             // 
             // idpaciente
             // 
@@ -97,8 +106,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 325);
+            this.ControlBox = false;
             this.Controls.Add(this.dataGridView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ActualizaEpisodio";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -108,6 +122,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_episodio;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpaciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_paciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn prioridad;
