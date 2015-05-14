@@ -64,8 +64,18 @@
             this.label99 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.idEpisodio = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cancelar = new System.Windows.Forms.Button();
+            this.guardar = new System.Windows.Forms.Button();
+            this.ver_triage = new System.Windows.Forms.Button();
+            this.tratamiento = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.juicio = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.hospitalizacion = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -383,7 +393,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(12, 199);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(579, 74);
+            this.groupBox2.Size = new System.Drawing.Size(580, 79);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DATOS RELACIONADOS CON LA ASISTENCIA";
@@ -445,11 +455,108 @@
             this.idEpisodio.Size = new System.Drawing.Size(152, 20);
             this.idEpisodio.TabIndex = 0;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cancelar);
+            this.groupBox3.Controls.Add(this.guardar);
+            this.groupBox3.Controls.Add(this.ver_triage);
+            this.groupBox3.Controls.Add(this.tratamiento);
+            this.groupBox3.Controls.Add(this.label2);
+            this.groupBox3.Controls.Add(this.juicio);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.hospitalizacion);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(12, 284);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(580, 486);
+            this.groupBox3.TabIndex = 14;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "DIAGNÓSTICO";
+            // 
+            // cancelar
+            // 
+            this.cancelar.Location = new System.Drawing.Point(468, 443);
+            this.cancelar.Name = "cancelar";
+            this.cancelar.Size = new System.Drawing.Size(105, 23);
+            this.cancelar.TabIndex = 7;
+            this.cancelar.Text = "Cancelar";
+            this.cancelar.UseVisualStyleBackColor = true;
+            this.cancelar.Click += new System.EventHandler(this.cancelar_Click);
+            // 
+            // guardar
+            // 
+            this.guardar.Location = new System.Drawing.Point(359, 443);
+            this.guardar.Name = "guardar";
+            this.guardar.Size = new System.Drawing.Size(105, 23);
+            this.guardar.TabIndex = 6;
+            this.guardar.Text = "Guardar y cerrar";
+            this.guardar.UseVisualStyleBackColor = true;
+            this.guardar.Click += new System.EventHandler(this.guardar_Click);
+            // 
+            // ver_triage
+            // 
+            this.ver_triage.Location = new System.Drawing.Point(250, 443);
+            this.ver_triage.Name = "ver_triage";
+            this.ver_triage.Size = new System.Drawing.Size(105, 23);
+            this.ver_triage.TabIndex = 5;
+            this.ver_triage.Text = "Ver hoja de triage";
+            this.ver_triage.UseVisualStyleBackColor = true;
+            this.ver_triage.Click += new System.EventHandler(this.ver_triage_Click);
+            // 
+            // tratamiento
+            // 
+            this.tratamiento.Location = new System.Drawing.Point(97, 308);
+            this.tratamiento.Multiline = true;
+            this.tratamiento.Name = "tratamiento";
+            this.tratamiento.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tratamiento.Size = new System.Drawing.Size(476, 108);
+            this.tratamiento.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 308);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Tratamiento:";
+            // 
+            // juicio
+            // 
+            this.juicio.Location = new System.Drawing.Point(97, 26);
+            this.juicio.Multiline = true;
+            this.juicio.Name = "juicio";
+            this.juicio.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.juicio.Size = new System.Drawing.Size(476, 266);
+            this.juicio.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Juicio diagnóstico:";
+            // 
+            // hospitalizacion
+            // 
+            this.hospitalizacion.AutoSize = true;
+            this.hospitalizacion.Location = new System.Drawing.Point(6, 422);
+            this.hospitalizacion.Name = "hospitalizacion";
+            this.hospitalizacion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.hospitalizacion.Size = new System.Drawing.Size(141, 17);
+            this.hospitalizacion.TabIndex = 0;
+            this.hospitalizacion.Text = "Requiere hospitalización";
+            this.hospitalizacion.UseVisualStyleBackColor = true;
+            // 
             // Diagnostico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(608, 628);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(619, 618);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -460,6 +567,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -502,6 +611,15 @@
         private System.Windows.Forms.Label label99;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox idEpisodio;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox hospitalizacion;
+        private System.Windows.Forms.TextBox juicio;
+        private System.Windows.Forms.Button cancelar;
+        private System.Windows.Forms.Button guardar;
+        private System.Windows.Forms.Button ver_triage;
+        private System.Windows.Forms.TextBox tratamiento;
+        private System.Windows.Forms.Label label2;
 
     }
 }

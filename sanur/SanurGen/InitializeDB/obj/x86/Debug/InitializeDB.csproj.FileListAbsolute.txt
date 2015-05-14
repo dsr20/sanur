@@ -154,7 +154,6 @@ C:\Users\Andrea\sanur\sanur\sanur\SanurGen\InitializeDB\bin\Debug\SanurGenNHiber
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
-C:\Users\Andrea\sanur\sanur\sanur\SanurGen\InitializeDB\bin\Debug\SanurGenNHibernate.exe
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\InitializeDB\bin\Debug\hibernate.cfg.xml
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\InitializeDB\bin\Debug\InitializeDB.exe.config
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\InitializeDB\bin\Debug\InitializeDB.exe
@@ -175,3 +174,4 @@ C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\InitializeDB\bin\Debug
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.csprojResolveAssemblyReference.cache
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.exe
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\InitializeDB\obj\x86\Debug\InitializeDB.pdb
+C:\Users\Andrea\sanur\sanur\sanur\SanurGen\InitializeDB\bin\Debug\SanurGenNHibernate.exe

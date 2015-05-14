@@ -20,7 +20,6 @@ namespace SanurGenNHibernate
         private TriageCEN triageCEN;
         private EpisodioCEN episodioCEN;
         private MedicoEN medicoEN;
-        private Diagnostico diagnostico;
 
         public ActualizaEpisodio()
         {
@@ -39,8 +38,13 @@ namespace SanurGenNHibernate
 
             // Obtiene episodios según la especialidad
             List<EpisodioEN> episodios = null;
-            episodios = (List<EpisodioEN>)episodioCEN.BuscarParaMedico(medicoEN.Especialidad);
-            episodios.Sort(comparaPrioridad);
+
+            // Obtener episodios pendientes de triage o de diagnostico
+            if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage)
+                episodios = (List<EpisodioEN>)episodioCEN.BuscarParaTriage();
+            else
+                episodios = (List<EpisodioEN>)episodioCEN.BuscarParaMedico(medicoEN.Especialidad);
+            //episodios.Sort(comparaPrioridad);
 
             // Rellena datos del grid, comprobar..
             for (int i = 0; i < episodios.Count(); i++)
@@ -53,25 +57,35 @@ namespace SanurGenNHibernate
         }
 
         // Comparador para ordenar los episodios por prioridad, COMPROBAR FUNCIONAMIENTO....
-        private static int comparaPrioridad(EpisodioEN ep1, EpisodioEN ep2)
+        /*private static int comparaPrioridad(EpisodioEN ep1, EpisodioEN ep2)
         {
             TriageCEN triageCEN = new TriageCEN();
             TriageEN t1 = triageCEN.BuscarDeEpisodio(ep1.IdEpisodio);
             TriageEN t2 = triageCEN.BuscarDeEpisodio(ep2.IdEpisodio);
             return t1.Prioridad - t2.Prioridad; // Comprobar si ordena ascendente o descendente
-        }
+        }*/ //No es necesario...
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             EpisodioEN episodio = new EpisodioEN();
             int idEpisodio = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-
+            
+            // Si la fila seleccionada contiene datos...
             if (idEpisodio != 0)
             {
                 episodio = episodioCEN.ReadOID(idEpisodio);
-                diagnostico = new Diagnostico(medicoEN, episodio);
-                diagnostico.Show();
-                //triage = triageCEN.BuscarDeEpisodio(idEpisodio);
+
+                // Se debe abrir la ventana correspondiente a segun si esta pendiente de triage o de diagnostico
+                if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage)
+                {
+                    HojaTriage triage = new HojaTriage(medicoEN, episodio);
+                    triage.Show();
+                }
+                else
+                {
+                    Diagnostico diagnostico = new Diagnostico(medicoEN, episodio);
+                    diagnostico.Show();
+                }
             }
         }
     }

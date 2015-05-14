@@ -6,16 +6,19 @@ namespace SanurGenNHibernate.CAD.Sanur
 {
 public partial interface IDiagnosticoCAD
 {
-DiagnosticoEN ReadOIDDefault (string idDiagnostico);
+DiagnosticoEN ReadOIDDefault (int idDiagnostico);
 
-string New_ (DiagnosticoEN diagnostico);
+int New_ (DiagnosticoEN diagnostico);
 
 void Modify (DiagnosticoEN diagnostico);
 
 
-DiagnosticoEN ReadOID (string idDiagnostico);
+DiagnosticoEN ReadOID (int idDiagnostico);
 
 
 System.Collections.Generic.IList<DiagnosticoEN> ReadAll (int first, int size);
+
+
+SanurGenNHibernate.EN.Sanur.DiagnosticoEN BuscarUltimo ();
 }
 }

@@ -32,10 +32,10 @@ public IDiagnosticoCAD get_IDiagnosticoCAD ()
         return this._IDiagnosticoCAD;
 }
 
-public string New_ (int p_medico, string p_juicio, string p_tratamiento, string p_idDiagnostico, bool p_hospitalizacion)
+public int New_ (int p_medico, string p_juicio, string p_tratamiento, bool p_hospitalizacion)
 {
         DiagnosticoEN diagnosticoEN = null;
-        string oid;
+        int oid;
 
         //Initialized DiagnosticoEN
         diagnosticoEN = new DiagnosticoEN ();
@@ -49,8 +49,6 @@ public string New_ (int p_medico, string p_juicio, string p_tratamiento, string 
 
         diagnosticoEN.Tratamiento = p_tratamiento;
 
-        diagnosticoEN.IdDiagnostico = p_idDiagnostico;
-
         diagnosticoEN.Hospitalizacion = p_hospitalizacion;
 
         //Call to DiagnosticoCAD
@@ -59,7 +57,7 @@ public string New_ (int p_medico, string p_juicio, string p_tratamiento, string 
         return oid;
 }
 
-public void Modify (string p_Diagnostico_OID, string p_juicio, string p_tratamiento, bool p_hospitalizacion)
+public void Modify (int p_Diagnostico_OID, string p_juicio, string p_tratamiento, bool p_hospitalizacion)
 {
         DiagnosticoEN diagnosticoEN = null;
 
@@ -74,7 +72,7 @@ public void Modify (string p_Diagnostico_OID, string p_juicio, string p_tratamie
         _IDiagnosticoCAD.Modify (diagnosticoEN);
 }
 
-public DiagnosticoEN ReadOID (string idDiagnostico)
+public DiagnosticoEN ReadOID (int idDiagnostico)
 {
         DiagnosticoEN diagnosticoEN = null;
 
@@ -88,6 +86,10 @@ public System.Collections.Generic.IList<DiagnosticoEN> ReadAll (int first, int s
 
         list = _IDiagnosticoCAD.ReadAll (first, size);
         return list;
+}
+public SanurGenNHibernate.EN.Sanur.DiagnosticoEN BuscarUltimo ()
+{
+        return _IDiagnosticoCAD.BuscarUltimo ();
 }
 }
 }

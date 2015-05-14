@@ -23,7 +23,7 @@ public DiagnosticoCAD(ISession sessionAux) : base (sessionAux)
 
 
 
-public DiagnosticoEN ReadOIDDefault (string idDiagnostico)
+public DiagnosticoEN ReadOIDDefault (int idDiagnostico)
 {
         DiagnosticoEN diagnosticoEN = null;
 
@@ -51,7 +51,7 @@ public DiagnosticoEN ReadOIDDefault (string idDiagnostico)
 }
 
 
-public string New_ (DiagnosticoEN diagnostico)
+public int New_ (DiagnosticoEN diagnostico)
 {
         try
         {
@@ -112,7 +112,7 @@ public void Modify (DiagnosticoEN diagnostico)
                 SessionClose ();
         }
 }
-public DiagnosticoEN ReadOID (string idDiagnostico)
+public DiagnosticoEN ReadOID (int idDiagnostico)
 {
         DiagnosticoEN diagnosticoEN = null;
 
@@ -150,6 +150,37 @@ public System.Collections.Generic.IList<DiagnosticoEN> ReadAll (int first, int s
                                  SetFirstResult (first).SetMaxResults (size).List<DiagnosticoEN>();
                 else
                         result = session.CreateCriteria (typeof(DiagnosticoEN)).List<DiagnosticoEN>();
+                SessionCommit ();
+        }
+
+        catch (Exception ex) {
+                SessionRollBack ();
+                if (ex is SanurGenNHibernate.Exceptions.ModelException)
+                        throw ex;
+                throw new SanurGenNHibernate.Exceptions.DataLayerException ("Error in DiagnosticoCAD.", ex);
+        }
+
+
+        finally
+        {
+                SessionClose ();
+        }
+
+        return result;
+}
+
+public SanurGenNHibernate.EN.Sanur.DiagnosticoEN BuscarUltimo ()
+{
+        SanurGenNHibernate.EN.Sanur.DiagnosticoEN result;
+        try
+        {
+                SessionInitializeTransaction ();
+                //String sql = @"FROM DiagnosticoEN self where SELECT max(diag.IdDiagnostico) FROM DiagnosticoEN as diag";
+                //IQuery query = session.CreateQuery(sql);
+                IQuery query = (IQuery)session.GetNamedQuery ("DiagnosticoENbuscarUltimoHQL");
+
+
+                result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.DiagnosticoEN>();
                 SessionCommit ();
         }
 

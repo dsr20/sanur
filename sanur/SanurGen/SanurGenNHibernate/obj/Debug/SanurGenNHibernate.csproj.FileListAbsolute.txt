@@ -180,9 +180,6 @@ C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\log4net.
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.ByteCode.Castle.dll
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.ByteCode.LinFu.dll
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.dll
-C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
-C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe
-C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ActualizaEpisodio.resources
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
@@ -211,6 +208,10 @@ C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Principal.resources
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.csproj.GenerateResource.Cache
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.buscarUsuario.resources
-C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\itextsharp.dll
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.buscarUsuario.resources
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Diagnostico.resources
+C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.core.dll
+C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.framework.dll
+C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
+C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe
+C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe

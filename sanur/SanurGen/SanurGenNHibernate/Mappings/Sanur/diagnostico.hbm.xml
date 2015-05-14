@@ -3,7 +3,10 @@
 		                   assembly="SanurGenNHibernate"
 		                   namespace="SanurGenNHibernate.EN.Sanur">
 			<class name="DiagnosticoEN" table="[Diagnostico]">
-						<id name="IdDiagnostico" column="[idDiagnostico]"/>
+				  	
+						<id name="IdDiagnostico" column="[idDiagnostico]" type="integer">
+							<generator class="identity"/>
+						</id>
 					<property name="Juicio" type="string"> 
 						<column name="[juicio]"  not-null="true"/>
 					</property>
@@ -31,5 +34,6 @@
 		  </class>
 		  
 		  <query name="DiagnosticoENReadAllHQL">from DiagnosticoEN</query>
+		  <query name="DiagnosticoENbuscarUltimoHQL"><![CDATA[SELECT max(diag.IdDiagnostico) FROM DiagnosticoEN as diag]]></query>
 		</hibernate-mapping>
 	

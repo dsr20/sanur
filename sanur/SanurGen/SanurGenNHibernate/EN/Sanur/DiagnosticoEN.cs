@@ -27,7 +27,7 @@ private string tratamiento;
  *
  */
 
-private string idDiagnostico;
+private int idDiagnostico;
 
 /**
  *
@@ -54,7 +54,7 @@ public virtual string Tratamiento {
 }
 
 
-public virtual string IdDiagnostico {
+public virtual int IdDiagnostico {
         get { return idDiagnostico; } set { idDiagnostico = value;  }
 }
 
@@ -73,7 +73,7 @@ public DiagnosticoEN()
 
 
 
-public DiagnosticoEN(string idDiagnostico, SanurGenNHibernate.EN.Sanur.MedicoEN medico, string juicio, string tratamiento, bool hospitalizacion)
+public DiagnosticoEN(int idDiagnostico, SanurGenNHibernate.EN.Sanur.MedicoEN medico, string juicio, string tratamiento, bool hospitalizacion)
 {
         this.init (idDiagnostico, medico, juicio, tratamiento, hospitalizacion);
 }
@@ -84,7 +84,7 @@ public DiagnosticoEN(DiagnosticoEN diagnostico)
         this.init (diagnostico.IdDiagnostico, diagnostico.Medico, diagnostico.Juicio, diagnostico.Tratamiento, diagnostico.Hospitalizacion);
 }
 
-private void init (string idDiagnostico, SanurGenNHibernate.EN.Sanur.MedicoEN medico, string juicio, string tratamiento, bool hospitalizacion)
+private void init (int idDiagnostico, SanurGenNHibernate.EN.Sanur.MedicoEN medico, string juicio, string tratamiento, bool hospitalizacion)
 {
         this.IdDiagnostico = idDiagnostico;
 

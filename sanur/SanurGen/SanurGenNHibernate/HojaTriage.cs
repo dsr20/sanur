@@ -148,9 +148,18 @@ namespace SanurGenNHibernate
 
         }
 
-        private void groupBox3_Enter(object sender, EventArgs e)
+        public void cargarTriage(EspecialidadEnum p_destino, PrioridadEnum p_prioridad, string p_observaciones, string p_motivo)
         {
-
+            destino.Text = p_destino.ToString();
+            destino.Enabled = false;
+            prioridad.Text = p_prioridad.ToString();
+            prioridad.Enabled = false;
+            observaciones.Text = p_observaciones;
+            observaciones.ReadOnly = true;
+            motivo.Text = p_motivo;
+            motivo.ReadOnly = true;
+            aceptar.Visible = false;
+            cancelar.Visible = false;
         }
     }
 }

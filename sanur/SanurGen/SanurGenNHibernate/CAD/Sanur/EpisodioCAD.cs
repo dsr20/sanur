@@ -296,7 +296,7 @@ public void AsignarTriage (int p_Episodio_OID, int p_triage_OID)
         }
 }
 
-public void AsignarDiagnostico (int p_Episodio_OID, string p_diagnostico_OID)
+public void AsignarDiagnostico (int p_Episodio_OID, int p_diagnostico_OID)
 {
         SanurGenNHibernate.EN.Sanur.EpisodioEN episodioEN = null;
         try
