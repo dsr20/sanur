@@ -1,7 +1,0 @@
-C:\workspace\sanur\SanurGen\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
-C:\workspace\sanur\SanurGen\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
-C:\workspace\sanur\SanurGen\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.Principal.resources
-C:\workspace\sanur\SanurGen\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.Properties.Resources.resources
-C:\workspace\sanur\SanurGen\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
-C:\workspace\sanur\SanurGen\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.exe
-C:\workspace\sanur\SanurGen\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.pdb
