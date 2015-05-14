@@ -16,14 +16,15 @@ namespace SanurGenNHibernate
 {
     public partial class HojaTriage : Form
     {
-        private int idMedico;
+        private UsuarioEN idMedico;
         private EpisodioEN episodio;
       //  private PacienteEN paciente;
 
         // El médico que actúa de usuario actual se recibe por parametro
-        public HojaTriage(int idMedico, EpisodioEN episodio)
+        public HojaTriage(UsuarioEN idMedico, EpisodioEN episodio)
         {
-           // EpisodioCP ecp = new EpisodioCP();
+
+            // EpisodioCP ecp = new EpisodioCP();
             this.idMedico = idMedico;
             this.episodio = episodio;
             InitializeComponent();
@@ -44,7 +45,7 @@ namespace SanurGenNHibernate
                 triage.MotivoAsist = motivo.Text.ToString();
                 triage.Observaciones = observaciones.Text.ToString();
 
-                triageCEN.New_(idMedico, triage.Prioridad, triage.MotivoAsist, triage.Destino, triage.Observaciones);
+                triageCEN.New_(idMedico.IdUsuario, triage.Prioridad, triage.MotivoAsist, triage.Destino, triage.Observaciones);
                 episodio.Estado = EstadoEnum.triaje;
 
                 epCEN.Modify(episodio.IdEpisodio, episodio.FechaInicio, episodio.Observaciones, episodio.Estado, episodio.Emergencia, episodio.Imporante);

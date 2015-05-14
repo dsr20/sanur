@@ -159,3 +159,5 @@ C:\Users\sergio\Desktop\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurG
 C:\Users\sergio\Desktop\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ModificarUsuario.resources
 C:\Users\sergio\Desktop\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.csproj.GenerateResource.Cache
 C:\Users\sergio\Desktop\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Properties.Resources.resources
+C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Properties.Resources.resources
+C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ObserForm.resources

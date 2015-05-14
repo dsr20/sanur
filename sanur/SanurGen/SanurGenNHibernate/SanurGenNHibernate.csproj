@@ -150,6 +150,12 @@
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="ObserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObserForm.Designer.cs">
+      <DependentUpon>ObserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +260,9 @@
     <EmbeddedResource Include="Mappings\Sanur\diagnostico.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\prueba.hbm.xml" />
     <EmbeddedResource Include="Mappings\Sanur\adjunto.hbm.xml" />
+    <EmbeddedResource Include="ObserForm.resx">
+      <DependentUpon>ObserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>

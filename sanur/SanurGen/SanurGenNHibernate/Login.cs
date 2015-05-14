@@ -32,7 +32,6 @@ namespace SanurGenNHibernate
 
             
             string hashs = GetMd5Hash(md,password.Text);
-            MessageBox.Show(hashs);
 
             if (user.ComprobarMail(nombre.Text, hashs)) // COMPROBAMOS QUE EL USUARIO COINCIDE CN EL PASS
             {

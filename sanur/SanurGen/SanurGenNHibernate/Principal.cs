@@ -227,7 +227,8 @@ namespace SanurGenNHibernate
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_busca_paciente busPaciente = new Form_busca_paciente(usuarioEN);
+
+            Form_busca_paciente busPaciente = new Form_busca_paciente(UsuarioIniciado);
             busPaciente.Show();
             //this.episodioEN = busPaciente.GetEpisodio();
         }
@@ -237,7 +238,8 @@ namespace SanurGenNHibernate
             EpisodioCEN episodio = new EpisodioCEN();
             EpisodioEN epis =new EpisodioEN();
             epis = episodio.ReadOID(9);
-            HojaTriage hojaTri = new HojaTriage(usuarioEN.IdUsuario,epis);
+          
+            HojaTriage hojaTri = new HojaTriage(UsuarioIniciado,epis);
             hojaTri.Show();
         }
     }
