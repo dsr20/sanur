@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="SanurGenNHibernate"
+		                   namespace="SanurGenNHibernate.EN.Sanur">
+			<class name="EpisodioEN" table="[Episodio]">
+				  	
+						<id name="IdEpisodio" column="[idEpisodio]" type="integer">
+							<generator class="identity"/>
+						</id>
+					<property name="FechaInicio" type="timestamp"> 
+						<column name="[fechaInicio]"  not-null="true"/>
+					</property>
+					<property name="Observaciones" type="string"> 
+						<column name="[observaciones]"  not-null="true"/>
+					</property>
+					<property name="FechaFin" type="timestamp"> 
+						<column name="[fechaFin]" />
+					</property>
+					<property name="Estado" > 
+						<column name="[estado]"  not-null="true"/>
+					</property>
+					<property name="Emergencia" type="boolean"> 
+						<column name="[emergencia]"  not-null="true"/>
+					</property>
+					<property name="Imporante" type="boolean"> 
+						<column name="[imporante]"  not-null="true"/>
+					</property>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+					
+					
+						<many-to-one name="Paciente" class="SanurGenNHibernate.EN.Sanur.PacienteEN" >
+									<column name="[FK_idPaciente_idPaciente]"/>
+						</many-to-one>
+					
+					
+   						<many-to-one name="Triage" class="SanurGenNHibernate.EN.Sanur.TriageEN" cascade="delete">
+								<column name="[FK_idTriaje_idTriage]" unique="true"/>
+						</many-to-one>
+					
+					
+					
+					
+					
+					
+   						<many-to-one name="Diagnostico" class="SanurGenNHibernate.EN.Sanur.DiagnosticoEN" cascade="delete">
+								<column name="[FK_idDiagnostico_idDiagnostico]" unique="true"/>
+						</many-to-one>
+					
+					
+					
+						<bag name="Prueba" table="[episodio_prueba]" cascade="delete">
+							<key>
+									<column name="[FK_idEpisodio_idEpisodio]"/>
+							</key>
+      						<many-to-many class="SanurGenNHibernate.EN.Sanur.PruebaEN">
+									<column name="[FK_idPrueba_idPrueba]" unique="true"/>
+      						</many-to-many>
+    					</bag>
+    				
+					
+					
+						<many-to-one name="Administrativo" class="SanurGenNHibernate.EN.Sanur.AdministrativoEN" >
+									<column name="[FK_idUsuario_idAdministrativo]"/>
+						</many-to-one>
+					
+					
+					
+					
+		
+		  </class>
+		  
+		  <query name="EpisodioENReadAllHQL">from EpisodioEN</query>
+		  <query name="EpisodioENobtenerHistorialHQL"><![CDATA[select ep FROM EpisodioEN as ep inner join ep.Paciente as pa where pa.IdPaciente = :idPaciente]]></query>
+		  <query name="EpisodioENbuscarParaTriageHQL"><![CDATA[FROM EpisodioEN as ep where ep.Estado = 1 order by ep.FechaInicio]]></query>
+		  <query name="EpisodioENbuscarParaMedicoHQL"><![CDATA[FROM EpisodioEN as ep WHERE ep.Estado = 2 AND ep.Triage.Destino = :destino ORDER BY ep.Triage.Prioridad ASC, ep.FechaInicio ASC]]></query>
+		</hibernate-mapping>
+	
