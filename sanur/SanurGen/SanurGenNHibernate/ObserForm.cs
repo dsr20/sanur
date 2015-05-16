@@ -53,7 +53,7 @@ namespace SanurGenNHibernate
                DialogResult res = MessageBox.Show("¿Está seguro de que desea crear un episodio?", "Crear episodio", MessageBoxButtons.YesNo);
                if (res == System.Windows.Forms.DialogResult.Yes)
                {
-                   episodioCEN.New_(episodio.Paciente.IdPaciente, episodio.FechaInicio, episodio.Observaciones, episodio.Administrativo.IdUsuario, Enumerated.Sanur.EstadoEnum.espera, false, false);
+                   episodioCEN.New_(episodio.Paciente.IdPaciente, episodio.FechaInicio, episodio.Observaciones, episodio.Administrativo.IdUsuario, Enumerated.Sanur.EstadoEnum.triaje, false, false);
                    creaPDF(episodio);
                    this.Close();
                }
