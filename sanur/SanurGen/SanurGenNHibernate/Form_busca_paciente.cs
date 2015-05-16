@@ -25,6 +25,8 @@ namespace SanurGenNHibernate
         {
             InitializeComponent();
             this.usuarioEN = usuario;
+
+           
         }
        
         private void button1_Click(object sender, EventArgs e)
@@ -93,19 +95,34 @@ namespace SanurGenNHibernate
             episodioENT.FechaInicio = time;
             episodioENT.FechaFin = time;
 
-            AdministrativoEN admin = new AdministrativoEN();
-            episodioENT.Administrativo = (AdministrativoEN)usuarioEN;
-            episodioENT.Diagnostico = new DiagnosticoEN();
+            AdministrativoEN admin = (AdministrativoEN)usuarioEN;
+            episodioENT.Administrativo = admin;
+
+            /*DiagnosticoEN diagnosticoEN = new DiagnosticoEN();
+            diagnosticoEN.Medico = null;
+            diagnosticoEN.Juicio = "";
+            diagnosticoEN.Tratamiento = "";
+            diagnosticoEN.Hospitalizacion = false;
+
+            DiagnosticoCEN diagnosticoCEN = new DiagnosticoCEN();
+
+            diagnosticoCEN.New_(0,"", "", false);
+
+            episodioENT.Diagnostico = diagnosticoEN;*/
+            DiagnosticoEN diagnostico = new DiagnosticoEN();
+            episodioENT.Diagnostico = diagnostico;
+
             episodioENT.Emergencia = false;
             episodioENT.Imporante = false;
             episodioENT.Estado = Enumerated.Sanur.EstadoEnum.espera;
-            episodioENT.Triage = null;
 
+            TriageEN triage = new TriageEN();
+            episodioENT.Triage = triage;
+            
             ObserForm obser =  new ObserForm(episodioENT);
             obser.Show();
             this.Close();
         }
 
-        
     }
 }

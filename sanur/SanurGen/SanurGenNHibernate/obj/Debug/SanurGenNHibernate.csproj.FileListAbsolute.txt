@@ -219,3 +219,5 @@ C:\workspace\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.framework.dll
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ActualizaEpisodio.resources
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.buscarUsuario.resources
 C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Diagnostico.resources
+C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ObserForm.resources
+C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Properties.Resources.resources

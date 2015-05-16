@@ -60,6 +60,7 @@ namespace SanurGenNHibernate
                 }
                 else if (TipoUsuario == "Administrador")
                 {
+                    usuariosToolStripMenuItem.Visible = true;
                     triageToolStripMenuItem.Visible = true;
                 }
                 else if (TipoUsuario == "Administrativo")
@@ -235,17 +236,19 @@ namespace SanurGenNHibernate
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_busca_paciente busPaciente = new Form_busca_paciente(usuarioEN);
+         
+            Form_busca_paciente busPaciente = new Form_busca_paciente(UsuarioIniciado);
             busPaciente.Show();
             //this.episodioEN = busPaciente.GetEpisodio();
         }
 
+        // IMPORTANTEEEEE
         private void nuevoTriageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EpisodioCEN episodio = new EpisodioCEN();
-            EpisodioEN epis =new EpisodioEN();
+            EpisodioEN epis = new EpisodioEN();
             epis = episodio.ReadOID(1);
-            HojaTriage hojaTri = new HojaTriage((MedicoEN)UsuarioIniciado,epis);
+            HojaTriage hojaTri = new HojaTriage((MedicoEN) UsuarioIniciado,epis);
             hojaTri.Show();
         }
     }

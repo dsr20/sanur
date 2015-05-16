@@ -50,8 +50,6 @@ namespace SanurGenNHibernate
            EpisodioCEN episodioCEN = new EpisodioCEN();
            try
            {
-               
-
                DialogResult res = MessageBox.Show("¿Está seguro de que desea crear un episodio?", "Crear episodio", MessageBoxButtons.YesNo);
                if (res == System.Windows.Forms.DialogResult.Yes)
                {
@@ -59,7 +57,7 @@ namespace SanurGenNHibernate
                    creaPDF(episodio);
                    this.Close();
                }
-           }catch (NullReferenceException nre)
+           }catch (NullReferenceException)
            {
                 MessageBox.Show("Necesita especificar un paciente");
            }
@@ -68,6 +66,7 @@ namespace SanurGenNHibernate
         public EpisodioEN getObservaciones() { return episodio; }
 
 
+        // MÉTODO PARA CREAR EL PDF
         private void creaPDF(EpisodioEN episodioEN)
         {
             Document doc = new Document();
@@ -275,7 +274,7 @@ namespace SanurGenNHibernate
             for (int i = 0; i < palabras.Length; i++)
             {
 
-                if (iter == 7 || i == palabras.Length - 1)
+                if (iter == 11 || i == palabras.Length - 1)
                 {
                     if (i == palabras.Length - 1)
                         str2 += palabras[i] + " ";
@@ -297,16 +296,12 @@ namespace SanurGenNHibernate
 
             rectangulo.Stroke();
 
-            //DATOS DEL PACIENTE
-            // Creamos una tabla que contendrá el nombre, apellido y país
-
-
-            // Configuramos el título de las columnas de la tabla
-
-
-            // Finalmente, añadimos la tabla al documento PDF y cerramos el documento
-
             doc.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
 

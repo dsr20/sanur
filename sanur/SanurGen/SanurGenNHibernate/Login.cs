@@ -21,6 +21,8 @@ namespace SanurGenNHibernate
         public Login()
         {
             InitializeComponent();
+            pictureBox1.Image = Image.FromFile("../../../pdf/Logo_Hospital.png");
+            this.AcceptButton = bEnter;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,7 +34,6 @@ namespace SanurGenNHibernate
 
             
             string hashs = GetMd5Hash(md,password.Text);
-            MessageBox.Show(hashs);
 
             if (user.ComprobarMail(nombre.Text, hashs)) // COMPROBAMOS QUE EL USUARIO COINCIDE CN EL PASS
             {

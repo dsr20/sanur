@@ -161,5 +161,10 @@ namespace SanurGenNHibernate
             aceptar.Visible = false;
             cancelar.Visible = false;
         }
+
+        private void HojaTriage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -72,7 +72,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(59, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(304, 22);
             this.textBox1.TabIndex = 1;
@@ -100,7 +100,7 @@
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(60, 46);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(304, 22);
             this.textBox2.TabIndex = 3;
@@ -108,7 +108,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(387, 18);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 47);
             this.button1.TabIndex = 5;
@@ -152,10 +152,11 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.tnombre);
             this.panel1.Location = new System.Drawing.Point(21, 79);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(461, 546);
             this.panel1.TabIndex = 0;
+           
             // 
             // label17
             // 
@@ -170,7 +171,7 @@
             // tciudad
             // 
             this.tciudad.Location = new System.Drawing.Point(119, 386);
-            this.tciudad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tciudad.Margin = new System.Windows.Forms.Padding(4);
             this.tciudad.Name = "tciudad";
             this.tciudad.ReadOnly = true;
             this.tciudad.Size = new System.Drawing.Size(297, 22);
@@ -179,7 +180,7 @@
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(317, 518);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 28);
             this.button3.TabIndex = 29;
@@ -189,7 +190,7 @@
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(-1, 518);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 28);
             this.button2.TabIndex = 28;
@@ -200,7 +201,7 @@
             // tips
             // 
             this.tips.Location = new System.Drawing.Point(119, 465);
-            this.tips.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tips.Margin = new System.Windows.Forms.Padding(4);
             this.tips.Name = "tips";
             this.tips.ReadOnly = true;
             this.tips.Size = new System.Drawing.Size(297, 22);
@@ -209,7 +210,7 @@
             // tgp
             // 
             this.tgp.Location = new System.Drawing.Point(152, 433);
-            this.tgp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tgp.Margin = new System.Windows.Forms.Padding(4);
             this.tgp.Name = "tgp";
             this.tgp.ReadOnly = true;
             this.tgp.Size = new System.Drawing.Size(264, 22);
@@ -218,7 +219,7 @@
             // tcp
             // 
             this.tcp.Location = new System.Drawing.Point(119, 354);
-            this.tcp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tcp.Margin = new System.Windows.Forms.Padding(4);
             this.tcp.Name = "tcp";
             this.tcp.ReadOnly = true;
             this.tcp.Size = new System.Drawing.Size(297, 22);
@@ -227,7 +228,7 @@
             // tmunicipio
             // 
             this.tmunicipio.Location = new System.Drawing.Point(119, 324);
-            this.tmunicipio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tmunicipio.Margin = new System.Windows.Forms.Padding(4);
             this.tmunicipio.Name = "tmunicipio";
             this.tmunicipio.ReadOnly = true;
             this.tmunicipio.Size = new System.Drawing.Size(297, 22);
@@ -236,7 +237,7 @@
             // temail
             // 
             this.temail.Location = new System.Drawing.Point(119, 292);
-            this.temail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.temail.Margin = new System.Windows.Forms.Padding(4);
             this.temail.Name = "temail";
             this.temail.ReadOnly = true;
             this.temail.Size = new System.Drawing.Size(297, 22);
@@ -245,7 +246,7 @@
             // tsexo
             // 
             this.tsexo.Location = new System.Drawing.Point(119, 260);
-            this.tsexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tsexo.Margin = new System.Windows.Forms.Padding(4);
             this.tsexo.Name = "tsexo";
             this.tsexo.ReadOnly = true;
             this.tsexo.Size = new System.Drawing.Size(297, 22);
@@ -254,7 +255,7 @@
             // tnacionalidad
             // 
             this.tnacionalidad.Location = new System.Drawing.Point(119, 228);
-            this.tnacionalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tnacionalidad.Margin = new System.Windows.Forms.Padding(4);
             this.tnacionalidad.Name = "tnacionalidad";
             this.tnacionalidad.ReadOnly = true;
             this.tnacionalidad.Size = new System.Drawing.Size(297, 22);
@@ -263,7 +264,7 @@
             // tdireccion
             // 
             this.tdireccion.Location = new System.Drawing.Point(119, 196);
-            this.tdireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tdireccion.Margin = new System.Windows.Forms.Padding(4);
             this.tdireccion.Name = "tdireccion";
             this.tdireccion.ReadOnly = true;
             this.tdireccion.Size = new System.Drawing.Size(297, 22);
@@ -272,7 +273,7 @@
             // ttelefono
             // 
             this.ttelefono.Location = new System.Drawing.Point(119, 164);
-            this.ttelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ttelefono.Margin = new System.Windows.Forms.Padding(4);
             this.ttelefono.Name = "ttelefono";
             this.ttelefono.ReadOnly = true;
             this.ttelefono.Size = new System.Drawing.Size(297, 22);
@@ -371,7 +372,7 @@
             // tfechanac
             // 
             this.tfechanac.Location = new System.Drawing.Point(177, 132);
-            this.tfechanac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tfechanac.Margin = new System.Windows.Forms.Padding(4);
             this.tfechanac.Name = "tfechanac";
             this.tfechanac.ReadOnly = true;
             this.tfechanac.Size = new System.Drawing.Size(239, 22);
@@ -390,7 +391,7 @@
             // tsip
             // 
             this.tsip.Location = new System.Drawing.Point(119, 100);
-            this.tsip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tsip.Margin = new System.Windows.Forms.Padding(4);
             this.tsip.Name = "tsip";
             this.tsip.ReadOnly = true;
             this.tsip.Size = new System.Drawing.Size(297, 22);
@@ -409,7 +410,7 @@
             // tdni
             // 
             this.tdni.Location = new System.Drawing.Point(119, 68);
-            this.tdni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tdni.Margin = new System.Windows.Forms.Padding(4);
             this.tdni.Name = "tdni";
             this.tdni.ReadOnly = true;
             this.tdni.Size = new System.Drawing.Size(297, 22);
@@ -428,7 +429,7 @@
             // tapellidos
             // 
             this.tapellidos.Location = new System.Drawing.Point(119, 36);
-            this.tapellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tapellidos.Margin = new System.Windows.Forms.Padding(4);
             this.tapellidos.Name = "tapellidos";
             this.tapellidos.ReadOnly = true;
             this.tapellidos.Size = new System.Drawing.Size(297, 22);
@@ -458,7 +459,7 @@
             // tnombre
             // 
             this.tnombre.Location = new System.Drawing.Point(119, 4);
-            this.tnombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tnombre.Margin = new System.Windows.Forms.Padding(4);
             this.tnombre.Name = "tnombre";
             this.tnombre.ReadOnly = true;
             this.tnombre.Size = new System.Drawing.Size(297, 22);
@@ -475,7 +476,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_busca_paciente";
             this.Text = "SANUR - Buscar Paciente";
             this.Load += new System.EventHandler(this.Form_busca_paciente_Load);
