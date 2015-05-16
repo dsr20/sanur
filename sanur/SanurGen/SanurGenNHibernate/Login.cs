@@ -45,8 +45,6 @@ namespace SanurGenNHibernate
 
                 VentanaPrincipal.VisibleMenu();
 
-                MessageBox.Show("Usuario iniciado con exito", "Logueo usuario", MessageBoxButtons.OK);
-
                 Close();
             }
 

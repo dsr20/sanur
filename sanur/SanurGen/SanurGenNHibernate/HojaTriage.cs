@@ -43,7 +43,7 @@ namespace SanurGenNHibernate
             {
                 triage.Destino = obtenerDestino();
                 triage.Prioridad = obtenerPrioridad();
-                triage.MotivoAsist = motivo.Text.ToString();
+                triage.MotivoAsist = episodio.Observaciones;
                 triage.Observaciones = observaciones.Text.ToString();
 
                 triageCEN.New_(medico.IdUsuario, triage.Prioridad, triage.MotivoAsist, triage.Destino, triage.Observaciones);
@@ -142,7 +142,7 @@ namespace SanurGenNHibernate
             sip.Text = paciente.Sip.ToString();
             edad.Text = (((DateTime.Now - (DateTime)paciente.FNac).Days) / 365).ToString();
 
-            motivo_general.Text = episodio.Observaciones;
+            motivo.Text = episodio.Observaciones;
             idEpisodio.Text = episodio.IdEpisodio.ToString();
             fecha.Text = episodio.FechaInicio.ToString();
 
@@ -162,9 +162,6 @@ namespace SanurGenNHibernate
             cancelar.Visible = false;
         }
 
-        private void HojaTriage_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -71,6 +71,8 @@ namespace SanurGenNHibernate
                 return EspecialidadEnum.pediatria;
             else if (especialidad.Text.ToString() == "Psiquiatría")
                 return EspecialidadEnum.psiquiatria;
+            else if (especialidad.Text.ToString() == "Triage")
+                return EspecialidadEnum.triage;
             else
                 return EspecialidadEnum.interna;
         }
@@ -90,6 +92,11 @@ namespace SanurGenNHibernate
         }
 
         private void altaUsuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void especialidad_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

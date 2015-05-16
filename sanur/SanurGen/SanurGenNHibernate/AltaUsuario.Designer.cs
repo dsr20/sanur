@@ -86,7 +86,7 @@
             // nombre
             // 
             this.nombre.Location = new System.Drawing.Point(432, 79);
-            this.nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombre.Margin = new System.Windows.Forms.Padding(4);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(215, 22);
             this.nombre.TabIndex = 4;
@@ -94,7 +94,7 @@
             // apellidos
             // 
             this.apellidos.Location = new System.Drawing.Point(432, 117);
-            this.apellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.apellidos.Margin = new System.Windows.Forms.Padding(4);
             this.apellidos.Name = "apellidos";
             this.apellidos.Size = new System.Drawing.Size(215, 22);
             this.apellidos.TabIndex = 5;
@@ -102,7 +102,7 @@
             // email
             // 
             this.email.Location = new System.Drawing.Point(432, 155);
-            this.email.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.email.Margin = new System.Windows.Forms.Padding(4);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(215, 22);
             this.email.TabIndex = 6;
@@ -110,7 +110,7 @@
             // contrasena
             // 
             this.contrasena.Location = new System.Drawing.Point(432, 190);
-            this.contrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contrasena.Margin = new System.Windows.Forms.Padding(4);
             this.contrasena.Name = "contrasena";
             this.contrasena.Size = new System.Drawing.Size(215, 22);
             this.contrasena.TabIndex = 7;
@@ -134,7 +134,7 @@
             "Administrador",
             "Medico"});
             this.tipo.Location = new System.Drawing.Point(432, 26);
-            this.tipo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tipo.Margin = new System.Windows.Forms.Padding(4);
             this.tipo.Name = "tipo";
             this.tipo.Size = new System.Drawing.Size(215, 24);
             this.tipo.TabIndex = 9;
@@ -160,18 +160,20 @@
             "Traumatología",
             "Pediatría",
             "Psiquiatría",
-            "Interna"});
+            "Interna",
+            "Triage"});
             this.especialidad.Location = new System.Drawing.Point(432, 249);
-            this.especialidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.especialidad.Margin = new System.Windows.Forms.Padding(4);
             this.especialidad.Name = "especialidad";
             this.especialidad.Size = new System.Drawing.Size(215, 24);
             this.especialidad.TabIndex = 11;
             this.especialidad.Visible = false;
+            this.especialidad.SelectedIndexChanged += new System.EventHandler(this.especialidad_SelectedIndexChanged);
             // 
             // crear
             // 
             this.crear.Location = new System.Drawing.Point(391, 347);
-            this.crear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.crear.Margin = new System.Windows.Forms.Padding(4);
             this.crear.Name = "crear";
             this.crear.Size = new System.Drawing.Size(164, 28);
             this.crear.TabIndex = 12;
@@ -197,7 +199,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "altaUsuario";
             this.Text = "Alta nuevo usuario";
             this.Load += new System.EventHandler(this.altaUsuario_Load);

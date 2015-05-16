@@ -77,8 +77,6 @@ public static void InitializeData ()
         /*PROTECTED REGION ID(initializeDataMethod) ENABLED START*/
         try
         {
-                AdministradorCEN admin = new AdministradorCEN();
-                admin.New_("dani","1234",true,"dsr@alu.com","sigu");
                 MedicoCEN medico = new MedicoCEN ();
                 medico.New_ ("pepe", "gacel", false, "gacel", "ivorra", SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum.traumatologia);
 
@@ -87,13 +85,15 @@ public static void InitializeData ()
 
                 PacienteCEN pcen = new PacienteCEN ();
                 pcen.New_ ("Gacel", "Ivorra", new DateTime (1991, 1, 9), "600255555", "Doctor Jimenez", "Espa�a", 1232345, 48672144, "H", "g@g.com", "Alicante", "B+", "03005", "San Juan", "Alicante");
-        
+
                 MedicoCEN mcen = new MedicoCEN ();
                 mcen.New_ ("Sergio", "sergio", false, "s@s.com", "apellido1 apellido2", SanurGenNHibernate.Enumerated.Sanur.EspecialidadEnum.ginecologia);
 
                 AdministrativoCEN acen = new AdministrativoCEN ();
                 acen.New_ ("Andrea", "administrativo", false, "administrativo", "Rodriguez");
 
+                AdministradorCEN admincen = new AdministradorCEN();
+                admincen.New_("admin", "1234", true, "admin@com", "admin");
                 EpisodioCEN epcen = new EpisodioCEN ();
                 epcen.New_ (1, new DateTime (2000, 10, 20), "Dolor en el torax", 4, SanurGenNHibernate.Enumerated.Sanur.EstadoEnum.triaje, false, false);
 

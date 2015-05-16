@@ -31,8 +31,6 @@ namespace SanurGenNHibernate
         SanurGenNHibernate.ModificarUsuario modusuario;
         SanurGenNHibernate.buscarUsuario buscarusuario;
 
-
-
         private int childFormNumber = 0;
 
         private UsuarioEN usuarioEN;
@@ -61,12 +59,9 @@ namespace SanurGenNHibernate
                 else if (TipoUsuario == "Administrador")
                 {
                     usuariosToolStripMenuItem.Visible = true;
-                    triageToolStripMenuItem.Visible = true;
                 }
                 else if (TipoUsuario == "Administrativo")
                 {
-                    usuariosToolStripMenuItem.Visible = true;
-                    pacientesToolStripMenuItem.Visible = true;
                     triageToolStripMenuItem.Visible = true;
                 }
             }
@@ -236,20 +231,27 @@ namespace SanurGenNHibernate
 
         private void buscarPacienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
-            Form_busca_paciente busPaciente = new Form_busca_paciente(UsuarioIniciado);
+            Form_busca_paciente busPaciente = new Form_busca_paciente(usuarioEN);
             busPaciente.Show();
             //this.episodioEN = busPaciente.GetEpisodio();
         }
 
-        // IMPORTANTEEEEE
         private void nuevoTriageToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EpisodioCEN episodio = new EpisodioCEN();
-            EpisodioEN epis = new EpisodioEN();
+            EpisodioEN epis =new EpisodioEN();
             epis = episodio.ReadOID(1);
-            HojaTriage hojaTri = new HojaTriage((MedicoEN) UsuarioIniciado,epis);
+            HojaTriage hojaTri = new HojaTriage((MedicoEN)UsuarioIniciado,epis);
             hojaTri.Show();
+        }
+
+        private void buscarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //creo y muestro el formulario de usuarios
+            buscarusuario = new SanurGenNHibernate.buscarUsuario();//creo la ventana
+            buscarusuario.VentanaPrincipal = this;//para que tenga acceso login a los datos de ventanaprincipal
+            buscarusuario.MdiParent = this;
+            buscarusuario.Show();
         }
     }
 }

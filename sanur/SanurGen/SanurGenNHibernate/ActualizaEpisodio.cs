@@ -25,6 +25,7 @@ namespace SanurGenNHibernate
         {
             InitializeComponent();
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
             triageCEN = new TriageCEN();
             pacienteCEN = new PacienteCEN();
             episodioCEN = new EpisodioCEN();
@@ -36,6 +37,13 @@ namespace SanurGenNHibernate
 
             medicoEN = (MedicoEN)VentanaPrincipal.UsuarioIniciado;
 
+            if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage) 
+            {
+                this.dataGridView1.Columns["Observaciones"].Visible = false;
+                this.dataGridView1.Columns["Prioridad"].Visible = false;
+            }
+            
+
             // Obtiene episodios según la especialidad
             List<EpisodioEN> episodios = null;
 
@@ -45,14 +53,32 @@ namespace SanurGenNHibernate
             else
                 episodios = (List<EpisodioEN>)episodioCEN.BuscarParaMedico(medicoEN.Especialidad);
             //episodios.Sort(comparaPrioridad);
+            
 
-            // Rellena datos del grid, comprobar..
-            for (int i = 0; i < episodios.Count(); i++)
+            // ------ TRIAGE ------
+            if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage)
+                // Rellena datos del grid, comprobar..
+                for (int i = 0; i < episodios.Count(); i++)
+                {
+                    PacienteEN paciente = pacienteCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
+                    TriageEN triage = triageCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
+
+                    //string[] fila = {episodios[i].IdEpisodio.ToString(), paciente.IdPaciente.ToString(), paciente.Nombre, triage.Prioridad.ToString(), triage.MotivoAsist, triage.Observaciones, episodios[i].FechaInicio.ToString()};
+                    string[] fila = { episodios[i].IdEpisodio.ToString(), paciente.IdPaciente.ToString(), paciente.Nombre, episodios[i].Observaciones, episodios[i].FechaInicio.ToString() };
+                    dataGridView1.Rows.Add(fila);
+                }
+            else 
             {
-                PacienteEN paciente = pacienteCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
-                TriageEN triage = triageCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
-                string[] fila = {episodios[i].IdEpisodio.ToString(), paciente.IdPaciente.ToString(), paciente.Nombre, triage.Prioridad.ToString(), triage.MotivoAsist, triage.Observaciones, episodios[i].FechaInicio.ToString()};
-                dataGridView1.Rows.Add(fila);
+                // ------ MEDICOS ------
+                for (int i = 0; i < episodios.Count(); i++)
+                {
+                    PacienteEN paciente = pacienteCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
+                    TriageEN triage = triageCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
+
+                    string[] fila = { episodios[i].IdEpisodio.ToString(), paciente.IdPaciente.ToString(), paciente.Nombre, triage.Observaciones, episodios[i].FechaInicio.ToString(), triage.Prioridad.ToString(), triage.MotivoAsist};
+                    
+                    dataGridView1.Rows.Add(fila);
+                }
             }
         }
 
@@ -80,12 +106,15 @@ namespace SanurGenNHibernate
                 {
                     HojaTriage triage = new HojaTriage(medicoEN, episodio);
                     triage.Show();
+                    triage.Refresh();
                 }
                 else
                 {
                     Diagnostico diagnostico = new Diagnostico(medicoEN, episodio);
                     diagnostico.Show();
+                    diagnostico.Refresh();
                 }
+                
             }
         }
     }

@@ -123,7 +123,7 @@
             // motivo
             // 
             this.motivo.Location = new System.Drawing.Point(133, 44);
-            this.motivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.motivo.Margin = new System.Windows.Forms.Padding(4);
             this.motivo.Multiline = true;
             this.motivo.Name = "motivo";
             this.motivo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -133,7 +133,7 @@
             // observaciones
             // 
             this.observaciones.Location = new System.Drawing.Point(135, 169);
-            this.observaciones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.observaciones.Margin = new System.Windows.Forms.Padding(4);
             this.observaciones.Multiline = true;
             this.observaciones.Name = "observaciones";
             this.observaciones.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -151,7 +151,7 @@
             "Psiquiatría",
             "Traumatología"});
             this.destino.Location = new System.Drawing.Point(135, 345);
-            this.destino.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.destino.Margin = new System.Windows.Forms.Padding(4);
             this.destino.Name = "destino";
             this.destino.Size = new System.Drawing.Size(160, 25);
             this.destino.TabIndex = 7;
@@ -167,7 +167,7 @@
             "Normal",
             "No urgente"});
             this.prioridad.Location = new System.Drawing.Point(492, 345);
-            this.prioridad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.prioridad.Margin = new System.Windows.Forms.Padding(4);
             this.prioridad.Name = "prioridad";
             this.prioridad.Size = new System.Drawing.Size(160, 25);
             this.prioridad.TabIndex = 8;
@@ -175,7 +175,7 @@
             // aceptar
             // 
             this.aceptar.Location = new System.Drawing.Point(277, 752);
-            this.aceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.aceptar.Margin = new System.Windows.Forms.Padding(4);
             this.aceptar.Name = "aceptar";
             this.aceptar.Size = new System.Drawing.Size(100, 28);
             this.aceptar.TabIndex = 9;
@@ -186,7 +186,7 @@
             // cancelar
             // 
             this.cancelar.Location = new System.Drawing.Point(407, 752);
-            this.cancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelar.Margin = new System.Windows.Forms.Padding(4);
             this.cancelar.Name = "cancelar";
             this.cancelar.Size = new System.Drawing.Size(100, 28);
             this.cancelar.TabIndex = 10;
@@ -226,9 +226,9 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(7, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(773, 223);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
@@ -240,7 +240,7 @@
             this.sip.Enabled = false;
             this.sip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sip.Location = new System.Drawing.Point(381, 187);
-            this.sip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sip.Margin = new System.Windows.Forms.Padding(4);
             this.sip.Name = "sip";
             this.sip.Size = new System.Drawing.Size(383, 23);
             this.sip.TabIndex = 27;
@@ -261,7 +261,7 @@
             this.codpos.Enabled = false;
             this.codpos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.codpos.Location = new System.Drawing.Point(120, 187);
-            this.codpos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.codpos.Margin = new System.Windows.Forms.Padding(4);
             this.codpos.Name = "codpos";
             this.codpos.Size = new System.Drawing.Size(213, 23);
             this.codpos.TabIndex = 25;
@@ -282,7 +282,7 @@
             this.grupoSang.Enabled = false;
             this.grupoSang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grupoSang.Location = new System.Drawing.Point(672, 123);
-            this.grupoSang.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grupoSang.Margin = new System.Windows.Forms.Padding(4);
             this.grupoSang.Name = "grupoSang";
             this.grupoSang.Size = new System.Drawing.Size(91, 23);
             this.grupoSang.TabIndex = 23;
@@ -303,7 +303,7 @@
             this.tlf.Enabled = false;
             this.tlf.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tlf.Location = new System.Drawing.Point(432, 123);
-            this.tlf.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tlf.Margin = new System.Windows.Forms.Padding(4);
             this.tlf.Name = "tlf";
             this.tlf.Size = new System.Drawing.Size(151, 23);
             this.tlf.TabIndex = 21;
@@ -324,7 +324,7 @@
             this.direccion.Enabled = false;
             this.direccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.direccion.Location = new System.Drawing.Point(103, 155);
-            this.direccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.direccion.Margin = new System.Windows.Forms.Padding(4);
             this.direccion.Name = "direccion";
             this.direccion.Size = new System.Drawing.Size(661, 23);
             this.direccion.TabIndex = 19;
@@ -345,7 +345,7 @@
             this.municipio.Enabled = false;
             this.municipio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.municipio.Location = new System.Drawing.Point(100, 123);
-            this.municipio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.municipio.Margin = new System.Windows.Forms.Padding(4);
             this.municipio.Name = "municipio";
             this.municipio.Size = new System.Drawing.Size(230, 23);
             this.municipio.TabIndex = 17;
@@ -366,7 +366,7 @@
             this.ciudad.Enabled = false;
             this.ciudad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ciudad.Location = new System.Drawing.Point(572, 91);
-            this.ciudad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ciudad.Margin = new System.Windows.Forms.Padding(4);
             this.ciudad.Name = "ciudad";
             this.ciudad.Size = new System.Drawing.Size(191, 23);
             this.ciudad.TabIndex = 15;
@@ -387,7 +387,7 @@
             this.nacionalidad.Enabled = false;
             this.nacionalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nacionalidad.Location = new System.Drawing.Point(280, 91);
-            this.nacionalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nacionalidad.Margin = new System.Windows.Forms.Padding(4);
             this.nacionalidad.Name = "nacionalidad";
             this.nacionalidad.Size = new System.Drawing.Size(214, 23);
             this.nacionalidad.TabIndex = 13;
@@ -408,7 +408,7 @@
             this.sexo.Enabled = false;
             this.sexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sexo.Location = new System.Drawing.Point(69, 91);
-            this.sexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sexo.Margin = new System.Windows.Forms.Padding(4);
             this.sexo.Name = "sexo";
             this.sexo.Size = new System.Drawing.Size(78, 23);
             this.sexo.TabIndex = 11;
@@ -429,7 +429,7 @@
             this.edad.Enabled = false;
             this.edad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edad.Location = new System.Drawing.Point(625, 59);
-            this.edad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.edad.Margin = new System.Windows.Forms.Padding(4);
             this.edad.Name = "edad";
             this.edad.Size = new System.Drawing.Size(138, 23);
             this.edad.TabIndex = 9;
@@ -450,7 +450,7 @@
             this.fnac.Enabled = false;
             this.fnac.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fnac.Location = new System.Drawing.Point(365, 59);
-            this.fnac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fnac.Margin = new System.Windows.Forms.Padding(4);
             this.fnac.Name = "fnac";
             this.fnac.Size = new System.Drawing.Size(194, 23);
             this.fnac.TabIndex = 7;
@@ -471,7 +471,7 @@
             this.dni.Enabled = false;
             this.dni.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dni.Location = new System.Drawing.Point(51, 59);
-            this.dni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dni.Margin = new System.Windows.Forms.Padding(4);
             this.dni.Name = "dni";
             this.dni.Size = new System.Drawing.Size(183, 23);
             this.dni.TabIndex = 5;
@@ -492,7 +492,7 @@
             this.nombre.Enabled = false;
             this.nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nombre.Location = new System.Drawing.Point(512, 27);
-            this.nombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nombre.Margin = new System.Windows.Forms.Padding(4);
             this.nombre.Name = "nombre";
             this.nombre.Size = new System.Drawing.Size(253, 23);
             this.nombre.TabIndex = 3;
@@ -503,7 +503,7 @@
             this.apellidos.Enabled = false;
             this.apellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apellidos.Location = new System.Drawing.Point(104, 27);
-            this.apellidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.apellidos.Margin = new System.Windows.Forms.Padding(4);
             this.apellidos.Name = "apellidos";
             this.apellidos.Size = new System.Drawing.Size(319, 23);
             this.apellidos.TabIndex = 2;
@@ -538,9 +538,9 @@
             this.groupBox2.Controls.Add(this.idEpisodio);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(7, 245);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(772, 91);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
@@ -562,7 +562,7 @@
             this.motivo_general.Enabled = false;
             this.motivo_general.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.motivo_general.Location = new System.Drawing.Point(81, 55);
-            this.motivo_general.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.motivo_general.Margin = new System.Windows.Forms.Padding(4);
             this.motivo_general.Name = "motivo_general";
             this.motivo_general.Size = new System.Drawing.Size(683, 23);
             this.motivo_general.TabIndex = 4;
@@ -573,7 +573,7 @@
             this.fecha.Enabled = false;
             this.fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fecha.Location = new System.Drawing.Point(443, 18);
-            this.fecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.fecha.Margin = new System.Windows.Forms.Padding(4);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(321, 23);
             this.fecha.TabIndex = 3;
@@ -604,7 +604,7 @@
             this.idEpisodio.Enabled = false;
             this.idEpisodio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.idEpisodio.Location = new System.Drawing.Point(113, 23);
-            this.idEpisodio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.idEpisodio.Margin = new System.Windows.Forms.Padding(4);
             this.idEpisodio.Name = "idEpisodio";
             this.idEpisodio.Size = new System.Drawing.Size(202, 23);
             this.idEpisodio.TabIndex = 0;
@@ -621,9 +621,9 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(7, 343);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox3.Size = new System.Drawing.Size(773, 388);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
@@ -633,18 +633,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 748);
+            this.ClientSize = new System.Drawing.Size(786, 794);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.cancelar);
             this.Controls.Add(this.aceptar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HojaTriage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hoja de triage";
-            this.Load += new System.EventHandler(this.HojaTriage_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
