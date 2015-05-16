@@ -39,6 +39,10 @@
             this.Nombregrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidosgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Emailgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Medicogrid = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Administradorgrid = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Administrativogrid = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Especialidadgrid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +55,7 @@
             this.panel1.Controls.Add(this.Email);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(49, 18);
+            this.panel1.Location = new System.Drawing.Point(143, 18);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(620, 113);
             this.panel1.TabIndex = 0;
@@ -105,10 +109,14 @@
             this.Idgrid,
             this.Nombregrid,
             this.Apellidosgrid,
-            this.Emailgrid});
+            this.Emailgrid,
+            this.Medicogrid,
+            this.Administradorgrid,
+            this.Administrativogrid,
+            this.Especialidadgrid});
             this.dataGridView1.Location = new System.Drawing.Point(49, 161);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(619, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(844, 250);
             this.dataGridView1.TabIndex = 1;
             // 
             // Idgrid
@@ -131,11 +139,33 @@
             this.Emailgrid.HeaderText = "Email";
             this.Emailgrid.Name = "Emailgrid";
             // 
+            // Medicogrid
+            // 
+            this.Medicogrid.HeaderText = "Medico";
+            this.Medicogrid.Name = "Medicogrid";
+            // 
+            // Administradorgrid
+            // 
+            this.Administradorgrid.HeaderText = "Administrador";
+            this.Administradorgrid.Name = "Administradorgrid";
+            // 
+            // Administrativogrid
+            // 
+            this.Administrativogrid.HeaderText = "Administrativo";
+            this.Administrativogrid.Name = "Administrativogrid";
+            // 
+            // Especialidadgrid
+            // 
+            this.Especialidadgrid.HeaderText = "Especialidad";
+            this.Especialidadgrid.Name = "Especialidadgrid";
+            this.Especialidadgrid.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Especialidadgrid.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // buscarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(736, 450);
+            this.ClientSize = new System.Drawing.Size(953, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Name = "buscarUsuario";
@@ -160,5 +190,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombregrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidosgrid;
         private System.Windows.Forms.DataGridViewTextBoxColumn Emailgrid;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Medicogrid;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Administradorgrid;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Administrativogrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Especialidadgrid;
     }
 }

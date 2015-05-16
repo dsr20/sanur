@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
@@ -43,14 +42,13 @@
             this.buscarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.triageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoTriageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
             // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
             this.statusStrip.Location = new System.Drawing.Point(0, 431);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(632, 22);
@@ -83,7 +81,8 @@
             this.usuariosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearUsuariosToolStripMenuItem,
             this.modificarUsuariosToolStripMenuItem,
-            this.borrarUsuarioToolStripMenuItem});
+            this.borrarUsuarioToolStripMenuItem,
+            this.buscarUsuarioToolStripMenuItem});
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
@@ -147,9 +146,16 @@
             // nuevoTriageToolStripMenuItem
             // 
             this.nuevoTriageToolStripMenuItem.Name = "nuevoTriageToolStripMenuItem";
-            this.nuevoTriageToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nuevoTriageToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.nuevoTriageToolStripMenuItem.Text = "Nuevo Triage";
             this.nuevoTriageToolStripMenuItem.Click += new System.EventHandler(this.nuevoTriageToolStripMenuItem_Click);
+            // 
+            // buscarUsuarioToolStripMenuItem
+            // 
+            this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
+            this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
+            this.buscarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.buscarUsuarioToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -186,6 +192,7 @@
         private System.Windows.Forms.ToolStripMenuItem buscarPacienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem triageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoTriageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buscarUsuarioToolStripMenuItem;
     }
 }
 

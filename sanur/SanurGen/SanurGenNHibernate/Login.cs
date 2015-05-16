@@ -39,8 +39,17 @@ namespace SanurGenNHibernate
                 u = user.ReadMail(nombre.Text);
                    
                 VentanaPrincipal.UsuarioIniciado = u;
-                VentanaPrincipal.TipoUsuario=VentanaPrincipal.CompruebaUsuario(u.IdUsuario);
+                try
+                {
+                    VentanaPrincipal.TipoUsuario = VentanaPrincipal.CompruebaUsuario(u.IdUsuario);
+                }
+                catch(Exception y)
+                {
+                    MessageBox.Show("Error en compruebausuario");
+                }
+
                 VentanaPrincipal.Sesion_ini = true;
+
 
                 VentanaPrincipal.VisibleMenu();
 

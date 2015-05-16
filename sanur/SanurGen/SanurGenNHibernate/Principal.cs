@@ -31,8 +31,6 @@ namespace SanurGenNHibernate
         SanurGenNHibernate.ModificarUsuario modusuario;
         SanurGenNHibernate.buscarUsuario buscarusuario;
 
-
-
         private int childFormNumber = 0;
 
         private UsuarioEN usuarioEN;
@@ -60,13 +58,12 @@ namespace SanurGenNHibernate
                 }
                 else if (TipoUsuario == "Administrador")
                 {
-                    triageToolStripMenuItem.Visible = true;
+                    usuariosToolStripMenuItem.Visible = true;
                 }
                 else if (TipoUsuario == "Administrativo")
                 {
-                    usuariosToolStripMenuItem.Visible = true;
-                    pacientesToolStripMenuItem.Visible = true;
                     triageToolStripMenuItem.Visible = true;
+                    pacientesToolStripMenuItem.Visible = true;
                 }
             }
 
@@ -247,6 +244,15 @@ namespace SanurGenNHibernate
             epis = episodio.ReadOID(1);
             HojaTriage hojaTri = new HojaTriage((MedicoEN)UsuarioIniciado,epis);
             hojaTri.Show();
+        }
+
+        private void buscarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //creo y muestro el formulario de usuarios
+            buscarusuario = new SanurGenNHibernate.buscarUsuario();//creo la ventana
+            buscarusuario.VentanaPrincipal = this;//para que tenga acceso login a los datos de ventanaprincipal
+            buscarusuario.MdiParent = this;
+            buscarusuario.Show();
         }
     }
 }

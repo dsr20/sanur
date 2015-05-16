@@ -188,7 +188,6 @@ C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.pdb
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Castle.DynamicProxy2.dll
-C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\itextsharp.dll
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\LinFu.DynamicProxy.dll
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.ByteCode.Castle.dll
 C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.ByteCode.LinFu.dll
@@ -215,3 +214,6 @@ C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.fr
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe
 C:\Users\Andrea\sanur\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.core.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.framework.dll
+C:\Users\sergio\Desktop\proyecto dss\sanur\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Diagnostico.resources
