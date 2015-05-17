@@ -175,6 +175,12 @@
     <Compile Include="Form_crear_paciente.Designer.cs">
       <DependentUpon>Form_crear_paciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Historial_Clinico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Historial_Clinico.Designer.cs">
+      <DependentUpon>Historial_Clinico.cs</DependentUpon>
+    </Compile>
     <Compile Include="HojaTriage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -285,6 +291,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_crear_paciente.resx">
       <DependentUpon>Form_crear_paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historial_Clinico.resx">
+      <DependentUpon>Historial_Clinico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HojaTriage.resx">
       <DependentUpon>HojaTriage.cs</DependentUpon>

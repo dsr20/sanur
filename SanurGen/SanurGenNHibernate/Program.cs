@@ -19,6 +19,9 @@ namespace SanurGenNHibernate
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form_crear_paciente());
             //Application.Run(new Form_busca_paciente());
+            //PacienteCEN pacientecen = new PacienteCEN();
+            //PacienteEN paciente = pacientecen.BuscarDNI(Convert.ToInt32("48672144"));
+            //Application.Run(new Historial_Clinico(paciente));
             Application.Run(new Principal());
             // Login login = new Login();
             // login.ShowDialog();

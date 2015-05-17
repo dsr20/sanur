@@ -225,3 +225,35 @@ C:\workspace\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Obse
 C:\Users\sethWarrior\Desktop\git\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
 C:\Users\sethWarrior\Desktop\git\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
 C:\Users\sethWarrior\Desktop\git\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.pdb
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe.config
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.exe
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.pdb
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\hibernate.cfg.xml
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.exe
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\SanurGenNHibernate.pdb
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Antlr3.Runtime.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Castle.DynamicProxy2.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\Iesi.Collections.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\LinFu.DynamicProxy.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\log4net.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.ByteCode.Castle.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.ByteCode.LinFu.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\NHibernate.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.core.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\bin\Debug\nunit.framework.dll
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ActualizaEpisodio.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.altaUsuario.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.BajaUsuario.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.buscarUsuario.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Diagnostico.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Form_busca_paciente.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Form_crear_paciente.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.HojaTriage.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Login.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ModificarUsuario.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.ObserForm.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Principal.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\GenerateResource.read.1.tlog
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\GenerateResource.write.1.tlog
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Debug\SanurGenNHibernate.Historial_Clinico.resources

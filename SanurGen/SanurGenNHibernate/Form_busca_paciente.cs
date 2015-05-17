@@ -124,5 +124,21 @@ namespace SanurGenNHibernate
             this.Close();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (pacienteEn == null)
+            {
+                MessageBox.Show("No se encuentra el paciente.");
+            }
+            else
+            {
+                Historial_Clinico historial = new Historial_Clinico(pacienteEn);
+                historial.Show();
+               //new Historial_Clinico(pacienteEn)  //Form.ShowDialog
+                //DialogResult dr = .ShowDialog(this);
+            }
+
+        }
+
     }
 }

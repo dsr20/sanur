@@ -49,8 +49,32 @@ namespace SanurGenNHibernate
                 MessageBox.Show("El campo ciudad no puede ser vacío");
             else
             {
-                PacienteCEN pacienteCen = new PacienteCEN();
-                pacienteCen.New_(TNombre.Text, TApellido.Text, dateTimePicker1.Value, TTelefono.Text, TDireccion.Text, TNacionalidad.Text, Convert.ToInt32(TSip.Text), Convert.ToInt32(TDNI.Text), selector_sexo.Text, TEmail.Text, TMunicipio.Text, TGS.Text, TCP.Text, TIPS.Text, tciudad.Text);
+                try
+                {
+
+                    PacienteCEN pacienteCen = new PacienteCEN();
+                    pacienteCen.New_(TNombre.Text, TApellido.Text, dateTimePicker1.Value, TTelefono.Text, TDireccion.Text, TNacionalidad.Text, Convert.ToInt32(TSip.Text), Convert.ToInt32(TDNI.Text), selector_sexo.Text, TEmail.Text, TMunicipio.Text, TGS.Text, TCP.Text, TIPS.Text, tciudad.Text);
+                    TNombre.Clear();
+                    TApellido.Clear();
+                    TTelefono.Clear();
+                    TDireccion.Clear();
+                    TNacionalidad.Clear();
+                    TSip.Clear();
+                    TDNI.Clear();
+                    TEmail.Clear();
+                    TMunicipio.Clear();
+                    TGS.Clear();
+                    TCP.Clear();
+                    TIPS.Clear();
+                    tciudad.Clear();
+                    MessageBox.Show("Paciente creado con Éxito");
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Redundancia de datos - Usuario ya existente en la BD");
+                }
+             
+
             }
 
 
@@ -72,6 +96,11 @@ namespace SanurGenNHibernate
        private void label3_Click(object sender, EventArgs e)
        {
 
+       }
+
+       private void button2_Click(object sender, EventArgs e)
+       {
+           this.Close();
        }
  
 

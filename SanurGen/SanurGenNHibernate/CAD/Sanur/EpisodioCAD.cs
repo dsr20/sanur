@@ -186,7 +186,7 @@ public System.Collections.Generic.IList<SanurGenNHibernate.EN.Sanur.EpisodioEN> 
                 SessionInitializeTransaction ();
                 //String sql = @"FROM EpisodioEN self where select ep FROM EpisodioEN as ep inner join ep.Paciente as pa where pa.IdPaciente = :idPaciente";
                 //IQuery query = session.CreateQuery(sql);
-                IQuery query = (IQuery)session.GetNamedQuery ("EpisodioENobtenerHistorialHQL");
+                 IQuery query = (IQuery)session.GetNamedQuery ("EpisodioENobtenerHistorialHQL");
                 query.SetParameter ("idPaciente", idPaciente);
 
                 result = query.List<SanurGenNHibernate.EN.Sanur.EpisodioEN>();
