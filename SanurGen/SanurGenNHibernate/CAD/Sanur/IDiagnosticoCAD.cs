@@ -19,6 +19,6 @@ DiagnosticoEN ReadOID (int idDiagnostico);
 System.Collections.Generic.IList<DiagnosticoEN> ReadAll (int first, int size);
 
 
-SanurGenNHibernate.EN.Sanur.DiagnosticoEN BuscarUltimo ();
+int BuscarUltimo ();
 }
 }

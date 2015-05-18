@@ -19,6 +19,7 @@ namespace SanurGenNHibernate
         public SanurGenNHibernate.Principal VentanaPrincipal;
         private MedicoEN medico;
         private EpisodioEN episodio;
+        public ActualizaEpisodio padre;
 
       //  private PacienteEN paciente;
 
@@ -52,7 +53,7 @@ namespace SanurGenNHibernate
                 epCEN.Modify(episodio.IdEpisodio, episodio.FechaInicio, episodio.Observaciones, episodio.Estado, episodio.Emergencia, episodio.Imporante);
                 idTriage = triageCEN.BuscarUltimo();
                 epCEN.AsignarTriage(episodio.IdEpisodio, idTriage);
-
+                padre.CargarDatosGrid();
                 Close();
             }
         }

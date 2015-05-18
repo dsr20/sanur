@@ -20,6 +20,25 @@ namespace SanurGenNHibernate
         private TriageCEN triageCEN;
         private EpisodioCEN episodioCEN;
         private MedicoEN medicoEN;
+        private System.Windows.Forms.Timer myTimer = new System.Windows.Forms.Timer();
+
+        private void InitializeTimer()
+        {
+            // Call this procedure when the application starts.
+            // Set to 1 second.
+            
+            myTimer.Tick += new EventHandler(myTimer_Tick);
+            myTimer.Interval = 10000;
+
+            myTimer.Start();
+
+
+        }
+
+        public void myTimer_Tick(object sender, EventArgs e)
+        {
+            CargarDatosGrid();
+        }
 
         public ActualizaEpisodio()
         {
@@ -29,12 +48,16 @@ namespace SanurGenNHibernate
             triageCEN = new TriageCEN();
             pacienteCEN = new PacienteCEN();
             episodioCEN = new EpisodioCEN();
+            InitializeTimer();
         }
 
         //A medias cargado de datos.
         public void CargarDatosGrid()
         {
-            medicoEN = (MedicoEN)VentanaPrincipal.UsuarioIniciado;
+            dataGridView1.Rows.Clear();
+
+            if (medicoEN == null)
+                medicoEN = (MedicoEN)VentanaPrincipal.UsuarioIniciado;
 
             if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage) 
             {
@@ -110,12 +133,14 @@ namespace SanurGenNHibernate
                 if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage)
                 {
                     HojaTriage triage = new HojaTriage(medicoEN, episodio);
+                    triage.padre = this;
                     triage.Show();
                     triage.Refresh();
                 }
                 else
                 {
                     Diagnostico diagnostico = new Diagnostico(medicoEN, episodio);
+                    diagnostico.padre = this;
                     diagnostico.Show();
                     diagnostico.Refresh();
                 }

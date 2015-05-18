@@ -17,6 +17,7 @@ namespace SanurGenNHibernate
         TriageCEN triageCEN = new TriageCEN();
         EpisodioEN episodio;
         MedicoEN medico;
+        public ActualizaEpisodio padre;
 
         public Diagnostico(MedicoEN medico, EpisodioEN episodio)
         {
@@ -109,13 +110,13 @@ namespace SanurGenNHibernate
 
                 // Se guarda y se relaciona el diagnostico con el episodio
                 diagnosticoCEN.New_(medico.IdUsuario, diagnostico.Juicio, diagnostico.Tratamiento, diagnostico.Hospitalizacion);
-                diagnostico.IdDiagnostico = diagnosticoCEN.BuscarUltimo().IdDiagnostico;
-                episodioCEN.AsignarDiagnostico(episodio.IdEpisodio, diagnostico.IdDiagnostico);
+                diagnostico.IdDiagnostico = diagnosticoCEN.BuscarUltimo();
+                episodioCEN.AsignarDiagnostico((int)episodio.IdEpisodio, (int)diagnostico.IdDiagnostico);
 
                 /*Principal p = new Principal();
 
                 p.ActualizarGrid();*/
-
+                padre.CargarDatosGrid();
                 Close();
             }
         }

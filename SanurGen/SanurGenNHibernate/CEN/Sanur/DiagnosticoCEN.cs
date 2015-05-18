@@ -87,7 +87,7 @@ public System.Collections.Generic.IList<DiagnosticoEN> ReadAll (int first, int s
         list = _IDiagnosticoCAD.ReadAll (first, size);
         return list;
 }
-public SanurGenNHibernate.EN.Sanur.DiagnosticoEN BuscarUltimo ()
+public int BuscarUltimo ()
 {
         return _IDiagnosticoCAD.BuscarUltimo ();
 }

@@ -169,9 +169,9 @@ public System.Collections.Generic.IList<DiagnosticoEN> ReadAll (int first, int s
         return result;
 }
 
-public SanurGenNHibernate.EN.Sanur.DiagnosticoEN BuscarUltimo ()
+public int BuscarUltimo ()
 {
-        SanurGenNHibernate.EN.Sanur.DiagnosticoEN result;
+        int result;
         try
         {
                 SessionInitializeTransaction ();
@@ -180,7 +180,7 @@ public SanurGenNHibernate.EN.Sanur.DiagnosticoEN BuscarUltimo ()
                 IQuery query = (IQuery)session.GetNamedQuery ("DiagnosticoENbuscarUltimoHQL");
 
 
-                result = query.UniqueResult<SanurGenNHibernate.EN.Sanur.DiagnosticoEN>();
+                result = query.UniqueResult<int>();
                 SessionCommit ();
         }
 

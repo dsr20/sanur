@@ -1,4 +1,5 @@
-﻿namespace SanurGenNHibernate
+﻿using System;
+namespace SanurGenNHibernate
 {
     partial class ActualizaEpisodio
     {
@@ -28,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id_episodio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idpaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
