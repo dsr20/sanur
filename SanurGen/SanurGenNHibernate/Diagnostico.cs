@@ -112,6 +112,9 @@ namespace SanurGenNHibernate
                 diagnostico.IdDiagnostico = diagnosticoCEN.BuscarUltimo().IdDiagnostico;
                 episodioCEN.AsignarDiagnostico(episodio.IdEpisodio, diagnostico.IdDiagnostico);
 
+                /*Principal p = new Principal();
+
+                p.ActualizarGrid();*/
 
                 Close();
             }

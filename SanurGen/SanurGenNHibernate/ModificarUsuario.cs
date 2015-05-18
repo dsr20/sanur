@@ -15,6 +15,7 @@ namespace SanurGenNHibernate
     public partial class ModificarUsuario : Form
     {
         public SanurGenNHibernate.Principal VentanaPrincipal;
+        public bool contrasenamodificada = false;
 
         public ModificarUsuario()
         {
@@ -77,39 +78,57 @@ namespace SanurGenNHibernate
             AdministrativoCEN administrativoCEN = new AdministrativoCEN();
 
             usuarioEN = usuarioCEN.ReadMail(emailantiguo.Text.ToString());
-
-            try
-            {
-                administradorCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), contrasena.Text.ToString(), usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString());
-                MessageBox.Show("El usuario ha sido modificado correctamente", "Modificar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception ex)
+            
+            if (usuarioEN.IdUsuario != VentanaPrincipal.UsuarioIniciado.IdUsuario)
             {
                 try
                 {
-                    administrativoCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), contrasena.Text.ToString(), usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString());
+                    if (contrasenamodificada == true)
+                    {
+                        administradorCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), contrasena.Text.ToString(), usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString());
+                    }
+                    else
+                    {
+                        administradorCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), "", usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString());
+                    }
                     MessageBox.Show("El usuario ha sido modificado correctamente", "Modificar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
-                catch (Exception exc)
+                catch (Exception ex)
                 {
                     try
                     {
-                        medicoEN = medicoCEN.ReadOID(usuarioEN.IdUsuario);
-                        medicoCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), contrasena.Text.ToString(), usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString(), (EspecialidadEnum)(especialidad.SelectedIndex + 1));
+                        administrativoCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), contrasena.Text.ToString(), usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString());
                         MessageBox.Show("El usuario ha sido modificado correctamente", "Modificar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    catch (Exception exce)
+                    catch (Exception exc)
                     {
-                        MessageBox.Show("Error al modificar el usuario","Modificar usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        try
+                        {
+                            medicoEN = medicoCEN.ReadOID(usuarioEN.IdUsuario);
+                            medicoCEN.Modify(usuarioEN.IdUsuario, nombre.Text.ToString(), contrasena.Text.ToString(), usuarioEN.Iniciado, emailnuevo.Text.ToString(), apellidos.Text.ToString(), (EspecialidadEnum)(especialidad.SelectedIndex + 1));
+                            MessageBox.Show("El usuario ha sido modificado correctamente", "Modificar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception exce)
+                        {
+                            MessageBox.Show("Error al modificar el usuario", "Modificar usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
+            else
+                MessageBox.Show("No puedes modificar el usuario que ha iniciado la sesión");
         }
 
         private void contrasena_TextChanged(object sender, EventArgs e)
         {
+            
+        }
 
+        private void contrasena_MouseClick(object sender, MouseEventArgs e)
+        {
+            contrasena.Text = "";
+            contrasenamodificada = true;
         }
     }
 }

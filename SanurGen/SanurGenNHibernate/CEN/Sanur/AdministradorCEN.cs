@@ -58,12 +58,21 @@ public int New_ (string p_nombre, String p_contrasena, bool p_iniciado, string p
 public void Modify (int p_Administrador_OID, string p_nombre, String p_contrasena, bool p_iniciado, string p_email, string p_apellidos)
 {
         AdministradorEN administradorEN = null;
+        UsuarioCEN usc = new UsuarioCEN();
+        //UsuarioEN use = new UsuarioEN();
 
         //Initialized AdministradorEN
         administradorEN = new AdministradorEN ();
         administradorEN.IdUsuario = p_Administrador_OID;
         administradorEN.Nombre = p_nombre;
+    
+    
+    if(p_contrasena=="")
+        administradorEN.Contrasena = usc.ReadOID(p_Administrador_OID).Contrasena;
+    else
         administradorEN.Contrasena = Utils.Util.GetEncondeMD5 (p_contrasena);
+
+
         administradorEN.Iniciado = p_iniciado;
         administradorEN.Email = p_email;
         administradorEN.Apellidos = p_apellidos;

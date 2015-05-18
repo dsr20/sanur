@@ -154,7 +154,7 @@
     <Compile Include="buscarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="buscarUsuario.Designer.cs">
+    <Compile Include="buscarUsuario.designer.cs">
       <DependentUpon>buscarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="VerDiagnostico.cs">

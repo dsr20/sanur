@@ -37,13 +37,13 @@
             this.crearUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarUsuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarPacienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.triageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoTriageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip.SuspendLayout();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,7 +67,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
             this.pacientesToolStripMenuItem,
-            this.triageToolStripMenuItem});
+            this.triageToolStripMenuItem,
+            this.cerrarSesiónToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -110,6 +111,13 @@
             this.borrarUsuarioToolStripMenuItem.Text = "Borrar Usuario";
             this.borrarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.borrarUsuarioToolStripMenuItem_Click);
             // 
+            // buscarUsuarioToolStripMenuItem
+            // 
+            this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
+            this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
+            this.buscarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.buscarUsuarioToolStripMenuItem_Click);
+            // 
             // pacientesToolStripMenuItem
             // 
             this.pacientesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -150,12 +158,13 @@
             this.nuevoTriageToolStripMenuItem.Text = "Nuevo Triage";
             this.nuevoTriageToolStripMenuItem.Click += new System.EventHandler(this.nuevoTriageToolStripMenuItem_Click);
             // 
-            // buscarUsuarioToolStripMenuItem
+            // cerrarSesiónToolStripMenuItem
             // 
-            this.buscarUsuarioToolStripMenuItem.Name = "buscarUsuarioToolStripMenuItem";
-            this.buscarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
-            this.buscarUsuarioToolStripMenuItem.Text = "Buscar Usuario";
-            this.buscarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.buscarUsuarioToolStripMenuItem_Click);
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
+            this.cerrarSesiónToolStripMenuItem.Visible = false;
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -169,8 +178,6 @@
             this.Text = "MDIParent1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Principal_Load);
-            this.statusStrip.ResumeLayout(false);
-            this.statusStrip.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -193,6 +200,7 @@
         private System.Windows.Forms.ToolStripMenuItem triageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoTriageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem buscarUsuarioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
     }
 }
 

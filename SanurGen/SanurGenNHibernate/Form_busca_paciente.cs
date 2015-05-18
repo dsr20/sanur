@@ -13,6 +13,8 @@ namespace SanurGenNHibernate
 {
     public partial class Form_busca_paciente : Form
     {
+        public SanurGenNHibernate.Principal VentanaPrincipal;
+
         private PacienteEN pacienteEn;
         private UsuarioEN usuarioEN;
 
@@ -21,13 +23,11 @@ namespace SanurGenNHibernate
             InitializeComponent();
         }
 
-        public Form_busca_paciente(UsuarioEN usuario)
+        /*public Form_busca_paciente(UsuarioEN usuario)
         {
             InitializeComponent();
-            this.usuarioEN = usuario;
-
-           
-        }
+            this.usuarioEN = usuario;   
+        }*/
        
         private void button1_Click(object sender, EventArgs e)
         {
@@ -78,7 +78,21 @@ namespace SanurGenNHibernate
 
         private void Form_busca_paciente_Load(object sender, EventArgs e)
         {
-
+            if (VentanaPrincipal.CompruebaUsuario(VentanaPrincipal.UsuarioIniciado.IdUsuario) == "Administrativo")
+            {
+                button2.Visible = true;
+                button3.Visible = false;
+            }
+            if (VentanaPrincipal.CompruebaUsuario(VentanaPrincipal.UsuarioIniciado.IdUsuario) == "Administrador")
+            {
+                button2.Visible = false;
+                button3.Visible = false;
+            }
+            if (VentanaPrincipal.CompruebaUsuario(VentanaPrincipal.UsuarioIniciado.IdUsuario) == "Medico")
+            {
+                button2.Visible = false;
+                button3.Visible = true;
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -95,7 +109,7 @@ namespace SanurGenNHibernate
             episodioENT.FechaInicio = time;
             episodioENT.FechaFin = time;
 
-            AdministrativoEN admin = (AdministrativoEN)usuarioEN;
+            AdministrativoEN admin = (AdministrativoEN)VentanaPrincipal.UsuarioIniciado;
             episodioENT.Administrativo = admin;
 
             /*DiagnosticoEN diagnosticoEN = new DiagnosticoEN();

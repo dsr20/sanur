@@ -51,32 +51,37 @@ namespace SanurGenNHibernate
 
             usuarioEN = usuarioCEN.ReadMail(emailantiguo.Text.ToString());
 
-            try
-            {
-                administradorCEN.Destroy(usuarioEN.IdUsuario);
-                MessageBox.Show("El usuario ha sido eliminado correctamente", "Eliminar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            }
-            catch (Exception ex)
+            if (usuarioEN.IdUsuario != VentanaPrincipal.UsuarioIniciado.IdUsuario)
             {
                 try
                 {
-                    administrativoCEN.Destroy(usuarioEN.IdUsuario);
+                    administradorCEN.Destroy(usuarioEN.IdUsuario);
                     MessageBox.Show("El usuario ha sido eliminado correctamente", "Eliminar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
-                catch (Exception exc)
+                catch (Exception ex)
                 {
                     try
                     {
-                        medicoCEN.Destroy(usuarioEN.IdUsuario);
+                        administrativoCEN.Destroy(usuarioEN.IdUsuario);
                         MessageBox.Show("El usuario ha sido eliminado correctamente", "Eliminar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    catch (Exception exce)
+                    catch (Exception exc)
                     {
-                        MessageBox.Show("Error al eliminar el usuario", "Eliminar usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        try
+                        {
+                            medicoCEN.Destroy(usuarioEN.IdUsuario);
+                            MessageBox.Show("El usuario ha sido eliminado correctamente", "Eliminar usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception exce)
+                        {
+                            MessageBox.Show("Error al eliminar el usuario", "Eliminar usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
+            else
+                MessageBox.Show("No puedes modificar el usuario que ha iniciado la sesión");
         }
     }
 }

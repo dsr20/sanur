@@ -34,7 +34,6 @@ namespace SanurGenNHibernate
         //A medias cargado de datos.
         public void CargarDatosGrid()
         {
-
             medicoEN = (MedicoEN)VentanaPrincipal.UsuarioIniciado;
 
             if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage) 
@@ -49,14 +48,19 @@ namespace SanurGenNHibernate
 
             // Obtener episodios pendientes de triage o de diagnostico
             if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage)
+            {
                 episodios = (List<EpisodioEN>)episodioCEN.BuscarParaTriage();
+            }
             else
+            {
                 episodios = (List<EpisodioEN>)episodioCEN.BuscarParaMedico(medicoEN.Especialidad);
+            }
             //episodios.Sort(comparaPrioridad);
             
 
             // ------ TRIAGE ------
             if (medicoEN.Especialidad == Enumerated.Sanur.EspecialidadEnum.triage)
+            {
                 // Rellena datos del grid, comprobar..
                 for (int i = 0; i < episodios.Count(); i++)
                 {
@@ -67,7 +71,8 @@ namespace SanurGenNHibernate
                     string[] fila = { episodios[i].IdEpisodio.ToString(), paciente.IdPaciente.ToString(), paciente.Nombre, episodios[i].Observaciones, episodios[i].FechaInicio.ToString() };
                     dataGridView1.Rows.Add(fila);
                 }
-            else 
+            }
+            else
             {
                 // ------ MEDICOS ------
                 for (int i = 0; i < episodios.Count(); i++)
@@ -75,8 +80,8 @@ namespace SanurGenNHibernate
                     PacienteEN paciente = pacienteCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
                     TriageEN triage = triageCEN.BuscarDeEpisodio(episodios[i].IdEpisodio);
 
-                    string[] fila = { episodios[i].IdEpisodio.ToString(), paciente.IdPaciente.ToString(), paciente.Nombre, triage.Observaciones, episodios[i].FechaInicio.ToString(), triage.Prioridad.ToString(), triage.MotivoAsist};
-                    
+                    string[] fila = { episodios[i].IdEpisodio.ToString(), paciente.IdPaciente.ToString(), paciente.Nombre, triage.Observaciones, episodios[i].FechaInicio.ToString(), triage.Prioridad.ToString(), triage.MotivoAsist };
+
                     dataGridView1.Rows.Add(fila);
                 }
             }
