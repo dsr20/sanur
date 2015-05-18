@@ -41,28 +41,9 @@ namespace SanurGenNHibernate
         {
             InitializeComponent();
         }
-        public void ActualizarGrid()
-        {
-            act_epi.Close();
-
-            if (TipoUsuario == "Medico")
-            {
-                pacientesToolStripMenuItem.Visible = true;
-                nuevoPacienteToolStripMenuItem.Visible = false;
-                //triageToolStripMenuItem.Visible = true;
-
-
-                act_epi.MdiParent = this;
-                act_epi.VentanaPrincipal = this;
-                act_epi.CargarDatosGrid();
-                act_epi.Dock = DockStyle.Fill;
-                act_epi.Show();
-            }
-        }
 
         public void VisibleMenu()
         {
-            act_epi = new ActualizaEpisodio();
             if (Sesion_ini == true)
             {
                 cerrarSesiónToolStripMenuItem.Visible = true;
@@ -71,9 +52,8 @@ namespace SanurGenNHibernate
                 {
                     pacientesToolStripMenuItem.Visible = true;
                     nuevoPacienteToolStripMenuItem.Visible = false;
-                    //triageToolStripMenuItem.Visible = true;
-                    
-                    
+
+                    act_epi = new ActualizaEpisodio();
                     act_epi.MdiParent = this;
                     act_epi.VentanaPrincipal = this;
                     act_epi.CargarDatosGrid();
@@ -284,12 +264,36 @@ namespace SanurGenNHibernate
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
-        {        
+        {      
+            FormCollection ventanas = Application.OpenForms;
+
+            for (int i = 0; i < ventanas.Count; i++)
+            {
+                Form ventana = ventanas[i];
+                if (!ventana.IsMdiContainer)
+                {
+                    ventana.Close();
+                    ventanas = Application.OpenForms;
+                    i--;
+                }
+            }
+
             Sesion_ini = false;
             TipoUsuario = "";
             usuariosToolStripMenuItem.Visible = false;
             pacientesToolStripMenuItem.Visible = false;
             triageToolStripMenuItem.Visible = false;
+            cerrarSesiónToolStripMenuItem.Visible = false;
+            UsuarioIniciado = null;
+            login = null;
+            altausuario = null;
+            bajausuario = null;
+            modusuario = null;
+            buscarusuario = null;
+            buscarpaciente = null;
+            act_epi = null;
+            usuarioEN = null;
+            childFormNumber = 0;
 
             //creo y muestro el formulario de usuarios
             login = new SanurGenNHibernate.Login();//creo la ventana
@@ -297,8 +301,6 @@ namespace SanurGenNHibernate
             login.MdiParent = this;
             login.Show();
 
-            cerrarSesiónToolStripMenuItem.Visible = false;
-            act_epi.Close();
         }
     }
 }

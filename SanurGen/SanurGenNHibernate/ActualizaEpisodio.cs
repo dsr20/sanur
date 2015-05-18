@@ -32,7 +32,12 @@ namespace SanurGenNHibernate
 
             myTimer.Start();
 
+            this.FormClosing += new FormClosingEventHandler(stopTimer);
+        }
 
+        public void stopTimer(object sender, EventArgs e)
+        {
+            myTimer.Stop();
         }
 
         public void myTimer_Tick(object sender, EventArgs e)
