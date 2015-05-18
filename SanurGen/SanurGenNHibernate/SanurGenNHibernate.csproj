@@ -157,11 +157,23 @@
     <Compile Include="buscarUsuario.Designer.cs">
       <DependentUpon>buscarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="VerDiagnostico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerDiagnostico.Designer.cs">
+      <DependentUpon>VerDiagnostico.cs</DependentUpon>
+    </Compile>
     <Compile Include="Diagnostico.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Diagnostico.Designer.cs">
       <DependentUpon>Diagnostico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="diagnostico_elegir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="diagnostico_elegir.Designer.cs">
+      <DependentUpon>diagnostico_elegir.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_busca_paciente.cs">
       <SubType>Form</SubType>
@@ -283,8 +295,14 @@
     <EmbeddedResource Include="buscarUsuario.resx">
       <DependentUpon>buscarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VerDiagnostico.resx">
+      <DependentUpon>VerDiagnostico.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Diagnostico.resx">
       <DependentUpon>Diagnostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="diagnostico_elegir.resx">
+      <DependentUpon>diagnostico_elegir.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_busca_paciente.resx">
       <DependentUpon>Form_busca_paciente.cs</DependentUpon>

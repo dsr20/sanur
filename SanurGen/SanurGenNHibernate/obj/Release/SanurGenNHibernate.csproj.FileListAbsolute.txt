@@ -31,3 +31,5 @@ C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\S
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Release\GenerateResource.write.1.tlog
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Release\SanurGenNHibernate.exe
 C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Release\SanurGenNHibernate.pdb
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Release\SanurGenNHibernate.VerDiagnostico.resources
+C:\Documents and Settings\ivan\My Documents\Repositorios\master\sanur\SanurGen\SanurGenNHibernate\obj\Release\SanurGenNHibernate.diagnostico_elegir.resources

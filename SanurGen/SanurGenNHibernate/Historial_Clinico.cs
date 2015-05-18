@@ -57,6 +57,18 @@ namespace SanurGenNHibernate
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            diagnostico_elegir diagnostico = new diagnostico_elegir(pacienteEn);
+            diagnostico.Show();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
     }
 }

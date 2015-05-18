@@ -37,6 +37,8 @@
             this.Observaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emergencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.importante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,7 +74,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 39);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(944, 535);
+            this.dataGridView1.Size = new System.Drawing.Size(1043, 535);
             this.dataGridView1.TabIndex = 2;
             // 
             // idEpisodio
@@ -80,7 +82,6 @@
             this.idEpisodio.HeaderText = "Id Episodio";
             this.idEpisodio.Name = "idEpisodio";
             this.idEpisodio.ReadOnly = true;
-            this.idEpisodio.Visible = false;
             // 
             // fechaInicio
             // 
@@ -115,11 +116,33 @@
             this.importante.Name = "importante";
             this.importante.ReadOnly = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 595);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(121, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Mostrar Diagóstico";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(980, 595);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Cerrar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Historial_Clinico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 630);
+            this.ClientSize = new System.Drawing.Size(1067, 630);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.paciente_nombre);
             this.Controls.Add(this.label1);
@@ -143,5 +166,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Observaciones;
         private System.Windows.Forms.DataGridViewTextBoxColumn emergencia;
         private System.Windows.Forms.DataGridViewTextBoxColumn importante;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
